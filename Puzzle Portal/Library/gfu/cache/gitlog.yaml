@@ -1,0 +1,1238 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 61
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -530159753, guid: 68c7e4565cde54155bb78d8e935f1dd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cacheType: 3
+  lastUpdatedAtString: 2018-11-06T21:55:49.785+01:00
+  initializedAtString: 2018-11-06T21:55:20.002+01:00
+  log:
+  - commitID: 29c4d744c1bc0c58793582744bc4d401da5e543b
+    mergeA: 
+    mergeB: 
+    authorName: Andrew73174
+    authorEmail: ChamberlainAn73174@th-nuernberg.de
+    commitEmail: ChamberlainAn73174@th-nuernberg.de
+    commitName: Andrew73174
+    summary: Test
+    description: "Test\r\n\r\nasdf"
+    timeString: 2018-11-06T21:52:46.000+01:00
+    commitTimeString: 2018-11-06T21:52:46.000+01:00
+    changes:
+    - path: Assets\Plugins.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins.meta
+      projectPath: Assets\Plugins.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub.meta
+      projectPath: Assets\Plugins\GitHub.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor.meta
+      projectPath: Assets\Plugins\GitHub\Editor.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll
+      projectPath: Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll.meta
+      projectPath: Assets\Plugins\GitHub\Editor\AsyncBridge.Net35.dll.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\ExtensionLoader.cs
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\ExtensionLoader.cs
+      projectPath: Assets\Plugins\GitHub\Editor\ExtensionLoader.cs
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\ExtensionLoader.cs.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\ExtensionLoader.cs.meta
+      projectPath: Assets\Plugins\GitHub\Editor\ExtensionLoader.cs.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll
+      projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.mdb
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.mdb
+      projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.mdb
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.mdb.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.mdb.meta
+      projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.mdb.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.meta
+      projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.45.dll.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\GitHub.Api.45.pdb.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\GitHub.Api.45.pdb.meta
+      projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.45.pdb.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\GitHub.Api.dll
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\GitHub.Api.dll
+      projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.dll
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\GitHub.Api.dll.mdb
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\GitHub.Api.dll.mdb
+      projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.dll.mdb
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\GitHub.Api.dll.mdb.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\GitHub.Api.dll.mdb.meta
+      projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.dll.mdb.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\GitHub.Api.dll.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\GitHub.Api.dll.meta
+      projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.dll.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\GitHub.Api.pdb.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\GitHub.Api.pdb.meta
+      projectPath: Assets\Plugins\GitHub\Editor\GitHub.Api.pdb.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\GitHub.Logging.dll
+      projectPath: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.mdb
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.mdb
+      projectPath: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.mdb
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.mdb.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.mdb.meta
+      projectPath: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.mdb.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.meta
+      projectPath: Assets\Plugins\GitHub\Editor\GitHub.Logging.dll.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\GitHub.Logging.pdb.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\GitHub.Logging.pdb.meta
+      projectPath: Assets\Plugins\GitHub\Editor\GitHub.Logging.pdb.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll
+      projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.mdb
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.mdb
+      projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.mdb
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.mdb.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.mdb.meta
+      projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.mdb.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.meta
+      projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.dll.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.pdb.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\GitHub.Unity.45.pdb.meta
+      projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.45.pdb.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\GitHub.Unity.dll
+      projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.mdb
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.mdb
+      projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.mdb
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.mdb.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.mdb.meta
+      projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.mdb.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.meta
+      projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.dll.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\GitHub.Unity.pdb.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\GitHub.Unity.pdb.meta
+      projectPath: Assets\Plugins\GitHub\Editor\GitHub.Unity.pdb.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\Mono.Posix.dll
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\Mono.Posix.dll
+      projectPath: Assets\Plugins\GitHub\Editor\Mono.Posix.dll
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\Mono.Posix.dll.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\Mono.Posix.dll.meta
+      projectPath: Assets\Plugins\GitHub\Editor\Mono.Posix.dll.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\QuickGuide.pdf
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\QuickGuide.pdf
+      projectPath: Assets\Plugins\GitHub\Editor\QuickGuide.pdf
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\QuickGuide.pdf.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\QuickGuide.pdf.meta
+      projectPath: Assets\Plugins\GitHub\Editor\QuickGuide.pdf.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll
+      projectPath: Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll.meta
+      projectPath: Assets\Plugins\GitHub\Editor\ReadOnlyCollectionsInterfaces.dll.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\System.Threading.dll
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\System.Threading.dll
+      projectPath: Assets\Plugins\GitHub\Editor\System.Threading.dll
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\System.Threading.dll.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\System.Threading.dll.meta
+      projectPath: Assets\Plugins\GitHub\Editor\System.Threading.dll.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\big-logo@2x.png
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\big-logo@2x.png
+      projectPath: Assets\Plugins\GitHub\Editor\big-logo@2x.png
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\big-logo@2x.png.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\big-logo@2x.png.meta
+      projectPath: Assets\Plugins\GitHub\Editor\big-logo@2x.png.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\credits.txt
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\credits.txt
+      projectPath: Assets\Plugins\GitHub\Editor\credits.txt
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\credits.txt.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\credits.txt.meta
+      projectPath: Assets\Plugins\GitHub\Editor\credits.txt.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\desktop.ini
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\desktop.ini
+      projectPath: Assets\Plugins\GitHub\Editor\desktop.ini
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\desktop.ini.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\desktop.ini.meta
+      projectPath: Assets\Plugins\GitHub\Editor\desktop.ini.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\eula.txt
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\eula.txt
+      projectPath: Assets\Plugins\GitHub\Editor\eula.txt
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\eula.txt.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\eula.txt.meta
+      projectPath: Assets\Plugins\GitHub\Editor\eula.txt.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\libsfw.bundle
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\libsfw.bundle
+      projectPath: Assets\Plugins\GitHub\Editor\libsfw.bundle
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\libsfw.bundle.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\libsfw.bundle.meta
+      projectPath: Assets\Plugins\GitHub\Editor\libsfw.bundle.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\libsfw.so
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\libsfw.so
+      projectPath: Assets\Plugins\GitHub\Editor\libsfw.so
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\libsfw.so.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\libsfw.so.meta
+      projectPath: Assets\Plugins\GitHub\Editor\libsfw.so.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\sfw.net.dll
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\sfw.net.dll
+      projectPath: Assets\Plugins\GitHub\Editor\sfw.net.dll
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\sfw.net.dll.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\sfw.net.dll.meta
+      projectPath: Assets\Plugins\GitHub\Editor\sfw.net.dll.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\x64.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\x64.meta
+      projectPath: Assets\Plugins\GitHub\Editor\x64.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\x64\desktop.ini
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\x64\desktop.ini
+      projectPath: Assets\Plugins\GitHub\Editor\x64\desktop.ini
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\x64\desktop.ini.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\x64\desktop.ini.meta
+      projectPath: Assets\Plugins\GitHub\Editor\x64\desktop.ini.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll
+      projectPath: Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll.meta
+      projectPath: Assets\Plugins\GitHub\Editor\x64\pthreadVC2.dll.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll
+      projectPath: Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll.meta
+      projectPath: Assets\Plugins\GitHub\Editor\x64\sfw_x64.dll.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\x86.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\x86.meta
+      projectPath: Assets\Plugins\GitHub\Editor\x86.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\x86\desktop.ini
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\x86\desktop.ini
+      projectPath: Assets\Plugins\GitHub\Editor\x86\desktop.ini
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\x86\desktop.ini.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\x86\desktop.ini.meta
+      projectPath: Assets\Plugins\GitHub\Editor\x86\desktop.ini.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll
+      projectPath: Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll.meta
+      projectPath: Assets\Plugins\GitHub\Editor\x86\pthreadVC2.dll.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll
+      projectPath: Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll.meta
+      projectPath: Assets\Plugins\GitHub\Editor\x86\sfw_x86.dll.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\desktop.ini
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\desktop.ini
+      projectPath: Assets\Plugins\GitHub\desktop.ini
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\GitHub\desktop.ini.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\GitHub\desktop.ini.meta
+      projectPath: Assets\Plugins\GitHub\desktop.ini.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\desktop.ini
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\desktop.ini
+      projectPath: Assets\Plugins\desktop.ini
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Plugins\desktop.ini.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Plugins\desktop.ini.meta
+      projectPath: Assets\Plugins\desktop.ini.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Scenes.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Scenes.meta
+      projectPath: Assets\Scenes.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Scenes\SampleScene.unity
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Scenes\SampleScene.unity
+      projectPath: Assets\Scenes\SampleScene.unity
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Scenes\SampleScene.unity.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Scenes\SampleScene.unity.meta
+      projectPath: Assets\Scenes\SampleScene.unity.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Scenes\desktop.ini
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Scenes\desktop.ini
+      projectPath: Assets\Scenes\desktop.ini
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Scenes\desktop.ini.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Scenes\desktop.ini.meta
+      projectPath: Assets\Scenes\desktop.ini.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Scripts.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Scripts.meta
+      projectPath: Assets\Scripts.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Scripts\Items.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Scripts\Items.meta
+      projectPath: Assets\Scripts\Items.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Scripts\Items\desktop.ini
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Scripts\Items\desktop.ini
+      projectPath: Assets\Scripts\Items\desktop.ini
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Scripts\Items\desktop.ini.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Scripts\Items\desktop.ini.meta
+      projectPath: Assets\Scripts\Items\desktop.ini.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Scripts\Level.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Scripts\Level.meta
+      projectPath: Assets\Scripts\Level.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Scripts\Level\desktop.ini
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Scripts\Level\desktop.ini
+      projectPath: Assets\Scripts\Level\desktop.ini
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Scripts\Level\desktop.ini.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Scripts\Level\desktop.ini.meta
+      projectPath: Assets\Scripts\Level\desktop.ini.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Scripts\Player.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Scripts\Player.meta
+      projectPath: Assets\Scripts\Player.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Scripts\Player\desktop.ini
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Scripts\Player\desktop.ini
+      projectPath: Assets\Scripts\Player\desktop.ini
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Scripts\Player\desktop.ini.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Scripts\Player\desktop.ini.meta
+      projectPath: Assets\Scripts\Player\desktop.ini.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Scripts\Soldier.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Scripts\Soldier.meta
+      projectPath: Assets\Scripts\Soldier.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Scripts\Soldier\desktop.ini
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Scripts\Soldier\desktop.ini
+      projectPath: Assets\Scripts\Soldier\desktop.ini
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Scripts\Soldier\desktop.ini.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Scripts\Soldier\desktop.ini.meta
+      projectPath: Assets\Scripts\Soldier\desktop.ini.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Scripts\Turret.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Scripts\Turret.meta
+      projectPath: Assets\Scripts\Turret.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Scripts\Turret\desktop.ini
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Scripts\Turret\desktop.ini
+      projectPath: Assets\Scripts\Turret\desktop.ini
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Scripts\Turret\desktop.ini.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Scripts\Turret\desktop.ini.meta
+      projectPath: Assets\Scripts\Turret\desktop.ini.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Scripts\desktop.ini
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Scripts\desktop.ini
+      projectPath: Assets\Scripts\desktop.ini
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Scripts\desktop.ini.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Scripts\desktop.ini.meta
+      projectPath: Assets\Scripts\desktop.ini.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sounds.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sounds.meta
+      projectPath: Assets\Sounds.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sounds\Items.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sounds\Items.meta
+      projectPath: Assets\Sounds\Items.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sounds\Items\desktop.ini
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sounds\Items\desktop.ini
+      projectPath: Assets\Sounds\Items\desktop.ini
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sounds\Items\desktop.ini.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sounds\Items\desktop.ini.meta
+      projectPath: Assets\Sounds\Items\desktop.ini.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sounds\Level.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sounds\Level.meta
+      projectPath: Assets\Sounds\Level.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sounds\Level\desktop.ini
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sounds\Level\desktop.ini
+      projectPath: Assets\Sounds\Level\desktop.ini
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sounds\Level\desktop.ini.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sounds\Level\desktop.ini.meta
+      projectPath: Assets\Sounds\Level\desktop.ini.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sounds\Player.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sounds\Player.meta
+      projectPath: Assets\Sounds\Player.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sounds\Player\desktop.ini
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sounds\Player\desktop.ini
+      projectPath: Assets\Sounds\Player\desktop.ini
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sounds\Player\desktop.ini.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sounds\Player\desktop.ini.meta
+      projectPath: Assets\Sounds\Player\desktop.ini.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sounds\Soldier.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sounds\Soldier.meta
+      projectPath: Assets\Sounds\Soldier.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sounds\Soldier\desktop.ini
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sounds\Soldier\desktop.ini
+      projectPath: Assets\Sounds\Soldier\desktop.ini
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sounds\Soldier\desktop.ini.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sounds\Soldier\desktop.ini.meta
+      projectPath: Assets\Sounds\Soldier\desktop.ini.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sounds\Turret.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sounds\Turret.meta
+      projectPath: Assets\Sounds\Turret.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sounds\Turret\desktop.ini
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sounds\Turret\desktop.ini
+      projectPath: Assets\Sounds\Turret\desktop.ini
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sounds\Turret\desktop.ini.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sounds\Turret\desktop.ini.meta
+      projectPath: Assets\Sounds\Turret\desktop.ini.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sounds\desktop.ini
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sounds\desktop.ini
+      projectPath: Assets\Sounds\desktop.ini
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sounds\desktop.ini.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sounds\desktop.ini.meta
+      projectPath: Assets\Sounds\desktop.ini.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sprites.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sprites.meta
+      projectPath: Assets\Sprites.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sprites\Items.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sprites\Items.meta
+      projectPath: Assets\Sprites\Items.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sprites\Items\desktop.ini
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sprites\Items\desktop.ini
+      projectPath: Assets\Sprites\Items\desktop.ini
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sprites\Items\desktop.ini.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sprites\Items\desktop.ini.meta
+      projectPath: Assets\Sprites\Items\desktop.ini.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sprites\Level.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sprites\Level.meta
+      projectPath: Assets\Sprites\Level.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sprites\Level\Environment.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sprites\Level\Environment.meta
+      projectPath: Assets\Sprites\Level\Environment.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sprites\Level\Environment\Floor_1.png
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sprites\Level\Environment\Floor_1.png
+      projectPath: Assets\Sprites\Level\Environment\Floor_1.png
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sprites\Level\Environment\Floor_1.png.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sprites\Level\Environment\Floor_1.png.meta
+      projectPath: Assets\Sprites\Level\Environment\Floor_1.png.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sprites\Level\Environment\desktop.ini
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sprites\Level\Environment\desktop.ini
+      projectPath: Assets\Sprites\Level\Environment\desktop.ini
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sprites\Level\Environment\desktop.ini.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sprites\Level\Environment\desktop.ini.meta
+      projectPath: Assets\Sprites\Level\Environment\desktop.ini.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sprites\Level\Portal.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sprites\Level\Portal.meta
+      projectPath: Assets\Sprites\Level\Portal.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sprites\Level\Portal\BluePort.png
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sprites\Level\Portal\BluePort.png
+      projectPath: Assets\Sprites\Level\Portal\BluePort.png
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sprites\Level\Portal\BluePort.png.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sprites\Level\Portal\BluePort.png.meta
+      projectPath: Assets\Sprites\Level\Portal\BluePort.png.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sprites\Level\Portal\OrangePort.png
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sprites\Level\Portal\OrangePort.png
+      projectPath: Assets\Sprites\Level\Portal\OrangePort.png
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sprites\Level\Portal\OrangePort.png.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sprites\Level\Portal\OrangePort.png.meta
+      projectPath: Assets\Sprites\Level\Portal\OrangePort.png.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sprites\Level\Portal\desktop.ini
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sprites\Level\Portal\desktop.ini
+      projectPath: Assets\Sprites\Level\Portal\desktop.ini
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sprites\Level\Portal\desktop.ini.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sprites\Level\Portal\desktop.ini.meta
+      projectPath: Assets\Sprites\Level\Portal\desktop.ini.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sprites\Level\desktop.ini
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sprites\Level\desktop.ini
+      projectPath: Assets\Sprites\Level\desktop.ini
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sprites\Level\desktop.ini.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sprites\Level\desktop.ini.meta
+      projectPath: Assets\Sprites\Level\desktop.ini.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sprites\Player.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sprites\Player.meta
+      projectPath: Assets\Sprites\Player.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sprites\Player\PlayerNormal.png
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sprites\Player\PlayerNormal.png
+      projectPath: Assets\Sprites\Player\PlayerNormal.png
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sprites\Player\PlayerNormal.png.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sprites\Player\PlayerNormal.png.meta
+      projectPath: Assets\Sprites\Player\PlayerNormal.png.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sprites\Player\desktop.ini
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sprites\Player\desktop.ini
+      projectPath: Assets\Sprites\Player\desktop.ini
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sprites\Player\desktop.ini.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sprites\Player\desktop.ini.meta
+      projectPath: Assets\Sprites\Player\desktop.ini.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sprites\Soldier.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sprites\Soldier.meta
+      projectPath: Assets\Sprites\Soldier.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sprites\Soldier\desktop.ini
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sprites\Soldier\desktop.ini
+      projectPath: Assets\Sprites\Soldier\desktop.ini
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sprites\Soldier\desktop.ini.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sprites\Soldier\desktop.ini.meta
+      projectPath: Assets\Sprites\Soldier\desktop.ini.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sprites\Turret.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sprites\Turret.meta
+      projectPath: Assets\Sprites\Turret.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sprites\Turret\desktop.ini
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sprites\Turret\desktop.ini
+      projectPath: Assets\Sprites\Turret\desktop.ini
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sprites\Turret\desktop.ini.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sprites\Turret\desktop.ini.meta
+      projectPath: Assets\Sprites\Turret\desktop.ini.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sprites\desktop.ini
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sprites\desktop.ini
+      projectPath: Assets\Sprites\desktop.ini
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\Sprites\desktop.ini.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\Sprites\desktop.ini.meta
+      projectPath: Assets\Sprites\desktop.ini.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\desktop.ini
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\desktop.ini
+      projectPath: Assets\desktop.ini
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\desktop.ini.meta
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\desktop.ini.meta
+      projectPath: Assets\desktop.ini.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Packages\desktop.ini
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Packages\desktop.ini
+      projectPath: Packages\desktop.ini
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Packages\manifest.json
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Packages\manifest.json
+      projectPath: Packages\manifest.json
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: ProjectSettings\AudioManager.asset
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\ProjectSettings\AudioManager.asset
+      projectPath: ProjectSettings\AudioManager.asset
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: ProjectSettings\ClusterInputManager.asset
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\ProjectSettings\ClusterInputManager.asset
+      projectPath: ProjectSettings\ClusterInputManager.asset
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: ProjectSettings\DynamicsManager.asset
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\ProjectSettings\DynamicsManager.asset
+      projectPath: ProjectSettings\DynamicsManager.asset
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: ProjectSettings\EditorBuildSettings.asset
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\ProjectSettings\EditorBuildSettings.asset
+      projectPath: ProjectSettings\EditorBuildSettings.asset
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: ProjectSettings\EditorSettings.asset
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\ProjectSettings\EditorSettings.asset
+      projectPath: ProjectSettings\EditorSettings.asset
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: ProjectSettings\GraphicsSettings.asset
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\ProjectSettings\GraphicsSettings.asset
+      projectPath: ProjectSettings\GraphicsSettings.asset
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: ProjectSettings\InputManager.asset
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\ProjectSettings\InputManager.asset
+      projectPath: ProjectSettings\InputManager.asset
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: ProjectSettings\NavMeshAreas.asset
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\ProjectSettings\NavMeshAreas.asset
+      projectPath: ProjectSettings\NavMeshAreas.asset
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: ProjectSettings\NetworkManager.asset
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\ProjectSettings\NetworkManager.asset
+      projectPath: ProjectSettings\NetworkManager.asset
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: ProjectSettings\Physics2DSettings.asset
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\ProjectSettings\Physics2DSettings.asset
+      projectPath: ProjectSettings\Physics2DSettings.asset
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: ProjectSettings\PresetManager.asset
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\ProjectSettings\PresetManager.asset
+      projectPath: ProjectSettings\PresetManager.asset
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: ProjectSettings\ProjectSettings.asset
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\ProjectSettings\ProjectSettings.asset
+      projectPath: ProjectSettings\ProjectSettings.asset
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: ProjectSettings\ProjectVersion.txt
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\ProjectSettings\ProjectVersion.txt
+      projectPath: ProjectSettings\ProjectVersion.txt
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: ProjectSettings\QualitySettings.asset
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\ProjectSettings\QualitySettings.asset
+      projectPath: ProjectSettings\QualitySettings.asset
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: ProjectSettings\TagManager.asset
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\ProjectSettings\TagManager.asset
+      projectPath: ProjectSettings\TagManager.asset
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: ProjectSettings\TimeManager.asset
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\ProjectSettings\TimeManager.asset
+      projectPath: ProjectSettings\TimeManager.asset
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: ProjectSettings\UnityConnectSettings.asset
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\ProjectSettings\UnityConnectSettings.asset
+      projectPath: ProjectSettings\UnityConnectSettings.asset
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: ProjectSettings\desktop.ini
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\ProjectSettings\desktop.ini
+      projectPath: ProjectSettings\desktop.ini
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: desktop.ini
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\desktop.ini
+      projectPath: desktop.ini
+      originalPath: 
+      status: 4
+      staged: 0
+  - commitID: ee7185151a02ecc92302f2e431db72156bbd73fe
+    mergeA: 
+    mergeB: 
+    authorName: Andrew73174
+    authorEmail: ChamberlainAn73174@th-nuernberg.de
+    commitEmail: ChamberlainAn73174@th-nuernberg.de
+    commitName: Andrew73174
+    summary: Initial commit
+    description: Initial commit
+    timeString: 2018-11-06T21:50:33.000+01:00
+    commitTimeString: 2018-11-06T21:50:33.000+01:00
+    changes:
+    - path: .gitattributes
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\.gitattributes
+      projectPath: .gitattributes
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: .gitignore
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\.gitignore
+      projectPath: .gitignore
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Assets\.gitignore
+      fullPath: C:\Users\Charlie\Google Drive (chamberlainan73174@gmail.com)\Software
+        Engineering\Puzzle Portal\Assets\.gitignore
+      projectPath: Assets\.gitignore
+      originalPath: 
+      status: 4
+      staged: 0
