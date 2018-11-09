@@ -12,21 +12,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 2
-  lastUpdatedAtString: 2018-11-06T21:52:47.716+01:00
-  initializedAtString: 2018-11-06T21:50:55.290+01:00
+  lastUpdatedAtString: 2018-11-09T09:51:14.120+01:00
+  initializedAtString: 2018-11-09T09:38:41.725+01:00
   localBranches:
-  - name: desktop.ini
-    tracking: 
   - name: master
-    tracking: 
+    tracking: origin/master
   remoteBranches:
-  - name: origin/desktop.ini
-    tracking: '[None]'
   - name: origin/master
     tracking: '[None]'
   remotes:
   - name: origin
-    url: https://github.com/i1Spook/SoftwareEngineering
+    url: https://github.com/i1Spook/SoftwareEngineering.git
     login: 
     user: 
     host: 
@@ -34,41 +30,29 @@ MonoBehaviour:
     token: 
   localConfigBranches:
     keys:
-    - desktop.ini
     - master
     values:
-    - name: desktop.ini
-      remote:
-        name: 
-        url: 
-      trackingBranch: 
     - name: master
       remote:
-        name: 
-        url: 
-      trackingBranch: 
+        name: origin
+        url: https://github.com/i1Spook/SoftwareEngineering.git
+      trackingBranch: master
   remoteConfigBranches:
     keys:
     - origin
     subKeys:
     - Values:
-      - desktop.ini
       - master
     subKeyValues:
     - Values:
-      - name: desktop.ini
-        remote:
-          name: origin
-          url: https://github.com/i1Spook/SoftwareEngineering
-        trackingBranch: 
       - name: master
         remote:
           name: origin
-          url: https://github.com/i1Spook/SoftwareEngineering
+          url: https://github.com/i1Spook/SoftwareEngineering.git
         trackingBranch: 
   configRemotes:
     keys:
     - origin
     values:
     - name: origin
-      url: https://github.com/i1Spook/SoftwareEngineering
+      url: https://github.com/i1Spook/SoftwareEngineering.git

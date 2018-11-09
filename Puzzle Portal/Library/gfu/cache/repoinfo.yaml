@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 1
-  lastUpdatedAtString: 2018-11-06T21:55:19.902+01:00
-  initializedAtString: 2018-11-06T21:55:19.902+01:00
+  lastUpdatedAtString: 2018-11-09T09:51:37.700+01:00
+  initializedAtString: 2018-11-09T09:36:29.629+01:00
   currentGitRemote:
     name: origin
-    url: https://github.com/i1Spook/SoftwareEngineering
+    url: https://github.com/i1Spook/SoftwareEngineering.git
     login: 
     user: 
     host: 
@@ -24,14 +24,14 @@ MonoBehaviour:
     token: 
   currentGitBranch:
     name: master
-    tracking: 
+    tracking: origin/master
   currentConfigBranch:
     name: master
     remote:
-      name: 
-      url: 
-    trackingBranch: 
+      name: origin
+      url: https://github.com/i1Spook/SoftwareEngineering.git
+    trackingBranch: master
   currentConfigRemote:
     name: origin
-    url: https://github.com/i1Spook/SoftwareEngineering
+    url: https://github.com/i1Spook/SoftwareEngineering.git
   currentHead: 
