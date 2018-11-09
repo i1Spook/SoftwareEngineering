@@ -1,0 +1,6 @@
+\\pascal.informatik.fh-nuernberg.de\studi$\noeckerpa71806\documents\visual studio 2017\Projects\NotThatNumber\NotThatNumber\bin\Debug\NotThatNumber.exe.config
+\\pascal.informatik.fh-nuernberg.de\studi$\noeckerpa71806\documents\visual studio 2017\Projects\NotThatNumber\NotThatNumber\bin\Debug\NotThatNumber.exe
+\\pascal.informatik.fh-nuernberg.de\studi$\noeckerpa71806\documents\visual studio 2017\Projects\NotThatNumber\NotThatNumber\bin\Debug\NotThatNumber.pdb
+\\pascal.informatik.fh-nuernberg.de\studi$\noeckerpa71806\documents\visual studio 2017\Projects\NotThatNumber\NotThatNumber\obj\Debug\NotThatNumber.csprojResolveAssemblyReference.cache
+\\pascal.informatik.fh-nuernberg.de\studi$\noeckerpa71806\documents\visual studio 2017\Projects\NotThatNumber\NotThatNumber\obj\Debug\NotThatNumber.exe
+\\pascal.informatik.fh-nuernberg.de\studi$\noeckerpa71806\documents\visual studio 2017\Projects\NotThatNumber\NotThatNumber\obj\Debug\NotThatNumber.pdb
