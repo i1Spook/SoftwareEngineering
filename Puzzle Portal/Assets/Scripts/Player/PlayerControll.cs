@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerControll : MonoBehaviour
 {
     public float speed;             //Floating point variable to store the player's movement speed.
+    public float force;             //Floating point variable to store the player's movement speed.
+
 
     private Rigidbody2D rb2d;       //Store a reference to the Rigidbody2D component required to use 2D Physics.
 
@@ -22,12 +24,19 @@ public class PlayerControll : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
 
         //Store the current vertical input in the float moveVertical.
-        float moveVertical = Input.GetAxis("Vertical");
+        Vector2 moveVertical = new Vector2
+        {
+            y = (Input.GetKeyDown(KeyCode.Space)) ? 1 : 0
+        };
 
         //Use the two store floats to create a new Vector2 variable movement.
-        Vector2 movement = new Vector2(moveHorizontal, moveVertical);
+        Vector2 movement = new Vector2
+        {
+            x = moveHorizontal
+        };
 
         //Call the AddForce function of our Rigidbody2D rb2d supplying movement multiplied by speed to move our player.
         rb2d.AddForce(movement * speed);
+        rb2d.AddForce(moveVertical * 50 * force);
     }
 }

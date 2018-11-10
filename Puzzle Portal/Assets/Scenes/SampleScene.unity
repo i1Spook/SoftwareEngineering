@@ -245,7 +245,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ThisPortal: {fileID: 488723379}
   OtherPortal: {fileID: 1641335885}
+  Player: {fileID: 1967539931}
   Speed: 1
+  VeloPlayer: {x: 0, y: 0}
+  veloPlayerCalc: 0
+  velocityObject: {x: 0, y: 0, z: 0}
+  direction: {x: 0, y: 0}
+  angle: 0
+  distanceToPortal: {x: 0, y: 0}
 --- !u!61 &488723382
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -324,7 +331,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 488723379}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.8309, y: -4.56, z: 0}
+  m_LocalPosition: {x: -5.89, y: -3.88, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -612,13 +619,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1641335885}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 1.49, y: -3.81, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.15, y: -3.84, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1641335890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -632,7 +639,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ThisPortal: {fileID: 1641335885}
   OtherPortal: {fileID: 488723379}
+  Player: {fileID: 0}
   Speed: 1
+  VeloPlayer: {x: 0, y: 0}
+  veloPlayerCalc: 0
+  velocityObject: {x: 0, y: 0, z: 0}
+  direction: {x: 0, y: 0}
+  angle: 0
+  distanceToPortal: {x: 0, y: 0}
 --- !u!1 &1889791336
 GameObject:
   m_ObjectHideFlags: 0
@@ -890,3 +904,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  force: 5

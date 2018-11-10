@@ -12,56 +12,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 5
-  lastUpdatedAtString: 2018-11-10T11:58:48.286+01:00
-  initializedAtString: 2018-11-10T11:58:21.179+01:00
+  lastUpdatedAtString: 2018-11-10T17:32:35.640+01:00
+  initializedAtString: 2018-11-10T16:41:31.354+01:00
   entries:
-  - path: Puzzle Portal\Assets\PlayerControll.cs
-    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\PlayerControll.cs
-    projectPath: Assets\PlayerControll.cs
+  - path: Puzzle Portal\Assets\Scenes\SampleScene.unity
+    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Scenes\SampleScene.unity
+    projectPath: Assets\Scenes\SampleScene.unity
     originalPath: 
-    status: 5
-    staged: 0
-  - path: Puzzle Portal\Assets\PlayerControll.cs.meta
-    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\PlayerControll.cs.meta
-    projectPath: Assets\PlayerControll.cs.meta
-    originalPath: 
-    status: 5
-    staged: 0
-  - path: Puzzle Portal\Assets\PortingPlayer.cs
-    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\PortingPlayer.cs
-    projectPath: Assets\PortingPlayer.cs
-    originalPath: 
-    status: 5
-    staged: 0
-  - path: Puzzle Portal\Assets\PortingPlayer.cs.meta
-    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\PortingPlayer.cs.meta
-    projectPath: Assets\PortingPlayer.cs.meta
-    originalPath: 
-    status: 5
+    status: 3
     staged: 0
   - path: Puzzle Portal\Assets\Scripts\Level\PortingPlayer.cs
     fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Scripts\Level\PortingPlayer.cs
     projectPath: Assets\Scripts\Level\PortingPlayer.cs
     originalPath: 
-    status: 1
-    staged: 0
-  - path: Puzzle Portal\Assets\Scripts\Level\PortingPlayer.cs.meta
-    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Scripts\Level\PortingPlayer.cs.meta
-    projectPath: Assets\Scripts\Level\PortingPlayer.cs.meta
-    originalPath: 
-    status: 1
+    status: 3
     staged: 0
   - path: Puzzle Portal\Assets\Scripts\Player\PlayerControll.cs
     fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Scripts\Player\PlayerControll.cs
     projectPath: Assets\Scripts\Player\PlayerControll.cs
     originalPath: 
-    status: 1
+    status: 3
     staged: 0
-  - path: Puzzle Portal\Assets\Scripts\Player\PlayerControll.cs.meta
-    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Scripts\Player\PlayerControll.cs.meta
-    projectPath: Assets\Scripts\Player\PlayerControll.cs.meta
+  - path: Puzzle Portal\Library\assetDatabase3
+    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\assetDatabase3
+    projectPath: Library\assetDatabase3
     originalPath: 
-    status: 1
+    status: 3
     staged: 0
   - path: Puzzle Portal\Library\gfu\cache\gitlocks.yaml
     fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\gfu\cache\gitlocks.yaml
@@ -87,15 +63,21 @@ MonoBehaviour:
     originalPath: 
     status: 3
     staged: 0
-  - path: Puzzle Portal\Library\ScriptAssemblies\BuiltinAssemblies.stamp
-    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\ScriptAssemblies\BuiltinAssemblies.stamp
-    projectPath: Library\ScriptAssemblies\BuiltinAssemblies.stamp
+  - path: Puzzle Portal\Library\InspectorExpandedItems.asset
+    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\InspectorExpandedItems.asset
+    projectPath: Library\InspectorExpandedItems.asset
     originalPath: 
-    status: 5
+    status: 3
     staged: 0
   - path: Puzzle Portal\Library\shadercompiler-UnityShaderCompiler.exe0.log
     fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\shadercompiler-UnityShaderCompiler.exe0.log
     projectPath: Library\shadercompiler-UnityShaderCompiler.exe0.log
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Puzzle Portal\ProjectSettings\TagManager.asset
+    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\ProjectSettings\TagManager.asset
+    projectPath: ProjectSettings\TagManager.asset
     originalPath: 
     status: 3
     staged: 0
