@@ -7,6 +7,7 @@ public class PlayerControll : MonoBehaviour
     public float speed;             //Floating point variable to store the player's movement speed.
     public float force;             //Floating point variable to store the player's movement speed.
 
+    public float velo;
 
     private Rigidbody2D rb2d;       //Store a reference to the Rigidbody2D component required to use 2D Physics.
 
@@ -20,6 +21,11 @@ public class PlayerControll : MonoBehaviour
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
     void FixedUpdate()
     {
+        velo = rb2d.velocity.magnitude;
+        if (rb2d.velocity.magnitude>30)
+        {
+            rb2d.AddForce(-rb2d.velocity);
+        }
         //Store the current horizontal input in the float moveHorizontal.
         float moveHorizontal = Input.GetAxis("Horizontal");
 
