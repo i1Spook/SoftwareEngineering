@@ -12,6 +12,207 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 5
-  lastUpdatedAtString: 2018-11-09T14:16:59.440+01:00
-  initializedAtString: 2018-11-09T13:51:29.787+01:00
-  entries: []
+  lastUpdatedAtString: 2018-11-10T11:56:30.266+01:00
+  initializedAtString: 2018-11-10T08:59:27.730+01:00
+  entries:
+  - path: Puzzle Portal\Assets\PlayerControll.cs
+    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\PlayerControll.cs
+    projectPath: Assets\PlayerControll.cs
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Puzzle Portal\Assets\PlayerControll.cs.meta
+    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\PlayerControll.cs.meta
+    projectPath: Assets\PlayerControll.cs.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Puzzle Portal\Assets\PortingPlayer.cs
+    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\PortingPlayer.cs
+    projectPath: Assets\PortingPlayer.cs
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Puzzle Portal\Assets\PortingPlayer.cs.meta
+    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\PortingPlayer.cs.meta
+    projectPath: Assets\PortingPlayer.cs.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Puzzle Portal\Assets\Scenes\SampleScene.unity
+    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Scenes\SampleScene.unity
+    projectPath: Assets\Scenes\SampleScene.unity
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Puzzle Portal\Assets\Sprites\Player\maincharacter.png
+    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Sprites\Player\maincharacter.png
+    projectPath: Assets\Sprites\Player\maincharacter.png
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Puzzle Portal\Assets\Sprites\Player\maincharacter.png.meta
+    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Sprites\Player\maincharacter.png.meta
+    projectPath: Assets\Sprites\Player\maincharacter.png.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Puzzle Portal\Assets\Sprites\Player\maincharacter-arme.png
+    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Sprites\Player\maincharacter-arme.png
+    projectPath: Assets\Sprites\Player\maincharacter-arme.png
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Puzzle Portal\Assets\Sprites\Player\maincharacter-arme.png.meta
+    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Sprites\Player\maincharacter-arme.png.meta
+    projectPath: Assets\Sprites\Player\maincharacter-arme.png.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Puzzle Portal\Assets\Sprites\Turret\turret-boden.png
+    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Sprites\Turret\turret-boden.png
+    projectPath: Assets\Sprites\Turret\turret-boden.png
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Puzzle Portal\Assets\Sprites\Turret\turret-boden.png.meta
+    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Sprites\Turret\turret-boden.png.meta
+    projectPath: Assets\Sprites\Turret\turret-boden.png.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Puzzle Portal\Assets\Standard Assets\Prototyping\Materials\NavyGrid.mat
+    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Standard
+      Assets\Prototyping\Materials\NavyGrid.mat
+    projectPath: Assets\Standard Assets\Prototyping\Materials\NavyGrid.mat
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Puzzle Portal\Assets\Standard Assets\Prototyping\Materials\SwatchTurquoiseAlbedo.mat
+    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Standard
+      Assets\Prototyping\Materials\SwatchTurquoiseAlbedo.mat
+    projectPath: Assets\Standard Assets\Prototyping\Materials\SwatchTurquoiseAlbedo.mat
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Puzzle Portal\Assets\Standard Assets\Prototyping\Materials\SwatchTurquoiseAlbedo.mat.meta
+    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Standard
+      Assets\Prototyping\Materials\SwatchTurquoiseAlbedo.mat.meta
+    projectPath: Assets\Standard Assets\Prototyping\Materials\SwatchTurquoiseAlbedo.mat.meta
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Puzzle Portal\BackupOfTeleporting.cs
+    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\BackupOfTeleporting.cs
+    projectPath: BackupOfTeleporting.cs
+    originalPath: 
+    status: 1
+    staged: 0
+  - path: Puzzle Portal\Library\assetDatabase3
+    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\assetDatabase3
+    projectPath: Library\assetDatabase3
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Puzzle Portal\Library\CurrentLayout.dwlt
+    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\CurrentLayout.dwlt
+    projectPath: Library\CurrentLayout.dwlt
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Puzzle Portal\Library\EditorInstance.json
+    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\EditorInstance.json
+    projectPath: Library\EditorInstance.json
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Puzzle Portal\Library\expandedItems
+    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\expandedItems
+    projectPath: Library\expandedItems
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Puzzle Portal\Library\gfu\cache\branches.yaml
+    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\gfu\cache\branches.yaml
+    projectPath: Library\gfu\cache\branches.yaml
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Puzzle Portal\Library\gfu\cache\gitlocks.yaml
+    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\gfu\cache\gitlocks.yaml
+    projectPath: Library\gfu\cache\gitlocks.yaml
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Puzzle Portal\Library\gfu\cache\gitlog.yaml
+    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\gfu\cache\gitlog.yaml
+    projectPath: Library\gfu\cache\gitlog.yaml
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Puzzle Portal\Library\gfu\cache\gitstatusentries.yaml
+    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\gfu\cache\gitstatusentries.yaml
+    projectPath: Library\gfu\cache\gitstatusentries.yaml
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Puzzle Portal\Library\gfu\cache\gittrackingstatus.yaml
+    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\gfu\cache\gittrackingstatus.yaml
+    projectPath: Library\gfu\cache\gittrackingstatus.yaml
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Puzzle Portal\Library\gfu\cache\repoinfo.yaml
+    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\gfu\cache\repoinfo.yaml
+    projectPath: Library\gfu\cache\repoinfo.yaml
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Puzzle Portal\Library\InspectorExpandedItems.asset
+    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\InspectorExpandedItems.asset
+    projectPath: Library\InspectorExpandedItems.asset
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Puzzle Portal\Library\LastSceneManagerSetup.txt
+    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\LastSceneManagerSetup.txt
+    projectPath: Library\LastSceneManagerSetup.txt
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Puzzle Portal\Library\ProjectSettings.asset
+    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\ProjectSettings.asset
+    projectPath: Library\ProjectSettings.asset
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Puzzle Portal\Library\ShaderCache.db
+    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\ShaderCache.db
+    projectPath: Library\ShaderCache.db
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Puzzle Portal\Library\shadercompiler-UnityShaderCompiler.exe0.log
+    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\shadercompiler-UnityShaderCompiler.exe0.log
+    projectPath: Library\shadercompiler-UnityShaderCompiler.exe0.log
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Puzzle Portal\ProjectSettings\QualitySettings.asset
+    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\ProjectSettings\QualitySettings.asset
+    projectPath: ProjectSettings\QualitySettings.asset
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Puzzle Portal\ProjectSettings\TagManager.asset
+    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\ProjectSettings\TagManager.asset
+    projectPath: ProjectSettings\TagManager.asset
+    originalPath: 
+    status: 3
+    staged: 0
+  - path: Puzzle Portal\ProjectSettings\UnityConnectSettings.asset
+    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\ProjectSettings\UnityConnectSettings.asset
+    projectPath: ProjectSettings\UnityConnectSettings.asset
+    originalPath: 
+    status: 3
+    staged: 0
