@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 5
-  lastUpdatedAtString: 2018-11-10T23:14:59.211+01:00
-  initializedAtString: 2018-11-10T20:07:12.074+01:00
+  lastUpdatedAtString: 2018-11-13T19:19:40.892+01:00
+  initializedAtString: 2018-11-13T17:30:24.513+01:00
   entries:
   - path: Puzzle Portal\Assets\Scenes\SampleScene.unity
     fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Scenes\SampleScene.unity
@@ -25,67 +25,7 @@ MonoBehaviour:
     fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Scripts\Level\PortalShot.cs
     projectPath: Assets\Scripts\Level\PortalShot.cs
     originalPath: 
-    status: 1
-    staged: 0
-  - path: Puzzle Portal\Assets\Scripts\Level\PortalShot.cs.meta
-    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Scripts\Level\PortalShot.cs.meta
-    projectPath: Assets\Scripts\Level\PortalShot.cs.meta
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Puzzle Portal\Assets\Scripts\Player\AimAtMouse.cs
-    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Scripts\Player\AimAtMouse.cs
-    projectPath: Assets\Scripts\Player\AimAtMouse.cs
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Puzzle Portal\Assets\Scripts\Player\AimAtMouse.cs.meta
-    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Scripts\Player\AimAtMouse.cs.meta
-    projectPath: Assets\Scripts\Player\AimAtMouse.cs.meta
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Puzzle Portal\Assets\Scripts\Player\PlayerControll.cs
-    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Scripts\Player\PlayerControll.cs
-    projectPath: Assets\Scripts\Player\PlayerControll.cs
-    originalPath: 
     status: 3
-    staged: 0
-  - path: Puzzle Portal\Assets\ShootingPortal.cs
-    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\ShootingPortal.cs
-    projectPath: Assets\ShootingPortal.cs
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Puzzle Portal\Assets\ShootingPortal.cs.meta
-    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\ShootingPortal.cs.meta
-    projectPath: Assets\ShootingPortal.cs.meta
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Puzzle Portal\Assets\Sprites\Level\Portal\BlueDrop.png
-    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Sprites\Level\Portal\BlueDrop.png
-    projectPath: Assets\Sprites\Level\Portal\BlueDrop.png
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Puzzle Portal\Assets\Sprites\Level\Portal\BlueDrop.png.meta
-    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Sprites\Level\Portal\BlueDrop.png.meta
-    projectPath: Assets\Sprites\Level\Portal\BlueDrop.png.meta
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Puzzle Portal\Assets\Sprites\Level\Portal\OrangeDrop.png
-    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Sprites\Level\Portal\OrangeDrop.png
-    projectPath: Assets\Sprites\Level\Portal\OrangeDrop.png
-    originalPath: 
-    status: 1
-    staged: 0
-  - path: Puzzle Portal\Assets\Sprites\Level\Portal\OrangeDrop.png.meta
-    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Sprites\Level\Portal\OrangeDrop.png.meta
-    projectPath: Assets\Sprites\Level\Portal\OrangeDrop.png.meta
-    originalPath: 
-    status: 1
     staged: 0
   - path: Puzzle Portal\Library\assetDatabase3
     fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\assetDatabase3
@@ -126,24 +66,6 @@ MonoBehaviour:
   - path: Puzzle Portal\Library\shadercompiler-UnityShaderCompiler.exe0.log
     fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\shadercompiler-UnityShaderCompiler.exe0.log
     projectPath: Library\shadercompiler-UnityShaderCompiler.exe0.log
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: Puzzle Portal\ProjectSettings\DynamicsManager.asset
-    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\ProjectSettings\DynamicsManager.asset
-    projectPath: ProjectSettings\DynamicsManager.asset
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: Puzzle Portal\ProjectSettings\Physics2DSettings.asset
-    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\ProjectSettings\Physics2DSettings.asset
-    projectPath: ProjectSettings\Physics2DSettings.asset
-    originalPath: 
-    status: 3
-    staged: 0
-  - path: Puzzle Portal\ProjectSettings\TagManager.asset
-    fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\ProjectSettings\TagManager.asset
-    projectPath: ProjectSettings\TagManager.asset
     originalPath: 
     status: 3
     staged: 0
