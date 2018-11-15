@@ -1,77 +1,174 @@
 ﻿using System;
+using System.IO;
 
 namespace NotThatNumber
 {
   class Program
   {
-    static int roundCounter = 0;
+    static int currentScore = 0;
+
+    static int highScore = 0;
+
     static void Main(string[] args)
     {
-      ShowHighscore();
+      Initialize();
+
       PlayGame();
     }
 
-    public static void ShowHighscore()
+    private static void Initialize()
     {
-      if (!(roundCounter == 0))
+      //  Read and print old Highscore from cache (textfile):
+      StreamReader reader = new StreamReader(@"E:\\highscore.txt");
+
+      var highScoreTxt = reader.ReadLine();
+
+      reader.Close();
+
+      Console.WriteLine("Current Highscore:");
+      Console.WriteLine(highScoreTxt);
+
+      //  Get old Highscore from cache (textfile):
+      var splitText = highScoreTxt.Split(':');
+
+      var oldHighScore = Convert.ToInt32(splitText[1]);
+
+      highScore = oldHighScore;
+    }
+
+    static void PlayGame()
+    {
+      var playAgain = false;
+
+      do
       {
-        Console.WriteLine("Type in your name to save your Highscore!");
-        string name = Console.ReadLine();
-        int highScore = 0;
-        if (roundCounter > highScore)
+        Console.WriteLine("Type in a number between 1 and 4!");
+
+        var yourNumber = 0;
+
+        ProtectedNumberInput(out yourNumber);
+
+        GetGameResult(yourNumber);
+
+        Console.WriteLine("Again? Yes(y) or No(n).");
+
+        ProtectedReplayInput(out playAgain);
+
+        if (!playAgain)
         {
-          highScore = roundCounter;
-          Console.WriteLine($"{name} holds the new record with {highScore} rounds!");
+          UpdateHighscore();
+
+          Environment.Exit(0);
         }
-        else
+      }
+      while (playAgain);
+    }
+
+    static void UpdateHighscore()
+    {      
+      if (currentScore > highScore)
+      {
+        SaveNewHighscore();
+
+        Console.WriteLine("Your new Highscore has been saved!");
+        Console.WriteLine("New Round? Yes(y) or No(n).");
+
+        ProtectedReplayInput(out bool playAgain);
+
+        if (!playAgain)
         {
-          Console.WriteLine($"{name} holds the record with {highScore} rounds!");
-        }        
+          Environment.Exit(0);
+        }
+      }
+      else
+      {
+        Console.WriteLine("Sorry, you didn't beat the Highscore!");
       }
     }
 
-    public static void PlayGame()
+    static void GetGameResult(int yourNumber)
     {
-      var replay = 0;
-      do
+      var randomGenerator = new Random();
+
+      var randomNumber = randomGenerator.Next(1, 5);
+
+      Console.WriteLine($"Not that Number! ({randomNumber})");
+
+      if (yourNumber == randomNumber)
       {
-        roundCounter = 1;
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine("OOF, YOU LOST! Your Score has been reset.");
+        Console.ForegroundColor = ConsoleColor.White;
 
-        //Number input
-        Console.WriteLine("Geben Sie eine Zahl zwischen 1 und 4 ein.");
-        int number;
-        number = Convert.ToInt32(Console.ReadLine());
-
-        //Random number generation
-        var randomGenerator = new Random();
-        var randomNumber = randomGenerator.Next(1, 5);
-        Console.WriteLine($"Zufällige Zahl = {randomNumber}");
-
-        //Decide if player won
-        if (number == randomNumber)
-        {
-          Console.WriteLine("OOF, YOU LOST!");
-          roundCounter = 0;
-        }
-        else
-        {
-          Console.WriteLine("YOU WON!");
-        }
-
-        //Replay?
-        Console.WriteLine("Nochmal? 1 für Ja, 0 für Nein.");
-        var answer = Convert.ToInt32(Console.ReadLine());
-        if (answer == 1)
-        {
-          replay = 1;
-          roundCounter++;
-        }
-        else
-        {
-          ShowHighscore();
-        }
+        currentScore = 0;
       }
-      while (replay == 1);
+      else
+      {
+        currentScore++;
+
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine($"YOU WON! (Score:{currentScore})");
+        Console.ForegroundColor = ConsoleColor.White;
+      }
+    }
+
+    static void ProtectedNumberInput(out int yourNumber)
+    {
+      var yourInput = Console.ReadLine();
+
+      var correctInput = Int32.TryParse(yourInput, out yourNumber);
+
+      while (!correctInput || yourNumber < 1 || yourNumber > 4)
+      {
+        Console.WriteLine("Please enter a numerical value between 1 and 4!");
+
+        yourInput = Console.ReadLine();
+
+        correctInput = Int32.TryParse(yourInput, out yourNumber);
+      }
+    }
+
+    static void ProtectedReplayInput(out bool playAgain)
+    {
+      var answer = Console.ReadLine();
+
+      while (!(answer == "y" || answer == "n"))
+      {
+        Console.WriteLine("Wrong input. Please answer with y or n!");
+
+        answer = Console.ReadLine();
+      }
+      if (answer == "y")
+      {
+        playAgain = true;
+      }
+      else
+      {
+        playAgain = false;
+      }
+    }
+    static void SaveNewHighscore()
+    {
+      var newHighScore = currentScore;
+
+      Console.WriteLine($"Type in your name to save your new Highscore of {newHighScore}!");
+
+      var name = Console.ReadLine();
+
+      while (name.Contains(":"))
+      {
+        Console.WriteLine("Invalid characters used. Please enter your name again!");
+
+        name = Console.ReadLine();
+      }
+
+      StreamWriter writer = new StreamWriter(@"E:\\highscore.txt");
+
+      writer.WriteLine($"{name}:{newHighScore}");
+
+      writer.Close();
+
+      highScore = newHighScore;
     }
   }
 }
