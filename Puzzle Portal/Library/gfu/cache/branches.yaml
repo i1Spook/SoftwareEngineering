@@ -12,15 +12,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 2
-  lastUpdatedAtString: 2018-11-09T14:47:16.267+01:00
-  initializedAtString: 2018-11-09T14:44:05.465+01:00
+  lastUpdatedAtString: 2018-11-23T18:45:55.143+01:00
+  initializedAtString: 2018-11-23T18:45:55.127+01:00
   localBranches:
+  - name: ItemBranch
+    tracking: origin/ItemBranch
   - name: master
     tracking: origin/master
   remoteBranches:
   - name: origin/HEAD
     tracking: '[None]'
+  - name: origin/ItemBranch
+    tracking: '[None]'
   - name: origin/master
+    tracking: '[None]'
+  - name: origin/NotThatNumber
     tracking: '[None]'
   remotes:
   - name: origin
@@ -32,8 +38,14 @@ MonoBehaviour:
     token: 
   localConfigBranches:
     keys:
+    - ItemBranch
     - master
     values:
+    - name: ItemBranch
+      remote:
+        name: origin
+        url: https://github.com/i1Spook/SoftwareEngineering.git
+      trackingBranch: ItemBranch
     - name: master
       remote:
         name: origin
@@ -45,7 +57,9 @@ MonoBehaviour:
     subKeys:
     - Values:
       - HEAD
+      - ItemBranch
       - master
+      - NotThatNumber
     subKeyValues:
     - Values:
       - name: HEAD
@@ -53,7 +67,17 @@ MonoBehaviour:
           name: origin
           url: https://github.com/i1Spook/SoftwareEngineering.git
         trackingBranch: 
+      - name: ItemBranch
+        remote:
+          name: origin
+          url: https://github.com/i1Spook/SoftwareEngineering.git
+        trackingBranch: 
       - name: master
+        remote:
+          name: origin
+          url: https://github.com/i1Spook/SoftwareEngineering.git
+        trackingBranch: 
+      - name: NotThatNumber
         remote:
           name: origin
           url: https://github.com/i1Spook/SoftwareEngineering.git

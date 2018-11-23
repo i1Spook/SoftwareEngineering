@@ -61,15 +61,18 @@
      <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
+     <Compile Include="Assets\Scripts\BluePortalScript.cs" />
+     <Compile Include="Assets\Scripts\Level\BluePortal.cs" />
+     <Compile Include="Assets\Scripts\Level\Portals.cs" />
      <Compile Include="Assets\Scripts\Level\PortalShot.cs" />
-     <Compile Include="Assets\Scripts\Level\PortingPlayer.cs" />
+     <Compile Include="Assets\Scripts\OrangePortalScript.cs" />
      <Compile Include="Assets\Scripts\Player\AimAtMouse.cs" />
      <Compile Include="Assets\Scripts\Player\Controller.cs" />
      <Compile Include="Assets\Scripts\Player\DTSCRIPT.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerControll.cs" />
+     <Compile Include="Assets\Scripts\ShootingPortal.cs" />
      <Compile Include="Assets\Scripts\Turret\ProjectileSkript.cs" />
      <Compile Include="Assets\Scripts\Turret\TurretSkriptFinal.cs" />
-     <Compile Include="Assets\ShootingPortal.cs" />
      <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>A:/User/Documents/GitHub/SE/SoftwareEngineering/Puzzle Portal/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>

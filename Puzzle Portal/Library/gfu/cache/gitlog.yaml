@@ -12,9 +12,1426 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 3
-  lastUpdatedAtString: 2018-11-09T14:45:07.348+01:00
-  initializedAtString: 2018-11-09T14:44:05.923+01:00
+  lastUpdatedAtString: 2018-11-23T18:45:56.187+01:00
+  initializedAtString: 2018-11-23T18:45:56.187+01:00
   log:
+  - commitID: 7f745d2efde0f6ee2629b88a1b0f72362fbf39a3
+    mergeA: 
+    mergeB: 
+    authorName: Andrew73174
+    authorEmail: ChamberlainAn73174@th-nuernberg.de
+    commitEmail: ChamberlainAn73174@th-nuernberg.de
+    commitName: Andrew73174
+    summary: Gitignore Update
+    description: Gitignore Update
+    timeString: 2018-11-23T18:45:43.000+01:00
+    commitTimeString: 2018-11-23T18:45:43.000+01:00
+    changes:
+    - path: .gitignore
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\.gitignore
+      projectPath: ..\.gitignore
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Assembly-CSharp-Editor-firstpass.csproj
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assembly-CSharp-Editor-firstpass.csproj
+      projectPath: Assembly-CSharp-Editor-firstpass.csproj
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\Assembly-CSharp-firstpass.csproj
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assembly-CSharp-firstpass.csproj
+      projectPath: Assembly-CSharp-firstpass.csproj
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\Assembly-CSharp.csproj
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assembly-CSharp.csproj
+      projectPath: Assembly-CSharp.csproj
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\Library\CurrentLayout.dwlt
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\CurrentLayout.dwlt
+      projectPath: Library\CurrentLayout.dwlt
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\assetDatabase3
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\assetDatabase3
+      projectPath: Library\assetDatabase3
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\shadercompiler-UnityShaderCompiler.exe0.log
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\shadercompiler-UnityShaderCompiler.exe0.log
+      projectPath: Library\shadercompiler-UnityShaderCompiler.exe0.log
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Puzzle Portal.sln
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Puzzle
+        Portal.sln
+      projectPath: Puzzle Portal.sln
+      originalPath: 
+      status: 4
+      staged: 0
+  - commitID: d256dc4fe6016d1a2e9555f6be749dad4d51f7d6
+    mergeA: bf806cdb3d0d66ac11b2060a0ea68b757df9a023
+    mergeB: 435add624b09d2078395012148330a0b3fb0697d
+    authorName: Andrew73174
+    authorEmail: 44318244+Andrew73174@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: 'Merge pull request #1 from i1Spook/master'
+    description: "Merge pull request #1 from i1Spook/master\r\n\r\nMergeBranch"
+    timeString: 2018-11-20T13:18:56.000+01:00
+    commitTimeString: 2018-11-20T13:18:56.000+01:00
+    changes: []
+  - commitID: 435add624b09d2078395012148330a0b3fb0697d
+    mergeA: 
+    mergeB: 
+    authorName: Hauchris
+    authorEmail: 44362410+Hauchris@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Add files via upload
+    description: "Add files via upload\r\n\r\nDeTection Skript muss einen Public bool
+      enthalten ansonsten ist das Turret Blind Bitte noch an den Spieler Anbinden."
+    timeString: 2018-11-16T17:38:56.000+01:00
+    commitTimeString: 2018-11-16T17:38:56.000+01:00
+    changes:
+    - path: Puzzle Portal\Assets\Scripts\Player\DTSCRIPT.cs
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Scripts\Player\DTSCRIPT.cs
+      projectPath: Assets\Scripts\Player\DTSCRIPT.cs
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\Assets\Scripts\Player\DTSCRIPT.cs.meta
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Scripts\Player\DTSCRIPT.cs.meta
+      projectPath: Assets\Scripts\Player\DTSCRIPT.cs.meta
+      originalPath: 
+      status: 4
+      staged: 0
+  - commitID: c8a750a06f3dda1671aec37b488bf39925d8dd7c
+    mergeA: 
+    mergeB: 
+    authorName: Hauchris
+    authorEmail: 44362410+Hauchris@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Turretskript and Projectile Demo1
+    description: "Turretskript and Projectile Demo1\r\n\r\nSo hab jetzt endlich den
+      schei\xDF zusammengef\xFChrt. SCHEI\xDF \r\n\r\nDas Turretskript an den Turretarm
+      hinzuf\xFCgen, das Projectile script an den Projectile Placeholder anf\xFCgen
+      Public werte anpassen dan funktioniert es. MAN BRAUCH NOCH DEN DETECTION NODE
+      hinzuf\xFCgen"
+    timeString: 2018-11-16T17:37:10.000+01:00
+    commitTimeString: 2018-11-16T17:37:10.000+01:00
+    changes:
+    - path: Puzzle Portal\Assets\Scripts\Turret\ProjectileSkript.cs
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Scripts\Turret\ProjectileSkript.cs
+      projectPath: Assets\Scripts\Turret\ProjectileSkript.cs
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\Assets\Scripts\Turret\ProjectileSkript.cs.meta
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Scripts\Turret\ProjectileSkript.cs.meta
+      projectPath: Assets\Scripts\Turret\ProjectileSkript.cs.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\Assets\Scripts\Turret\TurretSkriptFinal.cs
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Scripts\Turret\TurretSkriptFinal.cs
+      projectPath: Assets\Scripts\Turret\TurretSkriptFinal.cs
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\Assets\Scripts\Turret\TurretSkriptFinal.cs.meta
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Scripts\Turret\TurretSkriptFinal.cs.meta
+      projectPath: Assets\Scripts\Turret\TurretSkriptFinal.cs.meta
+      originalPath: 
+      status: 4
+      staged: 0
+  - commitID: bf806cdb3d0d66ac11b2060a0ea68b757df9a023
+    mergeA: 
+    mergeB: 
+    authorName: Andrew73174
+    authorEmail: ChamberlainAn73174@th-nuernberg.de
+    commitEmail: ChamberlainAn73174@th-nuernberg.de
+    commitName: Andrew73174
+    summary: Moved Martins Folder to right location
+    description: Moved Martins Folder to right location
+    timeString: 2018-11-14T20:43:24.000+01:00
+    commitTimeString: 2018-11-14T20:43:24.000+01:00
+    changes:
+    - path: Puzzle Portal\Assets\Scripts\Player\Controller.cs
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Scripts\Player\Controller.cs
+      projectPath: Assets\Scripts\Player\Controller.cs
+      originalPath: Scripts\Controller.cs
+      status: 6
+      staged: 0
+    - path: Puzzle Portal\Assets\Scripts\Player\Controller.cs.meta
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Scripts\Player\Controller.cs.meta
+      projectPath: Assets\Scripts\Player\Controller.cs.meta
+      originalPath: Scripts\Controller.cs.meta
+      status: 6
+      staged: 0
+  - commitID: 2710ea4f591ce811353fefb0a013f5c18c9f5064
+    mergeA: c866af33ef3214b5e4e8e9c3599eb3fa8c268a4a
+    mergeB: 1e6b8edfa92ffcba5e9fc77f21f93e3fc9cd5f7a
+    authorName: Andrew73174
+    authorEmail: ChamberlainAn73174@th-nuernberg.de
+    commitEmail: ChamberlainAn73174@th-nuernberg.de
+    commitName: Andrew73174
+    summary: Merge branch 'master' of https://github.com/i1Spook/SoftwareEngineering
+    description: Merge branch 'master' of https://github.com/i1Spook/SoftwareEngineering
+    timeString: 2018-11-14T20:41:47.000+01:00
+    commitTimeString: 2018-11-14T20:41:47.000+01:00
+    changes: []
+  - commitID: c866af33ef3214b5e4e8e9c3599eb3fa8c268a4a
+    mergeA: 
+    mergeB: 
+    authorName: Andrew73174
+    authorEmail: ChamberlainAn73174@th-nuernberg.de
+    commitEmail: ChamberlainAn73174@th-nuernberg.de
+    commitName: Andrew73174
+    summary: Changed the Portal Script
+    description: Changed the Portal Script
+    timeString: 2018-11-14T20:41:19.000+01:00
+    commitTimeString: 2018-11-14T20:41:19.000+01:00
+    changes:
+    - path: Puzzle Portal\Assets\Scenes\SampleScene.unity
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Scenes\SampleScene.unity
+      projectPath: Assets\Scenes\SampleScene.unity
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Assets\Scripts\Level\PortalShot.cs
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Scripts\Level\PortalShot.cs
+      projectPath: Assets\Scripts\Level\PortalShot.cs
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\CurrentLayout.dwlt
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\CurrentLayout.dwlt
+      projectPath: Library\CurrentLayout.dwlt
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\InspectorExpandedItems.asset
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\InspectorExpandedItems.asset
+      projectPath: Library\InspectorExpandedItems.asset
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\assetDatabase3
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\assetDatabase3
+      projectPath: Library\assetDatabase3
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\gfu\cache\gitlocks.yaml
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\gfu\cache\gitlocks.yaml
+      projectPath: Library\gfu\cache\gitlocks.yaml
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\gfu\cache\gitstatusentries.yaml
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\gfu\cache\gitstatusentries.yaml
+      projectPath: Library\gfu\cache\gitstatusentries.yaml
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\gfu\cache\gittrackingstatus.yaml
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\gfu\cache\gittrackingstatus.yaml
+      projectPath: Library\gfu\cache\gittrackingstatus.yaml
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\gfu\cache\repoinfo.yaml
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\gfu\cache\repoinfo.yaml
+      projectPath: Library\gfu\cache\repoinfo.yaml
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\shadercompiler-UnityShaderCompiler.exe0.log
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\shadercompiler-UnityShaderCompiler.exe0.log
+      projectPath: Library\shadercompiler-UnityShaderCompiler.exe0.log
+      originalPath: 
+      status: 3
+      staged: 0
+  - commitID: 1e6b8edfa92ffcba5e9fc77f21f93e3fc9cd5f7a
+    mergeA: 
+    mergeB: 
+    authorName: Maze
+    authorEmail: matze3211@gmail.com
+    commitEmail: matze3211@gmail.com
+    commitName: Maze
+    summary: added basic tilemap
+    description: added basic tilemap
+    timeString: 2018-11-14T13:48:25.000+01:00
+    commitTimeString: 2018-11-14T13:48:25.000+01:00
+    changes:
+    - path: Puzzle Portal\Assets\Scenes\SampleScene.unity
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Scenes\SampleScene.unity
+      projectPath: Assets\Scenes\SampleScene.unity
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Assets\Sprites\Level\Environment\Floor.png
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Sprites\Level\Environment\Floor.png
+      projectPath: Assets\Sprites\Level\Environment\Floor.png
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\Assets\Sprites\Level\Environment\Floor.png.meta
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Sprites\Level\Environment\Floor.png.meta
+      projectPath: Assets\Sprites\Level\Environment\Floor.png.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\Assets\Sprites\Level\Environment\Floor_square.asset
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Sprites\Level\Environment\Floor_square.asset
+      projectPath: Assets\Sprites\Level\Environment\Floor_square.asset
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\Assets\Sprites\Level\Environment\Floor_square.asset.meta
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Sprites\Level\Environment\Floor_square.asset.meta
+      projectPath: Assets\Sprites\Level\Environment\Floor_square.asset.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\Assets\Sprites\Level\Environment\Floor_square.png
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Sprites\Level\Environment\Floor_square.png
+      projectPath: Assets\Sprites\Level\Environment\Floor_square.png
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\Assets\Sprites\Level\Environment\Floor_square.png.meta
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Sprites\Level\Environment\Floor_square.png.meta
+      projectPath: Assets\Sprites\Level\Environment\Floor_square.png.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\Assets\Tiles.meta
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Tiles.meta
+      projectPath: Assets\Tiles.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\Assets\Tiles\Lab.prefab
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Tiles\Lab.prefab
+      projectPath: Assets\Tiles\Lab.prefab
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\Assets\Tiles\Lab.prefab.meta
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Tiles\Lab.prefab.meta
+      projectPath: Assets\Tiles\Lab.prefab.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\Library\CurrentLayout.dwlt
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\CurrentLayout.dwlt
+      projectPath: Library\CurrentLayout.dwlt
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\EditorUserBuildSettings.asset
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\EditorUserBuildSettings.asset
+      projectPath: Library\EditorUserBuildSettings.asset
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\InspectorExpandedItems.asset
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\InspectorExpandedItems.asset
+      projectPath: Library\InspectorExpandedItems.asset
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.dll.mdb
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.dll.mdb
+      projectPath: Library\ScriptAssemblies\Assembly-CSharp-Editor-firstpass.dll.mdb
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\ScriptAssemblies\Unity.PackageManagerUI.Editor.dll.mdb
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\ScriptAssemblies\Unity.PackageManagerUI.Editor.dll.mdb
+      projectPath: Library\ScriptAssemblies\Unity.PackageManagerUI.Editor.dll.mdb
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll.mdb
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll.mdb
+      projectPath: Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll.mdb
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\ScriptAssemblies\Unity.TextMeshPro.dll.mdb
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\ScriptAssemblies\Unity.TextMeshPro.dll.mdb
+      projectPath: Library\ScriptAssemblies\Unity.TextMeshPro.dll.mdb
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\ScriptAssemblies\UnityEditor.StandardEvents.dll.mdb
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\ScriptAssemblies\UnityEditor.StandardEvents.dll.mdb
+      projectPath: Library\ScriptAssemblies\UnityEditor.StandardEvents.dll.mdb
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\ShaderCache.db
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\ShaderCache.db
+      projectPath: Library\ShaderCache.db
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\TilemapEditorUserSettings.asset
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\TilemapEditorUserSettings.asset
+      projectPath: Library\TilemapEditorUserSettings.asset
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\assetDatabase3
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\assetDatabase3
+      projectPath: Library\assetDatabase3
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\expandedItems
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\expandedItems
+      projectPath: Library\expandedItems
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\gfu\cache\gitlocks.yaml
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\gfu\cache\gitlocks.yaml
+      projectPath: Library\gfu\cache\gitlocks.yaml
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\gfu\cache\gitstatusentries.yaml
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\gfu\cache\gitstatusentries.yaml
+      projectPath: Library\gfu\cache\gitstatusentries.yaml
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\gfu\cache\gittrackingstatus.yaml
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\gfu\cache\gittrackingstatus.yaml
+      projectPath: Library\gfu\cache\gittrackingstatus.yaml
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\gfu\cache\repoinfo.yaml
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\gfu\cache\repoinfo.yaml
+      projectPath: Library\gfu\cache\repoinfo.yaml
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\07\072450ffed31fe545a60f71f33f53916
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\07\072450ffed31fe545a60f71f33f53916
+      projectPath: Library\metadata\07\072450ffed31fe545a60f71f33f53916
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\0d\0d3bb855445e36e479c85976fc88383a
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\0d\0d3bb855445e36e479c85976fc88383a
+      projectPath: Library\metadata\0d\0d3bb855445e36e479c85976fc88383a
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\12\12fd8a0055b84bb59e84c9835a37e333
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\12\12fd8a0055b84bb59e84c9835a37e333
+      projectPath: Library\metadata\12\12fd8a0055b84bb59e84c9835a37e333
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\16\1638f3415e6a8594ba9323f0ba3c5acf
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\16\1638f3415e6a8594ba9323f0ba3c5acf
+      projectPath: Library\metadata\16\1638f3415e6a8594ba9323f0ba3c5acf
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\19\19ead9387dc9ef14fad0436a846268f7
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\19\19ead9387dc9ef14fad0436a846268f7
+      projectPath: Library\metadata\19\19ead9387dc9ef14fad0436a846268f7
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\1b\1b355da31ea043feba0c03e35dd4bc62
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\1b\1b355da31ea043feba0c03e35dd4bc62
+      projectPath: Library\metadata\1b\1b355da31ea043feba0c03e35dd4bc62
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\1c\1c6d1fbb51834b64847b1b73a75bfc77
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\1c\1c6d1fbb51834b64847b1b73a75bfc77
+      projectPath: Library\metadata\1c\1c6d1fbb51834b64847b1b73a75bfc77
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\20\204a570cd0814334ba2fd79718030cc0
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\20\204a570cd0814334ba2fd79718030cc0
+      projectPath: Library\metadata\20\204a570cd0814334ba2fd79718030cc0
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\21\21eff446d50eaf44a85985cd4c0b6fa1
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\21\21eff446d50eaf44a85985cd4c0b6fa1
+      projectPath: Library\metadata\21\21eff446d50eaf44a85985cd4c0b6fa1
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\26\2642008eb81683d4dbc7cd4ad6a2c485
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\26\2642008eb81683d4dbc7cd4ad6a2c485
+      projectPath: Library\metadata\26\2642008eb81683d4dbc7cd4ad6a2c485
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\26\2682a692a2be7e14e901a738c7806da0
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\26\2682a692a2be7e14e901a738c7806da0
+      projectPath: Library\metadata\26\2682a692a2be7e14e901a738c7806da0
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\2f\2fe3476eabbbb6c448e6b55a2cc471f5
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\2f\2fe3476eabbbb6c448e6b55a2cc471f5
+      projectPath: Library\metadata\2f\2fe3476eabbbb6c448e6b55a2cc471f5
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\32\32188fd89022c154c81befa2f0e00be0
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\32\32188fd89022c154c81befa2f0e00be0
+      projectPath: Library\metadata\32\32188fd89022c154c81befa2f0e00be0
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\32\328cc881519068e4eb7db4bb907ad2d9
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\32\328cc881519068e4eb7db4bb907ad2d9
+      projectPath: Library\metadata\32\328cc881519068e4eb7db4bb907ad2d9
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\38\38c8faf1788024c02930a0c68a6e0edc
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\38\38c8faf1788024c02930a0c68a6e0edc
+      projectPath: Library\metadata\38\38c8faf1788024c02930a0c68a6e0edc
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\3a\3a84de5cd0624681b6b6dcd8921d912a
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\3a\3a84de5cd0624681b6b6dcd8921d912a
+      projectPath: Library\metadata\3a\3a84de5cd0624681b6b6dcd8921d912a
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\3b\3bb0254b9671413d9d08a855c5090237
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\3b\3bb0254b9671413d9d08a855c5090237
+      projectPath: Library\metadata\3b\3bb0254b9671413d9d08a855c5090237
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\3e\3e9a2175e0404f7ea30b2b694850bae0
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\3e\3e9a2175e0404f7ea30b2b694850bae0
+      projectPath: Library\metadata\3e\3e9a2175e0404f7ea30b2b694850bae0
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\40\405b9b51bb344a128608d968297df79c
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\40\405b9b51bb344a128608d968297df79c
+      projectPath: Library\metadata\40\405b9b51bb344a128608d968297df79c
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\41\4113173d5e95493ab8765d7b08371de4
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\41\4113173d5e95493ab8765d7b08371de4
+      projectPath: Library\metadata\41\4113173d5e95493ab8765d7b08371de4
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\46\46098a81a64a45c5b756320e10a22f13
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\46\46098a81a64a45c5b756320e10a22f13
+      projectPath: Library\metadata\46\46098a81a64a45c5b756320e10a22f13
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\49\49f5766d0d4954f44b85d4bbd7131677
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\49\49f5766d0d4954f44b85d4bbd7131677
+      projectPath: Library\metadata\49\49f5766d0d4954f44b85d4bbd7131677
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\4a\4a3ecb1425d14502837abea459cf2b70
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\4a\4a3ecb1425d14502837abea459cf2b70
+      projectPath: Library\metadata\4a\4a3ecb1425d14502837abea459cf2b70
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\4a\4a813084baf34314aa7b09881c317646
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\4a\4a813084baf34314aa7b09881c317646
+      projectPath: Library\metadata\4a\4a813084baf34314aa7b09881c317646
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\4b\4b3fa4bde7f1451a8218c03ee6a8ded8
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\4b\4b3fa4bde7f1451a8218c03ee6a8ded8
+      projectPath: Library\metadata\4b\4b3fa4bde7f1451a8218c03ee6a8ded8
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\4b\4ba2329b63d54f0187bcaa12486b1b0f
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\4b\4ba2329b63d54f0187bcaa12486b1b0f
+      projectPath: Library\metadata\4b\4ba2329b63d54f0187bcaa12486b1b0f
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\4d\4d64205430999a04981dab6f259b6e44
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\4d\4d64205430999a04981dab6f259b6e44
+      projectPath: Library\metadata\4d\4d64205430999a04981dab6f259b6e44
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\51\517af1b5b81b93b43b9745d58f017562
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\51\517af1b5b81b93b43b9745d58f017562
+      projectPath: Library\metadata\51\517af1b5b81b93b43b9745d58f017562
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\53\53ebcfaa2e1e4e2dbc85882cd5a73fa1
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\53\53ebcfaa2e1e4e2dbc85882cd5a73fa1
+      projectPath: Library\metadata\53\53ebcfaa2e1e4e2dbc85882cd5a73fa1
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\57\5782f9e9e6e0bb94bac99aeea24814fc
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\57\5782f9e9e6e0bb94bac99aeea24814fc
+      projectPath: Library\metadata\57\5782f9e9e6e0bb94bac99aeea24814fc
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\5e\5e27b1dcd46fbfb459fd62aef1d20f07
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\5e\5e27b1dcd46fbfb459fd62aef1d20f07
+      projectPath: Library\metadata\5e\5e27b1dcd46fbfb459fd62aef1d20f07
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\5f\5f32cd94baa94578a686d4b9d6b660f7
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\5f\5f32cd94baa94578a686d4b9d6b660f7
+      projectPath: Library\metadata\5f\5f32cd94baa94578a686d4b9d6b660f7
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\64\6416c33b0bf58844fa4cc6d5182f23cb
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\64\6416c33b0bf58844fa4cc6d5182f23cb
+      projectPath: Library\metadata\64\6416c33b0bf58844fa4cc6d5182f23cb
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\69\6981461fe431401459211818212a29cf
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\69\6981461fe431401459211818212a29cf
+      projectPath: Library\metadata\69\6981461fe431401459211818212a29cf
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\6a\6a10b2909283487f913b00d94cd3faf5
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\6a\6a10b2909283487f913b00d94cd3faf5
+      projectPath: Library\metadata\6a\6a10b2909283487f913b00d94cd3faf5
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\6e\6e2d432c5ea14e75aa3a79f90f704442
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\6e\6e2d432c5ea14e75aa3a79f90f704442
+      projectPath: Library\metadata\6e\6e2d432c5ea14e75aa3a79f90f704442
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\6f\6fe576b47d8b47688ec5d02bccd15cf9
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\6f\6fe576b47d8b47688ec5d02bccd15cf9
+      projectPath: Library\metadata\6f\6fe576b47d8b47688ec5d02bccd15cf9
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\74\74101c7619674b24d82777e7458e0977
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\74\74101c7619674b24d82777e7458e0977
+      projectPath: Library\metadata\74\74101c7619674b24d82777e7458e0977
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\75\75799de484ac4f4cadc268d2cbea830a
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\75\75799de484ac4f4cadc268d2cbea830a
+      projectPath: Library\metadata\75\75799de484ac4f4cadc268d2cbea830a
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\76\7668179ede524d6396c8b7d84461ea29
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\76\7668179ede524d6396c8b7d84461ea29
+      projectPath: Library\metadata\76\7668179ede524d6396c8b7d84461ea29
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\80\80a3616ca19596e4da0f10f14d241e9f
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\80\80a3616ca19596e4da0f10f14d241e9f
+      projectPath: Library\metadata\80\80a3616ca19596e4da0f10f14d241e9f
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\84\844f815391db42d49455cbf1a7bfc434
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\84\844f815391db42d49455cbf1a7bfc434
+      projectPath: Library\metadata\84\844f815391db42d49455cbf1a7bfc434
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\84\84ca94c19f25ae14d83aa41bb3654390
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\84\84ca94c19f25ae14d83aa41bb3654390
+      projectPath: Library\metadata\84\84ca94c19f25ae14d83aa41bb3654390
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\87\870353891bb340e2b2a9c8707e7419ba
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\87\870353891bb340e2b2a9c8707e7419ba
+      projectPath: Library\metadata\87\870353891bb340e2b2a9c8707e7419ba
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\8e\8e7066e382b0fc749b25dbb1a3004dfe
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\8e\8e7066e382b0fc749b25dbb1a3004dfe
+      projectPath: Library\metadata\8e\8e7066e382b0fc749b25dbb1a3004dfe
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\90\9078b7128e594410d9b89e5b24cffd01
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\90\9078b7128e594410d9b89e5b24cffd01
+      projectPath: Library\metadata\90\9078b7128e594410d9b89e5b24cffd01
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\9b\9b3a918d590e4e1459441f9ead225410
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\9b\9b3a918d590e4e1459441f9ead225410
+      projectPath: Library\metadata\9b\9b3a918d590e4e1459441f9ead225410
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\aa\aa2083952c228ce409569f5d690c4dd9
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\aa\aa2083952c228ce409569f5d690c4dd9
+      projectPath: Library\metadata\aa\aa2083952c228ce409569f5d690c4dd9
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\ad\ad3539a1bf7ab2c41ba07a9f67559f6e
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\ad\ad3539a1bf7ab2c41ba07a9f67559f6e
+      projectPath: Library\metadata\ad\ad3539a1bf7ab2c41ba07a9f67559f6e
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\ad\adebbd281f1a4ef3a30be7f21937e02f
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\ad\adebbd281f1a4ef3a30be7f21937e02f
+      projectPath: Library\metadata\ad\adebbd281f1a4ef3a30be7f21937e02f
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\b0\b065703cfbf00f74bb12dd5fc273ec59
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\b0\b065703cfbf00f74bb12dd5fc273ec59
+      projectPath: Library\metadata\b0\b065703cfbf00f74bb12dd5fc273ec59
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\b2\b2b693dffac3a4433b3114fea0b7fd4e
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\b2\b2b693dffac3a4433b3114fea0b7fd4e
+      projectPath: Library\metadata\b2\b2b693dffac3a4433b3114fea0b7fd4e
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\b2\b2bead50dbf86924f8e51f03ddbebf70
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\b2\b2bead50dbf86924f8e51f03ddbebf70
+      projectPath: Library\metadata\b2\b2bead50dbf86924f8e51f03ddbebf70
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\b5\b5da970776034f77a070d99423d68791
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\b5\b5da970776034f77a070d99423d68791
+      projectPath: Library\metadata\b5\b5da970776034f77a070d99423d68791
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\b9\b95ab00277ee47c687d710a3bb623d0a
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\b9\b95ab00277ee47c687d710a3bb623d0a
+      projectPath: Library\metadata\b9\b95ab00277ee47c687d710a3bb623d0a
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\d0\d05b96cee66e14240838de167097537a
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\d0\d05b96cee66e14240838de167097537a
+      projectPath: Library\metadata\d0\d05b96cee66e14240838de167097537a
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\d3\d33d54853fd0f48e0ac8a63ea91e6626
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\d3\d33d54853fd0f48e0ac8a63ea91e6626
+      projectPath: Library\metadata\d3\d33d54853fd0f48e0ac8a63ea91e6626
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\d9\d91035c548f23744c9bfb107348ed1c0
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\d9\d91035c548f23744c9bfb107348ed1c0
+      projectPath: Library\metadata\d9\d91035c548f23744c9bfb107348ed1c0
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\db\db2c1ccad7abc5945acd3342facc4e4c
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\db\db2c1ccad7abc5945acd3342facc4e4c
+      projectPath: Library\metadata\db\db2c1ccad7abc5945acd3342facc4e4c
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\dc\dc443db3e92b4983b9738c1131f555cb
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\dc\dc443db3e92b4983b9738c1131f555cb
+      projectPath: Library\metadata\dc\dc443db3e92b4983b9738c1131f555cb
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\e1\e1007cd261c84053beb0c3537782908d
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\e1\e1007cd261c84053beb0c3537782908d
+      projectPath: Library\metadata\e1\e1007cd261c84053beb0c3537782908d
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\e3\e33383ce3afd26c41a6994f0af6a6743
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\e3\e33383ce3afd26c41a6994f0af6a6743
+      projectPath: Library\metadata\e3\e33383ce3afd26c41a6994f0af6a6743
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\e4\e4f4cf1b9b434137a499903a7a1d651a
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\e4\e4f4cf1b9b434137a499903a7a1d651a
+      projectPath: Library\metadata\e4\e4f4cf1b9b434137a499903a7a1d651a
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\ea\ead147da21254ff9a0a936bdd75e1680
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\ea\ead147da21254ff9a0a936bdd75e1680
+      projectPath: Library\metadata\ea\ead147da21254ff9a0a936bdd75e1680
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\ed\ed7343f30e3843b3afda8f8b02669cea
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\ed\ed7343f30e3843b3afda8f8b02669cea
+      projectPath: Library\metadata\ed\ed7343f30e3843b3afda8f8b02669cea
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\f5\f5f67c52d1564df4a8936ccd202a3bd8
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\f5\f5f67c52d1564df4a8936ccd202a3bd8
+      projectPath: Library\metadata\f5\f5f67c52d1564df4a8936ccd202a3bd8
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\f7\f70555f144d8491a825f0804e09c671c
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\f7\f70555f144d8491a825f0804e09c671c
+      projectPath: Library\metadata\f7\f70555f144d8491a825f0804e09c671c
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\metadata\f7\f7b54ff4a43d4fcf81b4538b678e0bcc
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\metadata\f7\f7b54ff4a43d4fcf81b4538b678e0bcc
+      projectPath: Library\metadata\f7\f7b54ff4a43d4fcf81b4538b678e0bcc
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\shadercompiler-UnityShaderCompiler.exe0.log
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\shadercompiler-UnityShaderCompiler.exe0.log
+      projectPath: Library\shadercompiler-UnityShaderCompiler.exe0.log
+      originalPath: 
+      status: 3
+      staged: 0
+  - commitID: 48f5d9112df0a4f9299bcd3098bb276e17f6c935
+    mergeA: 
+    mergeB: 
+    authorName: mawy1
+    authorEmail: 44568196+mawy1@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Basic Controller
+    description: "Basic Controller\r\n\r\nBasiscontoller f\xFCr die Spielfigur."
+    timeString: 2018-11-13T19:57:59.000+01:00
+    commitTimeString: 2018-11-13T19:57:59.000+01:00
+    changes:
+    - path: Scripts\Controller.cs
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Scripts\Controller.cs
+      projectPath: ..\Scripts\Controller.cs
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Scripts\Controller.cs.meta
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Scripts\Controller.cs.meta
+      projectPath: ..\Scripts\Controller.cs.meta
+      originalPath: 
+      status: 4
+      staged: 0
+  - commitID: d31eeccc47ece8becef7eef4d455f02d28181f03
+    mergeA: b1fc57b11e339621d842ee21c6f7e284e6e5eed4
+    mergeB: 2f377466c4d2ca8d6c5ec451d10c1bbc76fa5015
+    authorName: Andrew73174
+    authorEmail: ChamberlainAn73174@th-nuernberg.de
+    commitEmail: ChamberlainAn73174@th-nuernberg.de
+    commitName: Andrew73174
+    summary: Merge branch 'master' of https://github.com/i1Spook/SoftwareEngineering
+    description: Merge branch 'master' of https://github.com/i1Spook/SoftwareEngineering
+    timeString: 2018-11-10T23:15:56.000+01:00
+    commitTimeString: 2018-11-10T23:15:56.000+01:00
+    changes: []
+  - commitID: b1fc57b11e339621d842ee21c6f7e284e6e5eed4
+    mergeA: 
+    mergeB: 
+    authorName: Andrew73174
+    authorEmail: ChamberlainAn73174@th-nuernberg.de
+    commitEmail: ChamberlainAn73174@th-nuernberg.de
+    commitName: Andrew73174
+    summary: More PortalStuff
+    description: "More PortalStuff\r\n\r\nDiscord Changelog"
+    timeString: 2018-11-10T23:15:51.000+01:00
+    commitTimeString: 2018-11-10T23:15:51.000+01:00
+    changes:
+    - path: Puzzle Portal\Assets\Scenes\SampleScene.unity
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Scenes\SampleScene.unity
+      projectPath: Assets\Scenes\SampleScene.unity
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Assets\Scripts\Level\PortalShot.cs
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Scripts\Level\PortalShot.cs
+      projectPath: Assets\Scripts\Level\PortalShot.cs
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\Assets\Scripts\Level\PortalShot.cs.meta
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Scripts\Level\PortalShot.cs.meta
+      projectPath: Assets\Scripts\Level\PortalShot.cs.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\Assets\Scripts\Player\AimAtMouse.cs
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Scripts\Player\AimAtMouse.cs
+      projectPath: Assets\Scripts\Player\AimAtMouse.cs
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\Assets\Scripts\Player\AimAtMouse.cs.meta
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Scripts\Player\AimAtMouse.cs.meta
+      projectPath: Assets\Scripts\Player\AimAtMouse.cs.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\Assets\Scripts\Player\PlayerControll.cs
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Scripts\Player\PlayerControll.cs
+      projectPath: Assets\Scripts\Player\PlayerControll.cs
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Assets\ShootingPortal.cs
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\ShootingPortal.cs
+      projectPath: Assets\ShootingPortal.cs
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\Assets\ShootingPortal.cs.meta
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\ShootingPortal.cs.meta
+      projectPath: Assets\ShootingPortal.cs.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\Assets\Sprites\Level\Portal\BlueDrop.png
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Sprites\Level\Portal\BlueDrop.png
+      projectPath: Assets\Sprites\Level\Portal\BlueDrop.png
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\Assets\Sprites\Level\Portal\BlueDrop.png.meta
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Sprites\Level\Portal\BlueDrop.png.meta
+      projectPath: Assets\Sprites\Level\Portal\BlueDrop.png.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\Assets\Sprites\Level\Portal\OrangeDrop.png
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Sprites\Level\Portal\OrangeDrop.png
+      projectPath: Assets\Sprites\Level\Portal\OrangeDrop.png
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\Assets\Sprites\Level\Portal\OrangeDrop.png.meta
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Sprites\Level\Portal\OrangeDrop.png.meta
+      projectPath: Assets\Sprites\Level\Portal\OrangeDrop.png.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\Library\CurrentLayout.dwlt
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\CurrentLayout.dwlt
+      projectPath: Library\CurrentLayout.dwlt
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\InspectorExpandedItems.asset
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\InspectorExpandedItems.asset
+      projectPath: Library\InspectorExpandedItems.asset
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\assetDatabase3
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\assetDatabase3
+      projectPath: Library\assetDatabase3
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\gfu\cache\gitlocks.yaml
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\gfu\cache\gitlocks.yaml
+      projectPath: Library\gfu\cache\gitlocks.yaml
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\gfu\cache\gitstatusentries.yaml
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\gfu\cache\gitstatusentries.yaml
+      projectPath: Library\gfu\cache\gitstatusentries.yaml
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\gfu\cache\gittrackingstatus.yaml
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\gfu\cache\gittrackingstatus.yaml
+      projectPath: Library\gfu\cache\gittrackingstatus.yaml
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\gfu\cache\repoinfo.yaml
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\gfu\cache\repoinfo.yaml
+      projectPath: Library\gfu\cache\repoinfo.yaml
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\shadercompiler-UnityShaderCompiler.exe0.log
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\shadercompiler-UnityShaderCompiler.exe0.log
+      projectPath: Library\shadercompiler-UnityShaderCompiler.exe0.log
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\ProjectSettings\DynamicsManager.asset
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\ProjectSettings\DynamicsManager.asset
+      projectPath: ProjectSettings\DynamicsManager.asset
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\ProjectSettings\Physics2DSettings.asset
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\ProjectSettings\Physics2DSettings.asset
+      projectPath: ProjectSettings\Physics2DSettings.asset
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\ProjectSettings\TagManager.asset
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\ProjectSettings\TagManager.asset
+      projectPath: ProjectSettings\TagManager.asset
+      originalPath: 
+      status: 3
+      staged: 0
+  - commitID: 2f377466c4d2ca8d6c5ec451d10c1bbc76fa5015
+    mergeA: 
+    mergeB: 
+    authorName: Andrew73174
+    authorEmail: 44318244+Andrew73174@users.noreply.github.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Delete BackupOfTeleporting.cs
+    description: "Delete BackupOfTeleporting.cs\r\n\r\nNot needed anymore"
+    timeString: 2018-11-10T17:34:38.000+01:00
+    commitTimeString: 2018-11-10T17:34:38.000+01:00
+    changes:
+    - path: Puzzle Portal\BackupOfTeleporting.cs
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\BackupOfTeleporting.cs
+      projectPath: BackupOfTeleporting.cs
+      originalPath: 
+      status: 5
+      staged: 0
+  - commitID: 43e86754742ea02ef17303163c202f5d753735cc
+    mergeA: 
+    mergeB: 
+    authorName: Andrew73174
+    authorEmail: ChamberlainAn73174@th-nuernberg.de
+    commitEmail: ChamberlainAn73174@th-nuernberg.de
+    commitName: Andrew73174
+    summary: CodeCleanup
+    description: CodeCleanup
+    timeString: 2018-11-10T17:33:28.000+01:00
+    commitTimeString: 2018-11-10T17:33:28.000+01:00
+    changes:
+    - path: Puzzle Portal\Assets\Scenes\SampleScene.unity
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Scenes\SampleScene.unity
+      projectPath: Assets\Scenes\SampleScene.unity
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Assets\Scripts\Level\PortingPlayer.cs
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Scripts\Level\PortingPlayer.cs
+      projectPath: Assets\Scripts\Level\PortingPlayer.cs
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Assets\Scripts\Player\PlayerControll.cs
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Scripts\Player\PlayerControll.cs
+      projectPath: Assets\Scripts\Player\PlayerControll.cs
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\CurrentLayout.dwlt
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\CurrentLayout.dwlt
+      projectPath: Library\CurrentLayout.dwlt
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\InspectorExpandedItems.asset
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\InspectorExpandedItems.asset
+      projectPath: Library\InspectorExpandedItems.asset
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\assetDatabase3
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\assetDatabase3
+      projectPath: Library\assetDatabase3
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\gfu\cache\gitlocks.yaml
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\gfu\cache\gitlocks.yaml
+      projectPath: Library\gfu\cache\gitlocks.yaml
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\gfu\cache\gitstatusentries.yaml
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\gfu\cache\gitstatusentries.yaml
+      projectPath: Library\gfu\cache\gitstatusentries.yaml
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\gfu\cache\gittrackingstatus.yaml
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\gfu\cache\gittrackingstatus.yaml
+      projectPath: Library\gfu\cache\gittrackingstatus.yaml
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\gfu\cache\repoinfo.yaml
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\gfu\cache\repoinfo.yaml
+      projectPath: Library\gfu\cache\repoinfo.yaml
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\shadercompiler-UnityShaderCompiler.exe0.log
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\shadercompiler-UnityShaderCompiler.exe0.log
+      projectPath: Library\shadercompiler-UnityShaderCompiler.exe0.log
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\ProjectSettings\TagManager.asset
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\ProjectSettings\TagManager.asset
+      projectPath: ProjectSettings\TagManager.asset
+      originalPath: 
+      status: 3
+      staged: 0
+  - commitID: ab1aad5f436ec009155e2f92cd34214977b64882
+    mergeA: 
+    mergeB: 
+    authorName: Andrew73174
+    authorEmail: ChamberlainAn73174@th-nuernberg.de
+    commitEmail: ChamberlainAn73174@th-nuernberg.de
+    commitName: Andrew73174
+    summary: Organized Files
+    description: Organized Files
+    timeString: 2018-11-10T11:59:39.000+01:00
+    commitTimeString: 2018-11-10T11:59:39.000+01:00
+    changes:
+    - path: "Portal\\Assets\\PortingPlayer.cs\tPuzzle Portal\\Assets\\Scripts\\Level\\PortingPlayer.cs"
+      fullPath: "A:\\User\\Documents\\GitHub\\SE\\SoftwareEngineering\\Portal\\Assets\\PortingPlayer.cs\tPuzzle
+        Portal\\Assets\\Scripts\\Level\\PortingPlayer.cs"
+      projectPath: "..\\Portal\\Assets\\PortingPlayer.cs\tPuzzle Portal\\Assets\\Scripts\\Level\\PortingPlayer.cs"
+      originalPath: Puzzle
+      status: 6
+      staged: 0
+    - path: "Portal\\Assets\\PortingPlayer.cs.meta\tPuzzle Portal\\Assets\\Scripts\\Level\\PortingPlayer.cs.meta"
+      fullPath: "A:\\User\\Documents\\GitHub\\SE\\SoftwareEngineering\\Portal\\Assets\\PortingPlayer.cs.meta\tPuzzle
+        Portal\\Assets\\Scripts\\Level\\PortingPlayer.cs.meta"
+      projectPath: "..\\Portal\\Assets\\PortingPlayer.cs.meta\tPuzzle Portal\\Assets\\Scripts\\Level\\PortingPlayer.cs.meta"
+      originalPath: Puzzle
+      status: 6
+      staged: 0
+    - path: "Portal\\Assets\\PlayerControll.cs\tPuzzle Portal\\Assets\\Scripts\\Player\\PlayerControll.cs"
+      fullPath: "A:\\User\\Documents\\GitHub\\SE\\SoftwareEngineering\\Portal\\Assets\\PlayerControll.cs\tPuzzle
+        Portal\\Assets\\Scripts\\Player\\PlayerControll.cs"
+      projectPath: "..\\Portal\\Assets\\PlayerControll.cs\tPuzzle Portal\\Assets\\Scripts\\Player\\PlayerControll.cs"
+      originalPath: Puzzle
+      status: 6
+      staged: 0
+    - path: "Portal\\Assets\\PlayerControll.cs.meta\tPuzzle Portal\\Assets\\Scripts\\Player\\PlayerControll.cs.meta"
+      fullPath: "A:\\User\\Documents\\GitHub\\SE\\SoftwareEngineering\\Portal\\Assets\\PlayerControll.cs.meta\tPuzzle
+        Portal\\Assets\\Scripts\\Player\\PlayerControll.cs.meta"
+      projectPath: "..\\Portal\\Assets\\PlayerControll.cs.meta\tPuzzle Portal\\Assets\\Scripts\\Player\\PlayerControll.cs.meta"
+      originalPath: Puzzle
+      status: 6
+      staged: 0
+    - path: Puzzle Portal\Library\CurrentLayout.dwlt
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\CurrentLayout.dwlt
+      projectPath: Library\CurrentLayout.dwlt
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\assetDatabase3
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\assetDatabase3
+      projectPath: Library\assetDatabase3
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\expandedItems
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\expandedItems
+      projectPath: Library\expandedItems
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\gfu\cache\gitlocks.yaml
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\gfu\cache\gitlocks.yaml
+      projectPath: Library\gfu\cache\gitlocks.yaml
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\gfu\cache\gitstatusentries.yaml
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\gfu\cache\gitstatusentries.yaml
+      projectPath: Library\gfu\cache\gitstatusentries.yaml
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\gfu\cache\gittrackingstatus.yaml
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\gfu\cache\gittrackingstatus.yaml
+      projectPath: Library\gfu\cache\gittrackingstatus.yaml
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\gfu\cache\repoinfo.yaml
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\gfu\cache\repoinfo.yaml
+      projectPath: Library\gfu\cache\repoinfo.yaml
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\shadercompiler-UnityShaderCompiler.exe0.log
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\shadercompiler-UnityShaderCompiler.exe0.log
+      projectPath: Library\shadercompiler-UnityShaderCompiler.exe0.log
+      originalPath: 
+      status: 3
+      staged: 0
+  - commitID: 51b385d88831ff880a4c93c38f1fd9f30198fa2e
+    mergeA: 
+    mergeB: 
+    authorName: Andrew73174
+    authorEmail: ChamberlainAn73174@th-nuernberg.de
+    commitEmail: ChamberlainAn73174@th-nuernberg.de
+    commitName: Andrew73174
+    summary: Added Portals
+    description: Added Portals
+    timeString: 2018-11-10T11:56:59.000+01:00
+    commitTimeString: 2018-11-10T11:56:59.000+01:00
+    changes:
+    - path: Puzzle Portal\Assets\PlayerControll.cs
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\PlayerControll.cs
+      projectPath: Assets\PlayerControll.cs
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\Assets\PlayerControll.cs.meta
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\PlayerControll.cs.meta
+      projectPath: Assets\PlayerControll.cs.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\Assets\PortingPlayer.cs
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\PortingPlayer.cs
+      projectPath: Assets\PortingPlayer.cs
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\Assets\PortingPlayer.cs.meta
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\PortingPlayer.cs.meta
+      projectPath: Assets\PortingPlayer.cs.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\Assets\Scenes\SampleScene.unity
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Scenes\SampleScene.unity
+      projectPath: Assets\Scenes\SampleScene.unity
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Assets\Sprites\Player\maincharacter-arme.png
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Sprites\Player\maincharacter-arme.png
+      projectPath: Assets\Sprites\Player\maincharacter-arme.png
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\Assets\Sprites\Player\maincharacter-arme.png.meta
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Sprites\Player\maincharacter-arme.png.meta
+      projectPath: Assets\Sprites\Player\maincharacter-arme.png.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\Assets\Sprites\Player\maincharacter.png
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Sprites\Player\maincharacter.png
+      projectPath: Assets\Sprites\Player\maincharacter.png
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\Assets\Sprites\Player\maincharacter.png.meta
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Sprites\Player\maincharacter.png.meta
+      projectPath: Assets\Sprites\Player\maincharacter.png.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\Assets\Sprites\Turret\turret-boden.png
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Sprites\Turret\turret-boden.png
+      projectPath: Assets\Sprites\Turret\turret-boden.png
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\Assets\Sprites\Turret\turret-boden.png.meta
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Sprites\Turret\turret-boden.png.meta
+      projectPath: Assets\Sprites\Turret\turret-boden.png.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\Assets\Standard Assets\Prototyping\Materials\NavyGrid.mat
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Standard
+        Assets\Prototyping\Materials\NavyGrid.mat
+      projectPath: Assets\Standard Assets\Prototyping\Materials\NavyGrid.mat
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Assets\Standard Assets\Prototyping\Materials\SwatchTurquoiseAlbedo.mat
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Standard
+        Assets\Prototyping\Materials\SwatchTurquoiseAlbedo.mat
+      projectPath: Assets\Standard Assets\Prototyping\Materials\SwatchTurquoiseAlbedo.mat
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\Assets\Standard Assets\Prototyping\Materials\SwatchTurquoiseAlbedo.mat.meta
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Assets\Standard
+        Assets\Prototyping\Materials\SwatchTurquoiseAlbedo.mat.meta
+      projectPath: Assets\Standard Assets\Prototyping\Materials\SwatchTurquoiseAlbedo.mat.meta
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\BackupOfTeleporting.cs
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\BackupOfTeleporting.cs
+      projectPath: BackupOfTeleporting.cs
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: Puzzle Portal\Library\CurrentLayout.dwlt
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\CurrentLayout.dwlt
+      projectPath: Library\CurrentLayout.dwlt
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\EditorInstance.json
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\EditorInstance.json
+      projectPath: Library\EditorInstance.json
+      originalPath: 
+      status: 5
+      staged: 0
+    - path: Puzzle Portal\Library\InspectorExpandedItems.asset
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\InspectorExpandedItems.asset
+      projectPath: Library\InspectorExpandedItems.asset
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\LastSceneManagerSetup.txt
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\LastSceneManagerSetup.txt
+      projectPath: Library\LastSceneManagerSetup.txt
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\ProjectSettings.asset
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\ProjectSettings.asset
+      projectPath: Library\ProjectSettings.asset
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\ShaderCache.db
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\ShaderCache.db
+      projectPath: Library\ShaderCache.db
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\assetDatabase3
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\assetDatabase3
+      projectPath: Library\assetDatabase3
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\expandedItems
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\expandedItems
+      projectPath: Library\expandedItems
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\gfu\cache\branches.yaml
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\gfu\cache\branches.yaml
+      projectPath: Library\gfu\cache\branches.yaml
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\gfu\cache\gitlocks.yaml
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\gfu\cache\gitlocks.yaml
+      projectPath: Library\gfu\cache\gitlocks.yaml
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\gfu\cache\gitlog.yaml
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\gfu\cache\gitlog.yaml
+      projectPath: Library\gfu\cache\gitlog.yaml
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\gfu\cache\gitstatusentries.yaml
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\gfu\cache\gitstatusentries.yaml
+      projectPath: Library\gfu\cache\gitstatusentries.yaml
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\gfu\cache\gittrackingstatus.yaml
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\gfu\cache\gittrackingstatus.yaml
+      projectPath: Library\gfu\cache\gittrackingstatus.yaml
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\gfu\cache\repoinfo.yaml
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\gfu\cache\repoinfo.yaml
+      projectPath: Library\gfu\cache\repoinfo.yaml
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\Library\shadercompiler-UnityShaderCompiler.exe0.log
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\Library\shadercompiler-UnityShaderCompiler.exe0.log
+      projectPath: Library\shadercompiler-UnityShaderCompiler.exe0.log
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\ProjectSettings\QualitySettings.asset
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\ProjectSettings\QualitySettings.asset
+      projectPath: ProjectSettings\QualitySettings.asset
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\ProjectSettings\TagManager.asset
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\ProjectSettings\TagManager.asset
+      projectPath: ProjectSettings\TagManager.asset
+      originalPath: 
+      status: 3
+      staged: 0
+    - path: Puzzle Portal\ProjectSettings\UnityConnectSettings.asset
+      fullPath: A:\User\Documents\GitHub\SE\SoftwareEngineering\Puzzle Portal\ProjectSettings\UnityConnectSettings.asset
+      projectPath: ProjectSettings\UnityConnectSettings.asset
+      originalPath: 
+      status: 3
+      staged: 0
   - commitID: 3e894d4dd69534f1a1684dc9ed7412373cc2428b
     mergeA: 
     mergeB: 
