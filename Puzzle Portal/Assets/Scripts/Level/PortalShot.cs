@@ -9,16 +9,17 @@ public class PortalShot : MonoBehaviour
     public float winkel;
     public Vector3 Showme;
     Quaternion Rotation;
+    
     // Use this for initialization
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
     void OnCollisionEnter2D(Collision2D CollisionWith)
     {
@@ -37,10 +38,24 @@ public class PortalShot : MonoBehaviour
         {
             angle = 0f;
         }
-
+        CallResetShot();
+              
 
             BluePortal.transform.rotation = Rotation * Quaternion.Euler(0, 0, angle);
 
         Destroy(gameObject);
+    }
+   
+
+    void CallResetShot ()
+    {
+        if (tag == "BluePortal")
+        {
+            AimAtMouse.ResetShot(true, false);
+        }
+        else if (tag == "OrangePortal")
+        {
+            AimAtMouse.ResetShot(false, true);
+        }
     }
 }

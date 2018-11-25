@@ -8,6 +8,9 @@ TagManager:
   - BluePortal
   - OrangePortal
   - Portable
+  - Keycard
+  - Item
+  - FireExt
   layers:
   - Default
   - TransparentFX
@@ -19,7 +22,7 @@ TagManager:
   - 
   - Player
   - PortalShots
-  - 
+  - Items
   - 
   - 
   - 
