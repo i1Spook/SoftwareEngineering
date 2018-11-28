@@ -39,11 +39,12 @@ public class PortalShot : MonoBehaviour
             {
                 angle = 0f;
             }
-            CallResetShot();
+
 
             BluePortal.transform.rotation = Rotation * Quaternion.Euler(0, 0, angle);
         }
 
+        CallResetShot();
         Destroy(gameObject);
     }
 
