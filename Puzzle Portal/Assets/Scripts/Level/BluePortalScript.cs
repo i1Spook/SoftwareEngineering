@@ -6,15 +6,14 @@ public class BluePortalScript : MonoBehaviour
 {
 
     public GameObject BluePortal;
+
     public GameObject OrangePortal;
 
     public float velo;
 
     public static bool disableThisPortal = false;
 
-    float Cooldown = 0f;
-
-    Vector2 OtherPortalUpVector;
+    Vector2 OrangePortalUpVector;
 
     // Use this for initialization
     void Start()
@@ -31,47 +30,38 @@ public class BluePortalScript : MonoBehaviour
         //Check if Object is allowed to teleport
         if ((Object.gameObject.tag == "Player") || (Object.gameObject.tag == "Portable"))
         {
-            StartCoroutine(Teleport(Object));
+            Teleport(Object);
         }
     }
 
 
-    IEnumerator Teleport(Collider2D toBePorted)
+    void Teleport(Collider2D toBePorted)
     {
-
-        
-
         if (!disableThisPortal)
         {
             //Disable the Orange Portal
             OrangePortalScript.disableThisPortal = true;
 
-            //Turn Off OtherPortals BoxCollider (Time is "Cooldown")
-            //OrangePortal.GetComponent<BoxCollider2D>().enabled = false;
-
-            //Get the UpVector of the OtherPortal
-            OtherPortalUpVector = OrangePortal.transform.up;
+            //Get the UpVector of the OrangePortal
+            OrangePortalUpVector = OrangePortal.transform.up;
 
             //Teleport Object to position of otherPortal
             toBePorted.transform.position = new Vector2(OrangePortal.transform.position.x, OrangePortal.transform.position.y);
 
             //Gives the Object it's original velocity in the Updirection of the OtherPortal
-            toBePorted.attachedRigidbody.velocity = OtherPortalUpVector * toBePorted.attachedRigidbody.velocity.magnitude;
+            toBePorted.attachedRigidbody.velocity = OrangePortalUpVector * toBePorted.attachedRigidbody.velocity.magnitude;
         }
-        //Cooldown for the OtherPortal BoxCollider to turn back on
-        yield return new WaitForSeconds(Cooldown);
 
+        //Enforce lower terminal Velocity
         if (toBePorted.attachedRigidbody.velocity.magnitude > 30)
         {
-            toBePorted.attachedRigidbody.AddForce(-toBePorted.attachedRigidbody.velocity*2);
+            toBePorted.attachedRigidbody.AddForce(-toBePorted.attachedRigidbody.velocity * 2);
         }
-
-        //Turn On OtherPortals BoxCollider
-        //OrangePortal.GetComponent<BoxCollider2D>().enabled = true;
     }
 
     public void OnTriggerExit2D(Collider2D CollisionObject)
     {
+        //Reset this Portal
         disableThisPortal = false;
     }
 }

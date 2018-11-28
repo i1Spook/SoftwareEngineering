@@ -11,6 +11,8 @@ TagManager:
   - Keycard
   - Item
   - FireExt
+  - Portalwall
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -23,8 +25,8 @@ TagManager:
   - Player
   - PortalShots
   - Items
-  - 
-  - 
+  - PortalWall
+  - Wall
   - 
   - 
   - 
