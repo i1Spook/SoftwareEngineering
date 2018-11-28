@@ -6,9 +6,8 @@ public class PortalShot : MonoBehaviour
 {
 
     public GameObject BluePortal;
-    public float winkel;
-    public Vector3 Showme;
-    Quaternion Rotation;
+
+
     // Use this for initialization
     void Start()
     {
@@ -22,25 +21,42 @@ public class PortalShot : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D CollisionWith)
     {
-        Rotation = CollisionWith.gameObject.transform.rotation;
-        winkel = Rotation.eulerAngles.z;
-        BluePortal.transform.position = transform.position;
+        float winkel;
+        Quaternion Rotation;
 
-        Showme = transform.right;
-
-        var angle = 180f;
-        if (((winkel == 90) || (winkel == -90)) && (transform.right.y > 0f))
+        if (CollisionWith.gameObject.tag.ToUpper() == "PORTALWALL")
         {
-            angle = 0f;
-        }
-        else if ((winkel == 0) && (transform.right.x > 0f))
-        {
-            angle = 0f;
-        }
+            Rotation = CollisionWith.gameObject.transform.rotation;
+            winkel = Rotation.eulerAngles.z;
+            BluePortal.transform.position = transform.position;
 
+            var angle = 180f;
+            if (((winkel == 90) || (winkel == -90)) && (transform.right.y > 0f))
+            {
+                angle = 0f;
+            }
+            else if ((winkel == 0) && (transform.right.x > 0f))
+            {
+                angle = 0f;
+            }
+            CallResetShot();
 
             BluePortal.transform.rotation = Rotation * Quaternion.Euler(0, 0, angle);
+        }
 
         Destroy(gameObject);
+    }
+
+
+    void CallResetShot()
+    {
+        if (tag == "BluePortal")
+        {
+            AimAtMouse.ResetShot(true, false);
+        }
+        else if (tag == "OrangePortal")
+        {
+            AimAtMouse.ResetShot(false, true);
+        }
     }
 }
