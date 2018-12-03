@@ -29,7 +29,7 @@ public class OrangePortalScript : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D Object)
     {
         //Check if Object is allowed to teleport
-        if ((Object.gameObject.tag == "Player") || (Object.gameObject.tag == "Portable"))
+        if ((Object.gameObject.tag == "Player") || (Object.gameObject.tag == "Portable") || (Object.gameObject.tag == "Item"))
         {
             StartCoroutine(Teleport(Object));
         }
@@ -65,7 +65,7 @@ public class OrangePortalScript : MonoBehaviour
 
         if (toBePorted.attachedRigidbody.velocity.magnitude > 30)
         {
-            toBePorted.attachedRigidbody.AddForce(-toBePorted.attachedRigidbody.velocity*2);
+            toBePorted.attachedRigidbody.AddForce(-toBePorted.attachedRigidbody.velocity);
         }
         //Turn On OtherPortals BoxCollider
         //BluePortal.GetComponent<BoxCollider2D>().enabled = true;

@@ -28,7 +28,7 @@ public class BluePortalScript : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D Object)
     {
         //Check if Object is allowed to teleport
-        if ((Object.gameObject.tag == "Player") || (Object.gameObject.tag == "Portable"))
+        if ((Object.gameObject.tag == "Player") || (Object.gameObject.tag == "Portable") || (Object.gameObject.tag == "Item"))
         {
             Teleport(Object);
         }
@@ -55,7 +55,7 @@ public class BluePortalScript : MonoBehaviour
         //Enforce lower terminal Velocity
         if (toBePorted.attachedRigidbody.velocity.magnitude > 30)
         {
-            toBePorted.attachedRigidbody.AddForce(-toBePorted.attachedRigidbody.velocity * 2);
+            toBePorted.attachedRigidbody.AddForce(-toBePorted.attachedRigidbody.velocity );
         }
     }
 

@@ -53,11 +53,11 @@ public class PortalShot : MonoBehaviour
     {
         if (tag == "BluePortal")
         {
-            AimAtMouse.ResetShot(true, false);
+            ItemInputHandler.ResetShot(true, false);
         }
         else if (tag == "OrangePortal")
         {
-            AimAtMouse.ResetShot(false, true);
+            ItemInputHandler.ResetShot(false, true);
         }
     }
 }

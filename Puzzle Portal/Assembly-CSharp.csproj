@@ -53,10 +53,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\ItemInputHandler.cs" />
      <Compile Include="Assets\Scripts\Items\ItemScript.cs" />
      <Compile Include="Assets\Scripts\Level\BluePortal.cs" />
      <Compile Include="Assets\Scripts\Level\BluePortalScript.cs" />
-     <Compile Include="Assets\Scripts\Level\Deprecated.cs" />
      <Compile Include="Assets\Scripts\Level\OrangePortalScript.cs" />
      <Compile Include="Assets\Scripts\Level\Portals.cs" />
      <Compile Include="Assets\Scripts\Level\PortalShot.cs" />
@@ -68,16 +68,16 @@
      <Compile Include="Assets\Scripts\Turret\ProjectileSkript.cs" />
      <Compile Include="Assets\Scripts\Turret\TurretSkriptFinal.cs" />
  <Reference Include="UnityEditor.StandardEvents">
- <HintPath>A:/User/Documents/GitHub/SE/SoftwareEngineering/Puzzle Portal/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/Charlie/Google Drive (chamberlainan73174@gmail.com)/Software Engineering/ItemBranch/Puzzle Portal/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>A:/User/Documents/GitHub/SE/SoftwareEngineering/Puzzle Portal/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/Charlie/Google Drive (chamberlainan73174@gmail.com)/Software Engineering/ItemBranch/Puzzle Portal/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>A:/User/Documents/GitHub/SE/SoftwareEngineering/Puzzle Portal/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/Charlie/Google Drive (chamberlainan73174@gmail.com)/Software Engineering/ItemBranch/Puzzle Portal/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>A:/User/Documents/GitHub/SE/SoftwareEngineering/Puzzle Portal/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/Charlie/Google Drive (chamberlainan73174@gmail.com)/Software Engineering/ItemBranch/Puzzle Portal/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>A:/Programme/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
