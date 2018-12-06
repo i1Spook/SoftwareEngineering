@@ -11,13 +11,14 @@ public class BluePortalScript : MonoBehaviour
 
     public float velo;
 
-    public static bool disableThisPortal = false;
+    public static bool disableThisPortal;
 
     Vector2 OrangePortalUpVector;
 
     // Use this for initialization
     void Start()
     {
+        disableThisPortal = false;
     }
 
     // Update is called once per frame
@@ -55,7 +56,7 @@ public class BluePortalScript : MonoBehaviour
         //Enforce lower terminal Velocity
         if (toBePorted.attachedRigidbody.velocity.magnitude > 30)
         {
-            toBePorted.attachedRigidbody.AddForce(-toBePorted.attachedRigidbody.velocity );
+            toBePorted.attachedRigidbody.AddForce(-toBePorted.attachedRigidbody.velocity);
         }
     }
 

@@ -10,6 +10,6 @@ public class DTSCRIPT : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        Detected = true;
+        Detected = ItemScript.InLight;
     }
 }

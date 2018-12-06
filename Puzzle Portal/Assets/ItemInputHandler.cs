@@ -6,18 +6,20 @@ public class ItemInputHandler : MonoBehaviour
 {
     public GameObject BlueOriginal;
     public GameObject OrangeOriginal;
+    public GameObject ArmLocation;
 
     float timerBlue;
     float timerOrange;
 
-    public static bool BlueFired = false;
-    public static bool OrangeFired = false;
+    public static bool BlueFired;
+    public static bool OrangeFired;
 
     public static bool ItemWasShot;
     // Use this for initialization
     void Start()
     {
-
+        BlueFired = false;
+        OrangeFired = false;
     }
 
     // Update is called once per frame
@@ -46,7 +48,7 @@ public class ItemInputHandler : MonoBehaviour
         {
             BlueFired = true;
             GameObject BlueShot = Instantiate(BlueOriginal);
-            BlueShot.GetComponent<Rigidbody2D>().transform.position = transform.position;
+            BlueShot.GetComponent<Rigidbody2D>().transform.position =ArmLocation.transform.position;
             BlueShot.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
 
             FireObject(BlueShot, force);
