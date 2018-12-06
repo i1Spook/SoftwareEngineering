@@ -13,7 +13,8 @@ public class Controller : MonoBehaviour
 	{
         maxSpeed = 10f;
         facingRight = true;
-        rb = gameObject.GetComponentInParent<Rigidbody2D>();
+		rb = GetComponentInParent<Rigidbody2D> ();
+
 	}
 	
 	// Update is called once per frame
