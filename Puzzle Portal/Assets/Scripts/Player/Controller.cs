@@ -7,19 +7,27 @@ public class Controller : MonoBehaviour
 	public float maxSpeed;
 	bool facingRight;
 	Rigidbody2D rb;
+	
+	bool grounded = false;
+	public Transform groundCheck;
+	float groundRadius=0.2f;
+	public LayerMask whatIsGround;
+	
+	public float jumpForce = 400f;
 
 	// Use this for initialization
 	void Start ()
 	{
         maxSpeed = 10f;
         facingRight = true;
-		rb = GetComponentInParent<Rigidbody2D> ();
-
+	rb = GetComponentInParent<Rigidbody2D> ();
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate()
-	{		
+	{
+		grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
+		
 		float move = Input.GetAxis ("Horizontal");
 
 		rb.velocity = new Vector2 (move * maxSpeed, rb.velocity.y);
@@ -29,6 +37,14 @@ public class Controller : MonoBehaviour
 		} else if (move < 0 && facingRight) {
 			Flip ();
 		}
+	}
+	
+	void Update()
+	{
+		if (grounded && Input.GetKeyDown (KeyCode.Space)) {
+			rb.AddForce(new Vector2 (0, jumpForce));
+		}
+			
 	}
 
 	 void Flip()
