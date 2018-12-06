@@ -10,15 +10,14 @@ public class OrangePortalScript : MonoBehaviour
 
     public float velo;
 
-    public static bool disableThisPortal = false;
-
-    float Cooldown = 0f;
+    public static bool disableThisPortal;
 
     Vector2 OtherPortalUpVector;
 
     // Use this for initialization
     void Start()
     {
+        disableThisPortal = false;
     }
 
     // Update is called once per frame
@@ -31,24 +30,21 @@ public class OrangePortalScript : MonoBehaviour
         //Check if Object is allowed to teleport
         if ((Object.gameObject.tag == "Player") || (Object.gameObject.tag == "Portable") || (Object.gameObject.tag == "Item"))
         {
-            StartCoroutine(Teleport(Object));
+            Teleport(Object);
         }
     }
 
 
-    IEnumerator Teleport(Collider2D toBePorted)
+    void Teleport(Collider2D toBePorted)
     {
         velo = toBePorted.attachedRigidbody.velocity.magnitude;
 
-        
+
 
         if (!disableThisPortal)
         {
             //Disable the Blue Portal
             BluePortalScript.disableThisPortal = true;
-
-            //Turn Off OtherPortals BoxCollider (Time is "Cooldown")
-            //BluePortal.GetComponent<BoxCollider2D>().enabled = false;
 
             //Get the UpVector of the OtherPortal
             OtherPortalUpVector = BluePortal.transform.up;
@@ -61,7 +57,6 @@ public class OrangePortalScript : MonoBehaviour
         }
 
         //Cooldown for the OtherPortal BoxCollider to turn back on
-        yield return new WaitForSeconds(Cooldown);
 
         if (toBePorted.attachedRigidbody.velocity.magnitude > 30)
         {

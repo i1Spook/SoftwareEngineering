@@ -22,9 +22,9 @@ GameObject:
   - component: {fileID: 212448334184105994}
   - component: {fileID: 114875560016300220}
   - component: {fileID: 61981924541582498}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Projectile
-  m_TagString: Untagged
+  m_TagString: Death
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

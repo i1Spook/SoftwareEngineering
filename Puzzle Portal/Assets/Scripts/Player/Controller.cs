@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class Controller : MonoBehaviour
 {
-	public float maxSpeed = 10f;
-	bool facingRight = true;
+	public float maxSpeed;
+	bool facingRight;
 	Rigidbody2D rb;
 
 	// Use this for initialization
 	void Start ()
 	{
-		rb = GetComponent<Rigidbody2D> ();
+        maxSpeed = 10f;
+        facingRight = true;
+        rb = gameObject.GetComponentInParent<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame

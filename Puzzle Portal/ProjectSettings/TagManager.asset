@@ -13,6 +13,9 @@ TagManager:
   - FireExt
   - Portalwall
   - Wall
+  - Light
+  - Smoke
+  - Death
   layers:
   - Default
   - TransparentFX
@@ -27,9 +30,9 @@ TagManager:
   - Items
   - PortalWall
   - Wall
-  - 
-  - 
-  - 
+  - Smoke
+  - ItemCollider
+  - Projectile
   - 
   - 
   - 

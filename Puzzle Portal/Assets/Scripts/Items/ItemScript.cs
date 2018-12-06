@@ -6,32 +6,44 @@ public class ItemScript : MonoBehaviour
 {
     public GameObject Player;
 
-    bool GotKeycard = false;
+    bool GotKeycard;
 
     public static GameObject LastHit;
-    public static bool LastHitToggle = false;
 
     static GameObject ItemInHand;
     public static bool ItemInHandToggle;
     public static GameObject ArmLocation;
 
-    public static bool InLight = false;
+    public static uint SmokeCounter;
+    public static bool InLight;
+    public static bool Illuminated;
 
-    public static bool AtItem = false;
+    public static bool AtItem;
 
     void Start()
     {
+        GotKeycard = false;
+        SmokeCounter = 0;
+        InLight = false;
+        Illuminated = false;
+        AtItem = false;
+
         ArmLocation = Player.gameObject.transform.GetChild(0).gameObject;
     }
 
-    public static void ItemInteraction(bool ItemButtonPressed , bool ThrowButtonPressed)
+    void Update()
     {
-        if (ItemButtonPressed && LastHitToggle && !ItemInHandToggle)
+        InLight = (SmokeCounter < 3) && (Illuminated) ? true : false;
+    }
+
+    public static void ItemInteraction(bool ItemButtonPressed, bool ThrowButtonPressed)
+    {
+        if (ItemButtonPressed && AtItem && !ItemInHandToggle)
         {
             LastHit.gameObject.transform.position = ArmLocation.transform.GetChild(0).gameObject.transform.position;
             LastHit.transform.SetParent(ArmLocation.gameObject.transform);
 
-            LastHit.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic ;
+            LastHit.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
             LastHit.GetComponent<Rigidbody2D>().gravityScale = 0;
 
             ItemInHand = LastHit;
@@ -71,30 +83,40 @@ public class ItemScript : MonoBehaviour
         else if (CollisionWith.gameObject.tag.ToUpper() == "ITEM")
         {
             AtItem = true;
+            LastHit = CollisionWith.gameObject;
         }
         else if (CollisionWith.gameObject.tag.ToUpper() == "LIGHT")
         {
-            InLight = true;
+            Illuminated = true;
+        }
+        else if (CollisionWith.gameObject.tag.ToUpper() == "SMOKE")
+        {
+            SmokeCounter++;
+        }
+        else if (CollisionWith.gameObject.tag.ToUpper() == "DEATH")
+        {
+            ProjectileSkript.KillAll = true;
+            Illuminated = false;
+            RestartLevel.Restart();
         }
 
-            LastHit = CollisionWith.gameObject;
-        LastHitToggle = true;
+
     }
 
     void OnTriggerExit2D(Collider2D CollisionWith)
-    {        
+    {
         if (CollisionWith.gameObject.tag.ToUpper() == "ITEM")
         {
             AtItem = false;
             LastHit = null;
-            LastHitToggle = false;
         }
         else if (CollisionWith.gameObject.tag.ToUpper() == "LIGHT")
         {
-            InLight = false;
+            Illuminated = false;
         }
-        //LastHit = null;
-        //LastHitToggle = false;
-        //AtItem = false;
+        else if (CollisionWith.gameObject.tag.ToUpper() == "SMOKE")
+        {
+            SmokeCounter--;
+        }
     }
 }
