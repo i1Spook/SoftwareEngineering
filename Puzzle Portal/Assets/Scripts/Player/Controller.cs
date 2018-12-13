@@ -32,9 +32,9 @@ public class Controller : MonoBehaviour
 
 		rb.velocity = new Vector2 (move * maxSpeed, rb.velocity.y);
 
-		if (move > 0 && !facingRight) {
+		if (((Input.mousePosition.x-rb.position.x)>0) && !facingRight) {
 			Flip ();
-		} else if (move < 0 && facingRight) {
+		} else if (((Input.mousePosition.x-rb.position.x)<=0) && facingRight) {
 			Flip ();
 		}
 	}
