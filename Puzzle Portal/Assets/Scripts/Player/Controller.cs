@@ -5,7 +5,7 @@ using UnityEngine;
 public class Controller : MonoBehaviour
 {
 	public float maxSpeed;
-	bool facingRight;
+	public static bool facingRight;
 	Rigidbody2D rb;
 	
 	bool grounded = false;
@@ -20,7 +20,7 @@ public class Controller : MonoBehaviour
 	{
         maxSpeed = 10f;
         facingRight = true;
-	rb = GetComponentInParent<Rigidbody2D> ();
+	    rb = GetComponentInParent<Rigidbody2D> ();
 	}
 	
 	// Update is called once per frame
@@ -32,11 +32,11 @@ public class Controller : MonoBehaviour
 
 		rb.velocity = new Vector2 (move * maxSpeed, rb.velocity.y);
 
-		if (((Input.mousePosition.x-rb.position.x)>0) && !facingRight) {
+		if (((AimAtMouse.MousePositionRead.x-rb.position.x)>0) && !facingRight) {
 			Flip ();
-		} else if (((Input.mousePosition.x-rb.position.x)<=0) && facingRight) {
-			Flip ();
-		}
+		} else if (((AimAtMouse.MousePositionRead.x-rb.position.x)<=0) && facingRight) {
+			Flip ();         
+        }
 	}
 	
 	void Update()
