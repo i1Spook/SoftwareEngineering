@@ -12,11 +12,15 @@ public class ItemScript : MonoBehaviour
 
     static GameObject ItemInHand;
     public static bool ItemInHandToggle;
-    public static GameObject ArmLocation;
+    public GameObject ArmLocation;
+    static GameObject ArmLocationStatic;
 
     public static uint SmokeCounter;
     public static bool InLight;
     public static bool Illuminated;
+
+    GameObject ThisTurret;
+    bool AtTurret;
 
     public static bool AtItem;
 
@@ -27,21 +31,31 @@ public class ItemScript : MonoBehaviour
         InLight = false;
         Illuminated = false;
         AtItem = false;
+        AtTurret = false;
 
-        ArmLocation = Player.gameObject.transform.GetChild(0).gameObject;
+        ArmLocationStatic = ArmLocation;
     }
 
     void Update()
     {
         InLight = (SmokeCounter < 3) && (Illuminated) ? true : false;
+        if (AtTurret && Input.GetKeyDown(KeyCode.Q))
+        {
+            TurnOffTurret();
+        }
+    }
+
+    void TurnOffTurret()
+    {
+        ThisTurret.GetComponent<TurretSkriptFinal>().Active = false;
     }
 
     public static void ItemInteraction(bool ItemButtonPressed, bool ThrowButtonPressed)
     {
         if (ItemButtonPressed && AtItem && !ItemInHandToggle)
         {
-            LastHit.gameObject.transform.position = ArmLocation.transform.GetChild(0).gameObject.transform.position;
-            LastHit.transform.SetParent(ArmLocation.gameObject.transform);
+            LastHit.gameObject.transform.position = ArmLocationStatic.transform.position;
+            LastHit.transform.SetParent(ArmLocationStatic.gameObject.transform);
 
             LastHit.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
             LastHit.GetComponent<Rigidbody2D>().gravityScale = 0;
@@ -95,9 +109,14 @@ public class ItemScript : MonoBehaviour
         }
         else if (CollisionWith.gameObject.tag.ToUpper() == "DEATH")
         {
-            ProjectileSkript.KillAll = true;
+
             Illuminated = false;
             RestartLevel.Restart();
+        }
+        else if (CollisionWith.gameObject.tag.ToUpper() == "TURRET")
+        {
+            AtTurret = true;
+            ThisTurret = CollisionWith.gameObject;
         }
 
 
@@ -117,6 +136,11 @@ public class ItemScript : MonoBehaviour
         else if (CollisionWith.gameObject.tag.ToUpper() == "SMOKE")
         {
             SmokeCounter--;
+        }
+        else if (CollisionWith.gameObject.tag.ToUpper() == "TURRET")
+        {
+            AtTurret = false;
+            ThisTurret = null;
         }
     }
 }

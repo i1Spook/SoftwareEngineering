@@ -34,7 +34,8 @@ public class Controller : MonoBehaviour
 
 		if (((AimAtMouse.MousePositionRead.x-rb.position.x)>0) && !facingRight) {
 			Flip ();
-		} else if (((AimAtMouse.MousePositionRead.x-rb.position.x)<=0) && facingRight) {
+		} else if (((AimAtMouse.MousePositionRead.x-rb.position.x)<0) && facingRight) {
+
 			Flip ();         
         }
 	}
@@ -50,8 +51,12 @@ public class Controller : MonoBehaviour
 	 void Flip()
 	{
 		facingRight = !facingRight;
-		Vector3 theScale = transform.localScale;
-		theScale.x *= -1;
-	    transform.localScale = theScale;
-	}
+
+        GetComponent<SpriteRenderer>().flipX = !GetComponent<SpriteRenderer>().flipX;
+        //transform.GetChild(0).GetChild(0).GetComponent<SpriteRenderer>().flipY = !transform.GetChild(0).GetChild(0).GetComponent<SpriteRenderer>().flipY;
+
+        //Vector3 theScale = transform.localScale;
+        //theScale.x *= -1;
+        //   transform.localScale = theScale;
+    }
 }

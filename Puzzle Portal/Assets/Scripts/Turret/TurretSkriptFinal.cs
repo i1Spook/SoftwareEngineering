@@ -16,6 +16,7 @@ public class TurretSkriptFinal : MonoBehaviour
     public float Startangle;
     public float threshold = 4; //private?
     public float startTimeBetweenShots = 0.05f;
+
     public float VisionInLightLenght = 100;
     public float VisionInDarknessLength = 3; //Length Private?
     public float SpinupTime = 1;
@@ -23,6 +24,7 @@ public class TurretSkriptFinal : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        Active = true;
         transform.rotation = Quaternion.AngleAxis(Startangle, new Vector3(0, 0, 1));
         startAngle = new Vector2(-transform.right.x, -transform.right.y);
         Debug.Log(startAngle);

@@ -8,6 +8,7 @@ public class FireExt : MonoBehaviour
     public bool HighVelocity;
     public bool HitWall;
     public bool IsStationary;
+    bool veloCheck;
 
     bool IsUsed;
 
@@ -31,6 +32,7 @@ public class FireExt : MonoBehaviour
         HighVelocity = false;
         HitWall = false;
         IsStationary = false;
+        veloCheck = false;
     }
 
     // Update is called once per frame
@@ -68,12 +70,11 @@ public class FireExt : MonoBehaviour
 
                 SmokeClone[i].GetComponent<Rigidbody2D>().AddForce(RandomUp.normalized * Randomizer.Next(5, 20));
 
-                //Destroy(SmokeClone[i], 10);
             }
             HighVelocity = false;
             IsUsed = true;
         }
-        else if (HighVelocity && HitWall && !IsStationary && !IsUsed)
+        else if (HighVelocity && HitWall && !IsStationary /*&& !IsUsed*/)
         {
             int count = 1;
             GameObject[] SmokeTrail = new GameObject[count];
@@ -101,7 +102,6 @@ public class FireExt : MonoBehaviour
                 SmokeTrail[i].transform.position = transform.position;
                 SmokeTrail[i].transform.localScale = new Vector3(0.05f, 0.05f);
                 SmokeTrail[i].GetComponent<Rigidbody2D>().AddForce(RandomUp.normalized * Randomizer.Next(5, 15));
-                //Destroy(SmokeTrail[i], 2);
 
             }
         }
@@ -109,7 +109,9 @@ public class FireExt : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D CollisionWith)
     {
-        HighVelocity = (velo > 7) ? true : false;
+        veloCheck = (velo > 7) ? true : false;
+        if (veloCheck)
+        { HighVelocity = true; }
         HitWall = (CollisionWith.gameObject.tag.ToUpper() == "PORTALWALL") || (CollisionWith.gameObject.tag.ToUpper() == "WALL") ? true : false;
     }
 

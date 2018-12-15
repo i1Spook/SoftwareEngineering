@@ -13,7 +13,6 @@ public class AimAtMouse : MonoBehaviour
 
     bool FlippedArm = false;
 
-  
 
     // Use this for initialization
     void Start()
@@ -35,26 +34,29 @@ public class AimAtMouse : MonoBehaviour
         if (Controller.facingRight && FlippedArm)
         {
             FlipArm();
+            FlippedArm = false;
         }
         else if (!Controller.facingRight && !FlippedArm)
         {
             FlipArm();
-
+            FlippedArm = true;
         }
     }
     
-
 void FlipArm()
     {
         GameObject Arm = gameObject.transform.GetChild(0).gameObject;
-        Vector3 theScale = Arm.transform.localScale;
-        theScale.x *= -1;
-        theScale.y *= -1;
-        Arm.transform.localScale = theScale;
-        FlippedArm = !FlippedArm;
-    }
 
+        Arm.GetComponent<SpriteRenderer>().flipX = !Arm.GetComponent<SpriteRenderer>().flipX;
 
-    
-
+        if (!FlippedArm)
+        {
+            Arm.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 180f));
+        }
+        else
+        {
+            Arm.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
+        }
+    } 
 }
+

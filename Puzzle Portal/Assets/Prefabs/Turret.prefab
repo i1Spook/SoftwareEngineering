@@ -20,11 +20,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4842026935933684}
   - component: {fileID: 212647647439920740}
-  - component: {fileID: 61045832620877826}
   - component: {fileID: 50637135735953506}
-  m_Layer: 0
+  - component: {fileID: 60738343639892528}
+  m_Layer: 14
   m_Name: Turret
-  m_TagString: Portable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39,9 +39,10 @@ GameObject:
   - component: {fileID: 4563517693690528}
   - component: {fileID: 212650468246355878}
   - component: {fileID: 114164059382722660}
+  - component: {fileID: 61671520292537936}
   m_Layer: 0
   m_Name: turret-arm
-  m_TagString: Untagged
+  m_TagString: Turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,8 +54,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1426685826866774}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.12, y: -0.02, z: 0}
-  m_LocalScale: {x: 2.345, y: 1.591, z: 1}
+  m_LocalPosition: {x: -0.153, y: -0.019, z: 0}
+  m_LocalScale: {x: 0.9764727, y: 1.4517875, z: 1}
   m_Children: []
   m_Father: {fileID: 4842026935933684}
   m_RootOrder: 0
@@ -66,8 +67,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1133257278631984}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.54, y: -3.46, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.4251084, y: -2.7482994, z: 0}
+  m_LocalScale: {x: 2.0813, y: 2.0235, z: 1}
   m_Children:
   - {fileID: 4563517693690528}
   m_Father: {fileID: 0}
@@ -93,8 +94,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61045832620877826
-BoxCollider2D:
+--- !u!60 &60738343639892528
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -115,8 +116,40 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.28, y: 0.04}
+      - {x: -0.29999998, y: 0.02}
+      - {x: -0.29999998, y: 0}
+      - {x: -0.48, y: -0.22999999}
+      - {x: -0.48, y: -0.25}
+      - {x: 0.08, y: -0.25}
+      - {x: 0.08, y: -0.19}
+      - {x: -0.099999994, y: 0.04}
+--- !u!61 &61671520292537936
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1426685826866774}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.06, y: 0.03}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 0.5}
+    newSize: {x: 1, y: 0.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.11, y: 0.5}
+  m_Size: {x: 0.65, y: 0.07}
   m_EdgeRadius: 0
 --- !u!114 &114164059382722660
 MonoBehaviour:
@@ -129,14 +162,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d360c31bb8cd971458c1ad0391f5ce55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Projectile: {fileID: 0}
+  Projectile: {fileID: 1464760727935770, guid: 09c4b1e8b0ad123488f599cedde6b839, type: 2}
   Target: {fileID: 0}
   RotationSpeed: 1
-  Angle_min: -90
-  Angle_max: 90
+  Angle_min: -45
+  Angle_max: 45
   Startangle: 0
   threshold: 4
   startTimeBetweenShots: 0.05
+  Active: 0
 --- !u!212 &212647647439920740
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -172,7 +206,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 52990dd015abace42a66f005d9c8fca3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9beeba5d6a21d5940866b772faf39475, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -220,7 +254,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c6e56c4b2d7e60442bd9f69c157a50e7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 0.5}
