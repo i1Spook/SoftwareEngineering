@@ -12,25 +12,30 @@ public class TurretSkriptFinal : MonoBehaviour
     public float Startangle;
     public float threshold = 4; //private?
     public float startTimeBetweenShots = 0.05f;
+
+    public bool Active;
     // Use this for initialization
     void Start()
     {
+        Active = true;
         transform.rotation = Quaternion.AngleAxis(Startangle, new Vector3(0, 0, 1));
     }
     void Update()
-    {
-        updateValues();
-        if (detected)
+    {   if (Active)
         {
-            rotateToTargetPosition();
-            if (targetLocked())
+            updateValues();
+            if (detected)
             {
-                fireProjectile();
+                rotateToTargetPosition();
+                if (targetLocked())
+                {
+                    fireProjectile();
+                }
             }
-        }
-        else
-        {
-            Idlemode();
+            else
+            {
+                Idlemode();
+            }
         }
     }
     

@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4266246739616302}
   - component: {fileID: 212771639455123200}
   - component: {fileID: 60859657058016356}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Light_PartSide
   m_TagString: Light
   m_Icon: {fileID: 0}
