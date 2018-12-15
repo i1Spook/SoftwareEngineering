@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraScript : MonoBehaviour {
 
 	public GameObject player;
-
+	public float offY;
 	private Vector3 offset;
 
 	// Use this for initialization
@@ -15,6 +15,6 @@ public class CameraScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void LateUpdate () {
-		transform.position = player.transform.position + offset;
+		transform.position = (new Vector3(player.transform.position.x,offY,player.transform.position.z)) + (new Vector3(offset.x,offY,offset.z));
 	}
 }

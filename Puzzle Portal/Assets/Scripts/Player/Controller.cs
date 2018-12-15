@@ -35,6 +35,7 @@ public class Controller : MonoBehaviour
 		if (((AimAtMouse.MousePositionRead.x-rb.position.x)>0) && !facingRight) {
 			Flip ();
 		} else if (((AimAtMouse.MousePositionRead.x-rb.position.x)<0) && facingRight) {
+
 			Flip ();         
         }
 	}

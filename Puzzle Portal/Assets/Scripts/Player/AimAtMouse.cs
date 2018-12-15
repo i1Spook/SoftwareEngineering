@@ -13,7 +13,6 @@ public class AimAtMouse : MonoBehaviour
 
     bool FlippedArm = false;
 
-  
 
     // Use this for initialization
     void Start()
@@ -44,7 +43,6 @@ public class AimAtMouse : MonoBehaviour
         }
     }
     
-
 void FlipArm()
     {
         GameObject Arm = gameObject.transform.GetChild(0).gameObject;
@@ -59,9 +57,6 @@ void FlipArm()
         {
             Arm.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
         }
-    }
-
-
-    
-
+    } 
 }
+
