@@ -8,15 +8,13 @@ public class TurretSkriptFinal : MonoBehaviour
     public GameObject Projectile;
     public Transform Target;
     public float RotationSpeed;
-    public float Angle_min;
-    public float Angle_max;
-    public float Idle_Angle_min;
-    public float Idle_Angle_max;
+    public float AngleCap = 90;
+    public float IdleCap = 30;
     public float Idle_Speed;
+    public bool StartAngleIsRight;
     public float Startangle;
     public float threshold = 4; //private?
     public float startTimeBetweenShots = 0.05f;
-
     public float VisionInLightLenght = 100;
     public float VisionInDarknessLength = 3; //Length Private?
     public float SpinupTime = 1;
@@ -24,10 +22,12 @@ public class TurretSkriptFinal : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        Active = true;
         transform.rotation = Quaternion.AngleAxis(Startangle, new Vector3(0, 0, 1));
         startAngle = new Vector2(-transform.right.x, -transform.right.y);
         Debug.Log(startAngle);
+        if(startAngle.x > 0) { StartAngleIsRight = true; }
+        else { StartAngleIsRight = false; }
+        Debug.Log(StartAngleIsRight);
     }
     Vector2 startAngle;
     void Update()
@@ -43,11 +43,11 @@ public class TurretSkriptFinal : MonoBehaviour
         if (TargetSighted)
         {
             rotateToTargetPosition(currentAngleToTarget);
-            Debug.Log("Turret sees enemy");
+           
             if (targetLocked(rotationtotarget))
             {
                 fireProjectile();
-                Debug.Log("Turret Attacks");
+                
             }
             else
             {
@@ -59,7 +59,7 @@ public class TurretSkriptFinal : MonoBehaviour
             if (isBack)
             {
                 Idlemode();
-                Debug.Log("Turret went Idle");
+                
             }
             else
             {
@@ -82,7 +82,10 @@ public class TurretSkriptFinal : MonoBehaviour
         TurretXAxisDirection = new Vector2(-this.transform.right.x, -this.transform.right.y);
         rotationtotarget = AngleBetweenVector2(Turrettotargetdirection, TurretXAxisDirection);                                                                                                                                                                                                                              //rotationtotarget = (rotationtotarget - (0.25f * Mathf.PI)) % Mathf.PI; //Doesnt work? DOESNT WORK !
         currentAngleToTarget = AngleBetweenVector2(Turrettotargetdirection, new Vector2(-1, 0));
-        
+
+        Debug.Log(rotationtotarget + "ROtTOTArget");
+        Debug.Log(currentAngleToTarget + "Currangletotarget");
+
     }
 
     //bool detected() { }
@@ -115,7 +118,6 @@ public class TurretSkriptFinal : MonoBehaviour
         //Debug.Log(reallength);
         if (DetectionRay.collider != null)
         {
-            Debug.Log(DetectionRay.collider.tag);
             if (DetectionRay.collider.tag == "Player")
             {
                 TargetSighted = true;
@@ -131,14 +133,29 @@ public class TurretSkriptFinal : MonoBehaviour
 
     void rotateToTargetPosition(float AngleToTarget)
     {
-        if (rotationtotarget > 0 && AngleToTarget > Angle_min && AngleToTarget < Angle_max)
+        if (!StartAngleIsRight)
         {
-            transform.Rotate(0, 0, -RotationSpeed);
+            if (rotationtotarget > 0 && Mathf.Abs(AngleToTarget)<AngleCap)
+            {
+                transform.Rotate(0, 0, -RotationSpeed);
+            }
+            if (rotationtotarget < 0 && Mathf.Abs(AngleToTarget) < AngleCap)
+            {
+                transform.Rotate(0, 0, RotationSpeed);
+            }
         }
-        if (rotationtotarget < 0 && AngleToTarget > Angle_min && AngleToTarget < Angle_max)
+        if (StartAngleIsRight)
         {
-            transform.Rotate(0, 0, RotationSpeed);
+            if (rotationtotarget > 0 && Mathf.Abs(AngleToTarget) > AngleCap)
+            {
+                transform.Rotate(0, 0, -RotationSpeed);
+            }
+            if (rotationtotarget < 0 && Mathf.Abs(AngleToTarget) > AngleCap)
+            {
+                transform.Rotate(0, 0, RotationSpeed);
+            }
         }
+
     }
     
     bool targetLocked(float rotationToTarget)
@@ -196,9 +213,20 @@ public class TurretSkriptFinal : MonoBehaviour
         {
             transform.Rotate(0, 0, Idle_Speed);
         }
-        if(this.transform.rotation.z*Mathf.Rad2Deg*4 < Idle_Angle_min || this.transform.rotation.z * Mathf.Rad2Deg*4 > Idle_Angle_max)
+        if (!StartAngleIsRight)
         {
-            switchdirection = !switchdirection;
+            if (Mathf.Abs(this.transform.rotation.z * Mathf.Rad2Deg * 4) > IdleCap)
+            {
+                switchdirection = !switchdirection;
+            }
+        }
+
+        else
+        {
+            if (Mathf.Abs(this.transform.rotation.z * Mathf.Rad2Deg * 4) < IdleCap)
+            {
+                switchdirection = !switchdirection;
+            }
         }
     }
     bool switchdirection;
