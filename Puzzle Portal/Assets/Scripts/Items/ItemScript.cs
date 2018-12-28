@@ -6,7 +6,7 @@ public class ItemScript : MonoBehaviour
 {
     public GameObject Player;
 
-    bool GotKeycard;
+    public bool GotKeycard;
 
     public static GameObject LastHit;
 
@@ -18,6 +18,8 @@ public class ItemScript : MonoBehaviour
     public static uint SmokeCounter;
     public static bool InLight;
     public static bool Illuminated;
+
+    public static bool AllPortalsCreated;
 
     GameObject ThisTurret;
     bool AtTurret;
@@ -33,14 +35,22 @@ public class ItemScript : MonoBehaviour
         AtItem = false;
         AtTurret = false;
 
+        AllPortalsCreated = false;
+
         ArmLocationStatic = ArmLocation;
     }
 
     void Update()
     {
+        if (OrangePortalScript.PortalCreated && BluePortalScript.PortalCreated)
+        {
+            AllPortalsCreated = true;
+        }
+
         InLight = (SmokeCounter < 3) && (Illuminated) ? true : false;
         if (AtTurret && Input.GetKeyDown(KeyCode.Q))
         {
+            FindObjectOfType<AudioManager>().Play("TurretExplosion");
             TurnOffTurret();
         }
     }
@@ -54,6 +64,7 @@ public class ItemScript : MonoBehaviour
     {
         if (ItemButtonPressed && AtItem && !ItemInHandToggle)
         {
+            FindObjectOfType<AudioManager>().Play("ItemPickUp");
             LastHit.gameObject.transform.position = ArmLocationStatic.transform.position;
             LastHit.transform.SetParent(ArmLocationStatic.gameObject.transform);
 
@@ -65,6 +76,7 @@ public class ItemScript : MonoBehaviour
         }
         else if (ItemButtonPressed && ItemInHandToggle)
         {
+            FindObjectOfType<AudioManager>().Play("ItemDrop");
             ItemInHand.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             ItemInHand.GetComponent<Rigidbody2D>().gravityScale = 1;
 
@@ -74,6 +86,7 @@ public class ItemScript : MonoBehaviour
 
         if (ThrowButtonPressed && ItemInHandToggle)
         {
+            FindObjectOfType<AudioManager>().Play("ItemThrow");
             ItemInHand.transform.parent = null;
             ItemInHand.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             ItemInHand.GetComponent<Rigidbody2D>().gravityScale = 1;
@@ -91,35 +104,39 @@ public class ItemScript : MonoBehaviour
     {
         if (CollisionWith.gameObject.tag.ToUpper() == "KEYCARD")
         {
-            GotKeycard = true;
-            CollisionWith.gameObject.SetActive(false);
+          FindObjectOfType<AudioManager>().Play("KeycardPickUp");
+          GotKeycard = true;
+          CollisionWith.gameObject.SetActive(false);
         }
         else if (CollisionWith.gameObject.tag.ToUpper() == "ITEM")
         {
-            AtItem = true;
-            LastHit = CollisionWith.gameObject;
+          AtItem = true;
+          LastHit = CollisionWith.gameObject;
         }
         else if (CollisionWith.gameObject.tag.ToUpper() == "LIGHT")
         {
-            Illuminated = true;
+          Illuminated = true;
         }
         else if (CollisionWith.gameObject.tag.ToUpper() == "SMOKE")
         {
-            SmokeCounter++;
+          SmokeCounter++;
         }
         else if (CollisionWith.gameObject.tag.ToUpper() == "DEATH")
         {
-
-            Illuminated = false;
-            RestartLevel.Restart();
+          FindObjectOfType<AudioManager>().Play("PlayerDeath");
+          Illuminated = false;
+          RestartLevel.Restart();
         }
         else if (CollisionWith.gameObject.tag.ToUpper() == "TURRET")
         {
-            AtTurret = true;
-            ThisTurret = CollisionWith.gameObject;
+          AtTurret = true;
+          ThisTurret = CollisionWith.gameObject;
         }
-
-
+        //else if (CollisionWith.gameObject.tag.ToUpper() == "AREALEVELCHANGE")
+        //{
+        //    LevelChanger changer = new LevelChanger();
+        //    changer.FadeToNextLevel();
+        //}
     }
 
     void OnTriggerExit2D(Collider2D CollisionWith)

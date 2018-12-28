@@ -53,15 +53,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AudioManager.cs" />
+     <Compile Include="Assets\Footsteps.cs" />
      <Compile Include="Assets\ItemInputHandler.cs" />
+     <Compile Include="Assets\NextLevelLoad.cs" />
      <Compile Include="Assets\RestartLevel.cs" />
      <Compile Include="Assets\Scripts\Camera\Camera2DFollow.cs" />
      <Compile Include="Assets\Scripts\Camera\FS.cs" />
+     <Compile Include="Assets\Scripts\Elevator\PlatformMovement.cs" />
      <Compile Include="Assets\Scripts\Items\FireExt.cs" />
      <Compile Include="Assets\Scripts\Items\ItemScript.cs" />
      <Compile Include="Assets\Scripts\Level\BluePortalScript.cs" />
      <Compile Include="Assets\Scripts\Level\OrangePortalScript.cs" />
      <Compile Include="Assets\Scripts\Level\PortalShot.cs" />
+     <Compile Include="Assets\Scripts\LevelChanger\AreaLevelChanger.cs" />
+     <Compile Include="Assets\Scripts\LevelChanger\LevelChanger.cs" />
      <Compile Include="Assets\Scripts\Player\AimAtMouse.cs" />
      <Compile Include="Assets\Scripts\Player\Controller.cs" />
      <Compile Include="Assets\Scripts\Player\DTSCRIPT.cs" />
@@ -69,6 +75,8 @@
      <Compile Include="Assets\Scripts\Turret\ProjectileSkript.cs" />
      <Compile Include="Assets\Scripts\Turret\TurretSkriptFinal.cs" />
      <Compile Include="Assets\SmokeVanish.cs" />
+     <Compile Include="Assets\Sound.cs" />
+     <None Include="Assets\Fonts\license.txt" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>A:/User/Documents/GitHub/SE/SoftwareEngineering/Puzzle Portal/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>

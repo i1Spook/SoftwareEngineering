@@ -172,6 +172,7 @@ MonoBehaviour:
   VisionInLightLenght: 20
   VisionInDarknessLength: 3
   SpinupTime: 1
+  Active: 0
 --- !u!212 &212700560317943342
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -207,7 +208,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 52990dd015abace42a66f005d9c8fca3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9beeba5d6a21d5940866b772faf39475, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

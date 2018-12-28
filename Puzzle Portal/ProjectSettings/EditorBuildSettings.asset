@@ -6,6 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/0KeyCard Intro.unity
+    guid: 3c7390811c0d66446af9acc99d5fdeaf
+  - enabled: 1
+    path: Assets/Scenes/1Elevator.unity
+    guid: ce747f13cfc396344b317461b11263b5
+  - enabled: 1
+    path: Assets/Scenes/2PortalGun Intro.unity
+    guid: 84614811cf81fbd49a26627f79dc996f
+  - enabled: 1
+    path: Assets/Scenes/3Elevator.unity
+    guid: 4d5a8a3b70702c346bead455f0374c4d
+  - enabled: 1
+    path: Assets/Scenes/4LightTurret Intro.unity
+    guid: e71b1be23a76dfa45b6460cc5193ef9a
+  - enabled: 1
+    path: Assets/Scenes/5Elevator.unity
+    guid: 4cf6d236c72ab3646ad14629f9641418
+  - enabled: 1
+    path: Assets/Scenes/6Level 1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}

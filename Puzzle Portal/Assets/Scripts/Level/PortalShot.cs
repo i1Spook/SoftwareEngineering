@@ -5,7 +5,9 @@ using UnityEngine;
 public class PortalShot : MonoBehaviour
 {
 
-    public GameObject BluePortal;
+    public GameObject PortalReference;
+
+    
 
 
     // Use this for initialization
@@ -28,7 +30,7 @@ public class PortalShot : MonoBehaviour
         {
             Rotation = CollisionWith.gameObject.transform.rotation;
             winkel = Rotation.eulerAngles.z;
-            BluePortal.transform.position = transform.position;
+            PortalReference.transform.position = transform.position;
 
             var angle = 180f;
             if (((winkel == 90) || (winkel == -90)) && (transform.right.y > 0f))
@@ -40,8 +42,15 @@ public class PortalShot : MonoBehaviour
                 angle = 0f;
             }
 
-
-            BluePortal.transform.rotation = Rotation * Quaternion.Euler(0, 0, angle);
+            if (PortalReference.name == "NewOrangePortal")
+            {
+                OrangePortalScript.PortalCreated = true;
+            }
+            else if (PortalReference.name == "NewBluePortal")
+            {
+                BluePortalScript.PortalCreated = true;
+            }
+            PortalReference.transform.rotation = Rotation * Quaternion.Euler(0, 0, angle);
         }
 
         CallResetShot();

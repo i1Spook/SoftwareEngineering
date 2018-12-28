@@ -8,7 +8,7 @@ public class Controller : MonoBehaviour
 	public static bool facingRight;
 	Rigidbody2D rb;
 	
-	bool grounded = false;
+	public bool grounded = false;
 	public Transform groundCheck;
 	float groundRadius=0.2f;
 	public LayerMask whatIsGround;
@@ -20,7 +20,7 @@ public class Controller : MonoBehaviour
 	{
         maxSpeed = 10f;
         facingRight = true;
-	    rb = GetComponentInParent<Rigidbody2D> ();
+	    rb = GetComponentInParent<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame
@@ -28,7 +28,7 @@ public class Controller : MonoBehaviour
 	{
 		grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
 		
-		float move = Input.GetAxis ("Horizontal");
+		float move = Input.GetAxis("Horizontal");
 
 		rb.velocity = new Vector2 (move * maxSpeed, rb.velocity.y);
 
@@ -42,8 +42,10 @@ public class Controller : MonoBehaviour
 	
 	void Update()
 	{
+    //Jumping
 		if (grounded && Input.GetKeyDown (KeyCode.Space)) {
-			rb.AddForce(new Vector2 (0, jumpForce));
+      FindObjectOfType<AudioManager>().Play("Jump");
+      rb.AddForce(new Vector2 (0, jumpForce));
 		}
 			
 	}

@@ -40,11 +40,12 @@ public class FireExt : MonoBehaviour
     {
         velo = GetComponent<Rigidbody2D>().velocity.magnitude;
         IsStationary = (velo < 1) ? true : false;
-
-        if (HighVelocity && HitWall && IsStationary && !IsUsed)
-        {
-
+         
+          if (HighVelocity && HitWall && IsStationary && !IsUsed)
+          {
+            FindObjectOfType<AudioManager>().Play("FireExt");
             GameObject[] SmokeClone = new GameObject[32];
+      
 
             for (int i = 0; i < 32; i++)
             {
@@ -108,7 +109,7 @@ public class FireExt : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D CollisionWith)
-    {
+    {      
         veloCheck = (velo > 7) ? true : false;
         if (veloCheck)
         { HighVelocity = true; }

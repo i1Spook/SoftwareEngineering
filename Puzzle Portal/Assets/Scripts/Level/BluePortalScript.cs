@@ -13,12 +13,16 @@ public class BluePortalScript : MonoBehaviour
 
     public static bool disableThisPortal;
 
+    public static bool PortalCreated;
+
     Vector2 OrangePortalUpVector;
 
     // Use this for initialization
     void Start()
     {
         disableThisPortal = false;
+
+        PortalCreated = false;
     }
 
     // Update is called once per frame
@@ -38,7 +42,7 @@ public class BluePortalScript : MonoBehaviour
 
     void Teleport(Collider2D toBePorted)
     {
-        if (!disableThisPortal)
+        if (!disableThisPortal && ItemScript.AllPortalsCreated)
         {
             //Disable the Orange Portal
             OrangePortalScript.disableThisPortal = true;
@@ -46,8 +50,10 @@ public class BluePortalScript : MonoBehaviour
             //Get the UpVector of the OrangePortal
             OrangePortalUpVector = OrangePortal.transform.up;
 
+            Vector2 Position = new Vector2(OrangePortal.transform.GetChild(0).transform.position.x, OrangePortal.transform.GetChild(0).transform.position.y);
+
             //Teleport Object to position of otherPortal
-            toBePorted.transform.position = new Vector2(OrangePortal.transform.position.x, OrangePortal.transform.position.y);
+            toBePorted.transform.position = Position;
 
             //Gives the Object it's original velocity in the Updirection of the OtherPortal
             toBePorted.attachedRigidbody.velocity = OrangePortalUpVector * toBePorted.attachedRigidbody.velocity.magnitude;

@@ -17,6 +17,9 @@ TagManager:
   - Smoke
   - Death
   - Turret
+  - AreaLevelChange
+  - LevelChange
+  - Door
   layers:
   - Default
   - TransparentFX
@@ -35,8 +38,8 @@ TagManager:
   - ItemCollider
   - Projectile
   - 
-  - 
-  - 
+  - Platform
+  - Falling
   - 
   - 
   - 

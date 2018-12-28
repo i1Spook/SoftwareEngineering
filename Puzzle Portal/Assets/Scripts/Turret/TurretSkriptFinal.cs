@@ -17,7 +17,9 @@ public class TurretSkriptFinal : MonoBehaviour
     public float startTimeBetweenShots = 0.05f;
     public float VisionInLightLenght = 100;
     public float VisionInDarknessLength = 3; //Length Private?
-    public float SpinupTime = 1;
+    public float SpinupTime = 1.71f;
+
+  public bool Active;
 
     // Use this for initialization
     void Start()
@@ -28,44 +30,46 @@ public class TurretSkriptFinal : MonoBehaviour
         if(startAngle.x > 0) { StartAngleIsRight = true; }
         else { StartAngleIsRight = false; }
         Debug.Log(StartAngleIsRight);
+    Active = true;
     }
     Vector2 startAngle;
     void Update()
     {
-        updateValues();
+    if (Active)
+    {
+      updateValues();
 
-        if (GetComponent<Renderer>().isVisible) // Raycast only if onscreen
-        {
-            RaycastVision();
-            
-        }
+      if (GetComponent<Renderer>().isVisible) // Raycast only if onscreen
+      {
+        RaycastVision();
+      }
 
-        if (TargetSighted)
+      if (TargetSighted)
+      {
+        
+        rotateToTargetPosition(currentAngleToTarget);
+
+        if (targetLocked(rotationtotarget))
         {
-            rotateToTargetPosition(currentAngleToTarget);
-           
-            if (targetLocked(rotationtotarget))
-            {
-                fireProjectile();
-                
-            }
-            else
-            {
-                spinupTime = SpinupTime;
-            }
+          fireProjectile();
         }
         else
         {
-            if (isBack)
-            {
-                Idlemode();
-                
-            }
-            else
-            {
-                ReturnToIdlemode();
-            }
+          spinupTime = SpinupTime;
         }
+      }
+      else
+      {
+        if (isBack)
+        {
+          Idlemode();
+        }
+        else
+        {
+          ReturnToIdlemode();
+        }
+      }
+    }
     }
     
     bool PlayerInLight; //Placeholder Detectionrays
@@ -160,7 +164,10 @@ public class TurretSkriptFinal : MonoBehaviour
     
     bool targetLocked(float rotationToTarget)
     {
-        if (Mathf.Abs(rotationToTarget) < threshold) { return true; }
+        if (Mathf.Abs(rotationToTarget) < threshold)
+        {          
+          return true;
+        }
         else { return false; }
     }
     void fireProjectile()
@@ -204,7 +211,7 @@ public class TurretSkriptFinal : MonoBehaviour
     float angleToStartingVector;
     
     void Idlemode()
-    {
+    {      
         if (switchdirection)
         {
             transform.Rotate(0, 0, -Idle_Speed);
@@ -216,8 +223,8 @@ public class TurretSkriptFinal : MonoBehaviour
         if (!StartAngleIsRight)
         {
             if (Mathf.Abs(this.transform.rotation.z * Mathf.Rad2Deg * 4) > IdleCap)
-            {
-                switchdirection = !switchdirection;
+            {             
+              switchdirection = !switchdirection;
             }
         }
 
@@ -225,7 +232,7 @@ public class TurretSkriptFinal : MonoBehaviour
         {
             if (Mathf.Abs(this.transform.rotation.z * Mathf.Rad2Deg * 4) < IdleCap)
             {
-                switchdirection = !switchdirection;
+              switchdirection = !switchdirection;
             }
         }
     }
