@@ -42,7 +42,7 @@ public class ItemInputHandler : MonoBehaviour
     void ShootPortal(bool ShotFiredBlue, bool ShotFiredOrange)
     {
         float Lifespan = 5;
-        float force = 500;
+        float force = 700;
 
         if (!ItemScript.ItemInHandToggle && ShotFiredBlue && (!BlueFired || timerBlue > Lifespan))
         {

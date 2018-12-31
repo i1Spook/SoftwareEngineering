@@ -13,7 +13,14 @@ public class PortalShot : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        foreach (GameObject item in GameObject.FindGameObjectsWithTag(tag))
+        {
+            if (item.name != name)
+            {
+                PortalReference = item;
+                break;
+            }
+        } 
     }
 
     // Update is called once per frame

@@ -6,7 +6,7 @@ public class ItemScript : MonoBehaviour
 {
     public GameObject Player;
 
-    public bool GotKeycard;
+    public static bool GotKeycard;
 
     public static GameObject LastHit;
 
@@ -20,6 +20,10 @@ public class ItemScript : MonoBehaviour
     public static bool Illuminated;
 
     public static bool AllPortalsCreated;
+
+    public static uint KeycardCount;
+    public uint Test;
+    public int Test2;
 
     GameObject ThisTurret;
     bool AtTurret;
@@ -38,6 +42,10 @@ public class ItemScript : MonoBehaviour
         AllPortalsCreated = false;
 
         ArmLocationStatic = ArmLocation;
+
+        KeycardCount = 0;
+
+        Test2 = GameObject.FindGameObjectsWithTag("Keycard").Length;
     }
 
     void Update()
@@ -46,6 +54,8 @@ public class ItemScript : MonoBehaviour
         {
             AllPortalsCreated = true;
         }
+        Test = KeycardCount;
+        GotKeycard = (KeycardCount == GameObject.FindGameObjectsWithTag("Keycard").Length) ? true : false;
 
         InLight = (SmokeCounter < 3) && (Illuminated) ? true : false;
         if (AtTurret && Input.GetKeyDown(KeyCode.Q))
@@ -105,7 +115,7 @@ public class ItemScript : MonoBehaviour
         if (CollisionWith.gameObject.tag.ToUpper() == "KEYCARD")
         {
           FindObjectOfType<AudioManager>().Play("KeycardPickUp");
-          GotKeycard = true;
+            KeycardCount++;
           CollisionWith.gameObject.SetActive(false);
         }
         else if (CollisionWith.gameObject.tag.ToUpper() == "ITEM")

@@ -10,7 +10,18 @@ public class NextLevelLoad : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 		
 	}
+
+    public void OnTriggerEnter2D(Collider2D Object)
+    {
+        if ( (Object.gameObject.tag.ToUpper() == "PLAYER") && ItemScript.GotKeycard)
+        {
+            LevelChanger changer = new LevelChanger();
+            changer.FadeToNextLevel();
+        }
+
+    }
 }
