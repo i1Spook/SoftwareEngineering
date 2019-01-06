@@ -39,6 +39,9 @@ public class ItemScript : MonoBehaviour
         AtItem = false;
         AtTurret = false;
 
+        ItemInHandToggle = false;
+        ItemInHand = null;
+
         AllPortalsCreated = false;
 
         ArmLocationStatic = ArmLocation;
@@ -75,11 +78,18 @@ public class ItemScript : MonoBehaviour
         if (ItemButtonPressed && AtItem && !ItemInHandToggle)
         {
             FindObjectOfType<AudioManager>().Play("ItemPickUp");
+
+
             LastHit.gameObject.transform.position = ArmLocationStatic.transform.position;
+            LastHit.gameObject.transform.up = ArmLocationStatic.transform.up;
             LastHit.transform.SetParent(ArmLocationStatic.gameObject.transform);
 
-            LastHit.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
-            LastHit.GetComponent<Rigidbody2D>().gravityScale = 0;
+            LastHit.GetComponent<Rigidbody2D>().isKinematic = true;
+            LastHit.GetComponent<Rigidbody2D>().simulated = false;
+
+            //LastHit.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+            //LastHit.GetComponent<Rigidbody2D>().gravityScale = 0;
+
 
             ItemInHand = LastHit;
             ItemInHandToggle = true;
@@ -87,19 +97,30 @@ public class ItemScript : MonoBehaviour
         else if (ItemButtonPressed && ItemInHandToggle)
         {
             FindObjectOfType<AudioManager>().Play("ItemDrop");
-            ItemInHand.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-            ItemInHand.GetComponent<Rigidbody2D>().gravityScale = 1;
+
+            ItemInHand.GetComponent<Rigidbody2D>().isKinematic = false;
+            ItemInHand.GetComponent<Rigidbody2D>().simulated = true;
+
+            //ItemInHand.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            //ItemInHand.GetComponent<Rigidbody2D>().gravityScale = 1;
 
             ItemInHand.transform.parent = null;
             ItemInHandToggle = false;
+
+
         }
 
         if (ThrowButtonPressed && ItemInHandToggle)
         {
             FindObjectOfType<AudioManager>().Play("ItemThrow");
             ItemInHand.transform.parent = null;
-            ItemInHand.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-            ItemInHand.GetComponent<Rigidbody2D>().gravityScale = 1;
+
+            ItemInHand.GetComponent<Rigidbody2D>().isKinematic = false;
+            ItemInHand.GetComponent<Rigidbody2D>().simulated = true;
+
+            //ItemInHand.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            //ItemInHand.GetComponent<Rigidbody2D>().gravityScale = 1;
+
 
 
             ItemInputHandler.FireObject(ItemInHand, 500);
@@ -134,6 +155,9 @@ public class ItemScript : MonoBehaviour
         else if (CollisionWith.gameObject.tag.ToUpper() == "DEATH")
         {
           FindObjectOfType<AudioManager>().Play("PlayerDeath");
+
+            //ItemInHand = null;
+            //ItemInHandToggle = false;
           Illuminated = false;
           RestartLevel.Restart();
         }

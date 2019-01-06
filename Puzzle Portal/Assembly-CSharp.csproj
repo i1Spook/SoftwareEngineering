@@ -57,6 +57,7 @@
      <Compile Include="Assets\Footsteps.cs" />
      <Compile Include="Assets\ItemInputHandler.cs" />
      <Compile Include="Assets\NextLevelLoad.cs" />
+     <Compile Include="Assets\PortalScript.cs" />
      <Compile Include="Assets\RestartLevel.cs" />
      <Compile Include="Assets\Scripts\Camera\Camera2DFollow.cs" />
      <Compile Include="Assets\Scripts\Camera\FS.cs" />

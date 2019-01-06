@@ -33,6 +33,9 @@ public class FireExt : MonoBehaviour
         HitWall = false;
         IsStationary = false;
         veloCheck = false;
+
+        GetComponent<Rigidbody2D>().isKinematic = false;
+        GetComponent<Rigidbody2D>().simulated = true;
     }
 
     // Update is called once per frame

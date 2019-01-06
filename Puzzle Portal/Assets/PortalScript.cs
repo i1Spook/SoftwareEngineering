@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BluePortalScript : MonoBehaviour
+public class PortalScript : MonoBehaviour
 {
 
     public GameObject BluePortal;
@@ -11,11 +11,16 @@ public class BluePortalScript : MonoBehaviour
 
     public float velo;
 
-    public static bool disableThisPortal;
+    public bool disableThisPortal;
 
-    public static bool PortalCreated;
+    public bool PortalCreated;
 
-    Vector2 OrangePortalUpVector;
+    Vector2 OtherPortalUpVector;
+
+    GameObject OtherPortal;
+
+
+    
 
     // Use this for initialization
     void Start()
@@ -23,6 +28,8 @@ public class BluePortalScript : MonoBehaviour
         disableThisPortal = false;
 
         PortalCreated = false;
+
+        OtherPortal = tag.ToUpper() == "BLUEPORTAL" ? OrangePortal : BluePortal;
     }
 
     // Update is called once per frame
@@ -45,18 +52,18 @@ public class BluePortalScript : MonoBehaviour
         if (!disableThisPortal && ItemScript.AllPortalsCreated)
         {
             //Disable the Orange Portal
-            OrangePortalScript.disableThisPortal = true;
+            OtherPortal.GetComponent<PortalScript>().disableThisPortal = true;
 
             //Get the UpVector of the OrangePortal
-            OrangePortalUpVector = OrangePortal.transform.up;
+            OtherPortalUpVector = OtherPortal.transform.up;
 
-            Vector2 Position = new Vector2(OrangePortal.transform.GetChild(0).transform.position.x, OrangePortal.transform.GetChild(0).transform.position.y);
+            Vector2 Position = new Vector2(OtherPortal.transform.GetChild(0).transform.position.x, OtherPortal.transform.GetChild(0).transform.position.y);
 
             //Teleport Object to position of otherPortal
             toBePorted.transform.position = Position;
 
             //Gives the Object it's original velocity in the Updirection of the OtherPortal
-            toBePorted.GetComponent<Rigidbody2D>().velocity = OrangePortalUpVector * toBePorted.GetComponent<Rigidbody2D>().velocity.magnitude;
+            toBePorted.GetComponent<Rigidbody2D>().velocity = OtherPortalUpVector * toBePorted.GetComponent<Rigidbody2D>().velocity.magnitude;
         }
 
         //Enforce lower terminal Velocity

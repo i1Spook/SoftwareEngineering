@@ -5,9 +5,7 @@ using UnityEngine;
 public class PortalShot : MonoBehaviour
 {
 
-    public GameObject PortalReference;
-
-    
+    public GameObject PortalReference;  
 
 
     // Use this for initialization
