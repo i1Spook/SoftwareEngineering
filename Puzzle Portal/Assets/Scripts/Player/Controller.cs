@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Controller : MonoBehaviour
 {
-	public float maxSpeed;
+	public float speed;             
+    	public float force; 
+	
 	public static bool facingRight;
 	Rigidbody2D rb;
 	
@@ -30,7 +32,7 @@ public class Controller : MonoBehaviour
 		
 		float move = Input.GetAxis ("Horizontal");
 
-		rb.velocity = new Vector2 (move * maxSpeed, 0);
+		rb.AddForce = new Vector2 (move * speed, 0);
 
 		if (((AimAtMouse.MousePositionRead.x-rb.position.x)>0) && !facingRight) {
 			Flip ();
