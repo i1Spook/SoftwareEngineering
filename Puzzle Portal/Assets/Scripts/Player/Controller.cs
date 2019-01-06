@@ -30,7 +30,7 @@ public class Controller : MonoBehaviour
 		
 		float move = Input.GetAxis ("Horizontal");
 
-		rb.velocity = new Vector2 (move * maxSpeed, rb.velocity.y);
+		rb.velocity = new Vector2 (move * maxSpeed, 0);
 
 		if (((AimAtMouse.MousePositionRead.x-rb.position.x)>0) && !facingRight) {
 			Flip ();
