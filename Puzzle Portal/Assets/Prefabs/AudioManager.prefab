@@ -60,11 +60,11 @@ MonoBehaviour:
     mute: 0
     source: {fileID: 0}
   - name: Theme
-    clip: {fileID: 8300000, guid: 1eda054ab3c5d4044b7f2cf0dde4cac2, type: 3}
-    volume: 0.02
+    clip: {fileID: 8300000, guid: edc8e9cbc97868b498ff1582719144d0, type: 3}
+    volume: 0.05
     pitch: 1
     loop: 1
-    mute: 1
+    mute: 0
     source: {fileID: 0}
   - name: KeycardPickUp
     clip: {fileID: 8300000, guid: d1d0e7f233a9b7648842f44e03aa5ea5, type: 3}
@@ -102,7 +102,7 @@ MonoBehaviour:
     mute: 0
     source: {fileID: 0}
   - name: Jump
-    clip: {fileID: 8300000, guid: c79cc52a65c737f4a83cdeae938095d1, type: 3}
+    clip: {fileID: 8300000, guid: d463502f3beffd24987908b9c8898f22, type: 3}
     volume: 0.05
     pitch: 1
     loop: 0
@@ -146,6 +146,48 @@ MonoBehaviour:
   - name: ItemDrop
     clip: {fileID: 8300000, guid: 4f1268323d333b542b64dac62bb816fb, type: 3}
     volume: 0.5
+    pitch: 1
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: ProjectileHit
+    clip: {fileID: 8300000, guid: 9facbba0c7f388b44bd46d7417f03512, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Error
+    clip: {fileID: 8300000, guid: 617c3e7dd527b6a48b5bd54176aa1177, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Elevator
+    clip: {fileID: 8300000, guid: ce583899c76970c43a582fa164422cd8, type: 3}
+    volume: 0.02
+    pitch: 1
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: PortalWallHit1
+    clip: {fileID: 8300000, guid: fa243cd790418004fb6bf490ddbd5bd6, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: PortalWallHit2
+    clip: {fileID: 8300000, guid: 821664c366d3a564488907d5c8bf973f, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: PortalTraversal
+    clip: {fileID: 8300000, guid: b9f9fc12d4097d74aa3b89ea3c7b6b99, type: 3}
+    volume: 0.2
     pitch: 1
     loop: 0
     mute: 0

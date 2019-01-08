@@ -33,9 +33,6 @@ public class FireExt : MonoBehaviour
         HitWall = false;
         IsStationary = false;
         veloCheck = false;
-
-        GetComponent<Rigidbody2D>().isKinematic = false;
-        GetComponent<Rigidbody2D>().simulated = true;
     }
 
     // Update is called once per frame
@@ -46,7 +43,7 @@ public class FireExt : MonoBehaviour
          
           if (HighVelocity && HitWall && IsStationary && !IsUsed)
           {
-            FindObjectOfType<AudioManager>().Play("FireExt");
+            FindObjectOfType<AudioManager>().PlayAt("FireExt");
             GameObject[] SmokeClone = new GameObject[32];
       
 

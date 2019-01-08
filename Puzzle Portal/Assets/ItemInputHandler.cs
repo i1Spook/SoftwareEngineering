@@ -14,6 +14,8 @@ public class ItemInputHandler : MonoBehaviour
     public static bool BlueFired;
     public static bool OrangeFired;
 
+    public float projectileForce = 500;
+
     public static bool ItemWasShot;
     // Use this for initialization
     void Start()
@@ -42,30 +44,29 @@ public class ItemInputHandler : MonoBehaviour
     void ShootPortal(bool ShotFiredBlue, bool ShotFiredOrange)
     {
         float Lifespan = 5;
-        float force = 700;
 
         if (!ItemScript.ItemInHandToggle && ShotFiredBlue && (!BlueFired || timerBlue > Lifespan))
         {
-            FindObjectOfType<AudioManager>().Play("BlueShot");
+            FindObjectOfType<AudioManager>().PlayAt("BlueShot");
             BlueFired = true;
             GameObject BlueShot = Instantiate(BlueOriginal);
             BlueShot.GetComponent<Rigidbody2D>().transform.position =ArmLocation.transform.position;
             BlueShot.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
 
-            FireObject(BlueShot, force);
+            FireObject(BlueShot, projectileForce);
 
             timerBlue = 0;
         }
 
         if (!ItemScript.ItemInHandToggle && ShotFiredOrange && (!OrangeFired || timerOrange > Lifespan))
         {
-            FindObjectOfType<AudioManager>().Play("OrangeShot");
+            FindObjectOfType<AudioManager>().PlayAt("OrangeShot");
             OrangeFired = true;
             GameObject OrangeShot = Instantiate(OrangeOriginal);
             OrangeShot.GetComponent<Rigidbody2D>().transform.position = transform.position;
             OrangeShot.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
 
-            FireObject(OrangeShot, force);
+            FireObject(OrangeShot, projectileForce);
 
             timerOrange = 0;
         }
@@ -75,14 +76,14 @@ public class ItemInputHandler : MonoBehaviour
 
     }
 
-    public static void FireObject(GameObject Object, float force)
+    public static void FireObject(GameObject Object, float projectileForce)
     {
         Vector2 Pointer;
         Pointer.x = -AimAtMouse.MousePositionRead.y;
         Pointer.y = AimAtMouse.MousePositionRead.x;
 
         Object.transform.right = Pointer;
-        Object.GetComponent<Rigidbody2D>().AddForce(AimAtMouse.MousePositionRead.normalized * force);
+        Object.GetComponent<Rigidbody2D>().AddForce(AimAtMouse.MousePositionRead.normalized * projectileForce);
     }
 
     public static void ResetShot(bool BlueHit, bool OrangeHit)

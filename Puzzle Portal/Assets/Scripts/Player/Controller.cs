@@ -44,7 +44,7 @@ public class Controller : MonoBehaviour
 	{
     //Jumping
 		if (grounded && Input.GetKeyDown (KeyCode.Space)) {
-      FindObjectOfType<AudioManager>().Play("Jump");
+      FindObjectOfType<AudioManager>().PlayAt("Jump");
       rb.AddForce(new Vector2 (0, jumpForce));
 		}
 			
@@ -52,20 +52,9 @@ public class Controller : MonoBehaviour
 
 	 void Flip()
 	{
-		if (facingRight)
-        {
-            gameObject.transform.rotation = Quaternion.Euler(new Vector3(0, 180f, 0));
-        }
-        else
-        {
-            gameObject.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
-        }
+		facingRight = !facingRight;
 
-        
-
-        facingRight = !facingRight;
-
-        //GetComponent<SpriteRenderer>().flipX = !GetComponent<SpriteRenderer>().flipX;
+        GetComponent<SpriteRenderer>().flipX = !GetComponent<SpriteRenderer>().flipX;
         //transform.GetChild(0).GetChild(0).GetComponent<SpriteRenderer>().flipY = !transform.GetChild(0).GetChild(0).GetComponent<SpriteRenderer>().flipY;
 
         //Vector3 theScale = transform.localScale;

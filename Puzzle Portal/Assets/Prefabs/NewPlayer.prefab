@@ -307,6 +307,7 @@ MonoBehaviour:
   BlueOriginal: {fileID: 0}
   OrangeOriginal: {fileID: 0}
   ArmLocation: {fileID: 1640339235785598}
+  projectileForce: 1000
 --- !u!114 &114832678616781858
 MonoBehaviour:
   m_ObjectHideFlags: 1

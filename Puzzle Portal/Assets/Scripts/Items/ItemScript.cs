@@ -6,7 +6,11 @@ public class ItemScript : MonoBehaviour
 {
     public GameObject Player;
 
-    public static bool GotKeycard;
+    public bool GotKeycard;
+    public static int KeycardsCollected;
+    public static int KeycardsNeeded;
+
+    static GameObject Keycard;
 
     public static GameObject LastHit;
 
@@ -18,12 +22,6 @@ public class ItemScript : MonoBehaviour
     public static uint SmokeCounter;
     public static bool InLight;
     public static bool Illuminated;
-
-    public static bool AllPortalsCreated;
-
-    public static uint KeycardCount;
-    public uint Test;
-    public int Test2;
 
     GameObject ThisTurret;
     bool AtTurret;
@@ -39,31 +37,19 @@ public class ItemScript : MonoBehaviour
         AtItem = false;
         AtTurret = false;
 
-        ItemInHandToggle = false;
-        ItemInHand = null;
-
-        AllPortalsCreated = false;
+        KeycardsNeeded = GameObject.FindGameObjectsWithTag("Keycard").Length;
+        Debug.Log("Needed" + KeycardsNeeded);
+        Debug.Log("Collected" + KeycardsCollected);
 
         ArmLocationStatic = ArmLocation;
-
-        KeycardCount = 0;
-
-        Test2 = GameObject.FindGameObjectsWithTag("Keycard").Length;
     }
 
     void Update()
     {
-        if (OrangePortalScript.PortalCreated && BluePortalScript.PortalCreated)
-        {
-            AllPortalsCreated = true;
-        }
-        Test = KeycardCount;
-        GotKeycard = (KeycardCount == GameObject.FindGameObjectsWithTag("Keycard").Length) ? true : false;
-
         InLight = (SmokeCounter < 3) && (Illuminated) ? true : false;
         if (AtTurret && Input.GetKeyDown(KeyCode.Q))
         {
-            FindObjectOfType<AudioManager>().Play("TurretExplosion");
+            FindObjectOfType<AudioManager>().PlayAt("TurretExplosion");
             TurnOffTurret();
         }
     }
@@ -77,50 +63,32 @@ public class ItemScript : MonoBehaviour
     {
         if (ItemButtonPressed && AtItem && !ItemInHandToggle)
         {
-            FindObjectOfType<AudioManager>().Play("ItemPickUp");
-
-
+            FindObjectOfType<AudioManager>().PlayAt("ItemPickUp");
             LastHit.gameObject.transform.position = ArmLocationStatic.transform.position;
-            LastHit.gameObject.transform.up = ArmLocationStatic.transform.up;
             LastHit.transform.SetParent(ArmLocationStatic.gameObject.transform);
 
-            LastHit.GetComponent<Rigidbody2D>().isKinematic = true;
-            LastHit.GetComponent<Rigidbody2D>().simulated = false;
-
-            //LastHit.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
-            //LastHit.GetComponent<Rigidbody2D>().gravityScale = 0;
-
+            LastHit.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+            LastHit.GetComponent<Rigidbody2D>().gravityScale = 0;
 
             ItemInHand = LastHit;
             ItemInHandToggle = true;
         }
         else if (ItemButtonPressed && ItemInHandToggle)
         {
-            FindObjectOfType<AudioManager>().Play("ItemDrop");
-
-            ItemInHand.GetComponent<Rigidbody2D>().isKinematic = false;
-            ItemInHand.GetComponent<Rigidbody2D>().simulated = true;
-
-            //ItemInHand.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-            //ItemInHand.GetComponent<Rigidbody2D>().gravityScale = 1;
+            FindObjectOfType<AudioManager>().PlayAt("ItemDrop");
+            ItemInHand.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            ItemInHand.GetComponent<Rigidbody2D>().gravityScale = 1;
 
             ItemInHand.transform.parent = null;
             ItemInHandToggle = false;
-
-
         }
 
         if (ThrowButtonPressed && ItemInHandToggle)
         {
-            FindObjectOfType<AudioManager>().Play("ItemThrow");
+            FindObjectOfType<AudioManager>().PlayAt("ItemThrow");
             ItemInHand.transform.parent = null;
-
-            ItemInHand.GetComponent<Rigidbody2D>().isKinematic = false;
-            ItemInHand.GetComponent<Rigidbody2D>().simulated = true;
-
-            //ItemInHand.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-            //ItemInHand.GetComponent<Rigidbody2D>().gravityScale = 1;
-
+            ItemInHand.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            ItemInHand.GetComponent<Rigidbody2D>().gravityScale = 1;
 
 
             ItemInputHandler.FireObject(ItemInHand, 500);
@@ -135,8 +103,11 @@ public class ItemScript : MonoBehaviour
     {
         if (CollisionWith.gameObject.tag.ToUpper() == "KEYCARD")
         {
-          FindObjectOfType<AudioManager>().Play("KeycardPickUp");
-            KeycardCount++;
+          FindObjectOfType<AudioManager>().PlayAt("KeycardPickUp");
+          GotKeycard = true;
+          KeycardsCollected++;
+          Debug.Log("Needed" + KeycardsNeeded);
+          Debug.Log("Collected" + KeycardsCollected);
           CollisionWith.gameObject.SetActive(false);
         }
         else if (CollisionWith.gameObject.tag.ToUpper() == "ITEM")
@@ -154,11 +125,9 @@ public class ItemScript : MonoBehaviour
         }
         else if (CollisionWith.gameObject.tag.ToUpper() == "DEATH")
         {
-          FindObjectOfType<AudioManager>().Play("PlayerDeath");
-
-            //ItemInHand = null;
-            //ItemInHandToggle = false;
+          FindObjectOfType<AudioManager>().PlayAt("PlayerDeath");
           Illuminated = false;
+          KeycardsCollected = 0;
           RestartLevel.Restart();
         }
         else if (CollisionWith.gameObject.tag.ToUpper() == "TURRET")
@@ -166,11 +135,10 @@ public class ItemScript : MonoBehaviour
           AtTurret = true;
           ThisTurret = CollisionWith.gameObject;
         }
-        //else if (CollisionWith.gameObject.tag.ToUpper() == "AREALEVELCHANGE")
-        //{
-        //    LevelChanger changer = new LevelChanger();
-        //    changer.FadeToNextLevel();
-        //}
+        else if (CollisionWith.gameObject.name.ToUpper() == "PROJECTILE")
+        {
+          FindObjectOfType<AudioManager>().PlayAt("ProjectileHit");
+        }
     }
 
     void OnTriggerExit2D(Collider2D CollisionWith)
@@ -193,5 +161,27 @@ public class ItemScript : MonoBehaviour
             AtTurret = false;
             ThisTurret = null;
         }
+    }
+    public static bool AllKeycardsCollected()
+    {
+      int collected = KeycardsCollected;
+      int needed = KeycardsNeeded;
+
+      if (collected == needed)
+      {
+        Debug.Log("Fade successful");
+        Debug.Log("Needed" + needed);
+        Debug.Log("Collected" + collected);
+
+        KeycardsCollected = 0;
+
+        return true;
+      }
+      else
+      {
+        FindObjectOfType<AudioManager>().PlayAt("Error");
+        Debug.Log("Not enough Keycards");
+        return false;
+      }
     }
 }

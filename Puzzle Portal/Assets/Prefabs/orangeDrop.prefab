@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 433bc86c46aff1249b3d1d9257481090, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PortalReference: {fileID: 0}
+  BluePortal: {fileID: 0}
 --- !u!212 &212105184465198546
 SpriteRenderer:
   m_ObjectHideFlags: 1

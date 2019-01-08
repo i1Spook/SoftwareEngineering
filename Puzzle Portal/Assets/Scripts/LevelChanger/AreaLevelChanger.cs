@@ -3,17 +3,42 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class AreaLevelChanger : MonoBehaviour {
+public class AreaLevelChanger : MonoBehaviour
+{
+  public Animator animator;
 
-  //LevelChanger changer;
-  [SerializeField] private string newLevel;
+  int nextLevel;
 
-  void OnTriggerEnder2D(Collider2D other)
+  int levelToLoad;
+
+  public static bool initiatedLevelChange = false;
+  public static int CurrentLevel { get; private set; }
+  void Start()
   {
-    if (other.CompareTag("Player"))
+    CurrentLevel = SceneManager.GetActiveScene().buildIndex;
+
+    nextLevel = CurrentLevel + 1;
+  }
+  void OnTriggerEnter2D(Collider2D CollidedWith)
+  {
+    if (CollidedWith.CompareTag("Player") && ItemScript.AllKeycardsCollected())
     {
-      //changer.FadeToNextLevel();
-      SceneManager.LoadScene(newLevel);
+      Debug.Log("Collided");
+      FadeToNextLevel();
     }
+  }
+  public void FadeToNextLevel()
+  {
+    FadeToLevel(nextLevel);
+  }
+  public void FadeToLevel(int levelIndex)
+  {
+    initiatedLevelChange = true;
+    levelToLoad = levelIndex;
+    animator.SetTrigger("FadeOut");
+  }
+  public void OnFadeComplete()
+  {
+    SceneManager.LoadScene(levelToLoad);
   }
 }

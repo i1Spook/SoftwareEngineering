@@ -19,7 +19,8 @@ TagManager:
   - Turret
   - AreaLevelChange
   - LevelChange
-  - Door
+  - PortalGun
+  - PortalGunOnPlayer
   layers:
   - Default
   - TransparentFX

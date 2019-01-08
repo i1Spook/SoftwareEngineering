@@ -13,16 +13,12 @@ public class BluePortalScript : MonoBehaviour
 
     public static bool disableThisPortal;
 
-    public static bool PortalCreated;
-
     Vector2 OrangePortalUpVector;
 
     // Use this for initialization
     void Start()
     {
         disableThisPortal = false;
-
-        PortalCreated = false;
     }
 
     // Update is called once per frame
@@ -35,14 +31,15 @@ public class BluePortalScript : MonoBehaviour
         //Check if Object is allowed to teleport
         if ((Object.gameObject.tag == "Player") || (Object.gameObject.tag == "Portable") || (Object.gameObject.tag == "Item"))
         {
-            Teleport(Object.gameObject);
+            FindObjectOfType<AudioManager>().PlayAt("PortalTraversal");
+            Teleport(Object);
         }
     }
 
 
-    void Teleport(GameObject toBePorted)
+    void Teleport(Collider2D toBePorted)
     {
-        if (!disableThisPortal && ItemScript.AllPortalsCreated)
+        if (!disableThisPortal)
         {
             //Disable the Orange Portal
             OrangePortalScript.disableThisPortal = true;
@@ -50,19 +47,17 @@ public class BluePortalScript : MonoBehaviour
             //Get the UpVector of the OrangePortal
             OrangePortalUpVector = OrangePortal.transform.up;
 
-            Vector2 Position = new Vector2(OrangePortal.transform.GetChild(0).transform.position.x, OrangePortal.transform.GetChild(0).transform.position.y);
-
             //Teleport Object to position of otherPortal
-            toBePorted.transform.position = Position;
+            toBePorted.transform.position = new Vector2(OrangePortal.transform.position.x, OrangePortal.transform.position.y);
 
             //Gives the Object it's original velocity in the Updirection of the OtherPortal
-            toBePorted.GetComponent<Rigidbody2D>().velocity = OrangePortalUpVector * toBePorted.GetComponent<Rigidbody2D>().velocity.magnitude;
+            toBePorted.attachedRigidbody.velocity = OrangePortalUpVector * toBePorted.attachedRigidbody.velocity.magnitude;
         }
 
         //Enforce lower terminal Velocity
-        if (toBePorted.GetComponent<Rigidbody2D>().velocity.magnitude > 30)
+        if (toBePorted.attachedRigidbody.velocity.magnitude > 30)
         {
-            toBePorted.GetComponent<Rigidbody2D>().AddForce(-toBePorted.GetComponent<Rigidbody2D>().velocity);
+            toBePorted.attachedRigidbody.AddForce(-toBePorted.attachedRigidbody.velocity);
         }
     }
 

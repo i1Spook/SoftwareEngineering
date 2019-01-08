@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212622230820472130}
   - component: {fileID: 45037397071651926}
   - component: {fileID: 61975373216510526}
+  - component: {fileID: 114517494991793804}
   m_Layer: 10
   m_Name: Keycard
   m_TagString: Keycard
@@ -75,6 +76,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 22.74, y: 15}
   m_EdgeRadius: 0
+--- !u!114 &114517494991793804
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1987426024968796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a6d989833e4e4d449b0f7ba0e0fa4f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatStrength: 0.3
 --- !u!212 &212622230820472130
 SpriteRenderer:
   m_ObjectHideFlags: 1

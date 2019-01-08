@@ -12,16 +12,12 @@ public class OrangePortalScript : MonoBehaviour
 
     public static bool disableThisPortal;
 
-    public static bool PortalCreated;
-
     Vector2 OtherPortalUpVector;
 
     // Use this for initialization
     void Start()
     {
         disableThisPortal = false;
-
-        PortalCreated = false;
     }
 
     // Update is called once per frame
@@ -34,6 +30,7 @@ public class OrangePortalScript : MonoBehaviour
         //Check if Object is allowed to teleport
         if ((Object.gameObject.tag == "Player") || (Object.gameObject.tag == "Portable") || (Object.gameObject.tag == "Item"))
         {
+            FindObjectOfType<AudioManager>().PlayAt("PortalTraversal");
             Teleport(Object);
         }
     }
@@ -45,7 +42,7 @@ public class OrangePortalScript : MonoBehaviour
 
 
 
-        if (!disableThisPortal && ItemScript.AllPortalsCreated)
+        if (!disableThisPortal)
         {
             //Disable the Blue Portal
             BluePortalScript.disableThisPortal = true;
@@ -53,10 +50,8 @@ public class OrangePortalScript : MonoBehaviour
             //Get the UpVector of the OtherPortal
             OtherPortalUpVector = BluePortal.transform.up;
 
-            Vector2 Position = new Vector2(BluePortal.transform.GetChild(0).transform.position.x, BluePortal.transform.GetChild(0).transform.position.y);
-
             //Teleport Object to position of otherPortal
-            toBePorted.transform.position = Position;
+            toBePorted.transform.position = new Vector2(BluePortal.transform.position.x, BluePortal.transform.position.y);
 
             //Gives the Object it's original velocity in the Updirection of the OtherPortal
             toBePorted.attachedRigidbody.velocity = OtherPortalUpVector * toBePorted.attachedRigidbody.velocity.magnitude;

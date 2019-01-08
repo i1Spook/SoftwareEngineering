@@ -5,20 +5,13 @@ using UnityEngine;
 public class PortalShot : MonoBehaviour
 {
 
-    public GameObject PortalReference;  
+    public GameObject BluePortal;
 
 
     // Use this for initialization
     void Start()
     {
-        foreach (GameObject item in GameObject.FindGameObjectsWithTag(tag))
-        {
-            if (item.name != name)
-            {
-                PortalReference = item;
-                break;
-            }
-        } 
+
     }
 
     // Update is called once per frame
@@ -33,9 +26,11 @@ public class PortalShot : MonoBehaviour
 
         if (CollisionWith.gameObject.tag.ToUpper() == "PORTALWALL")
         {
+            FindObjectOfType<AudioManager>().PlayAt("PortalWallHit2");
+
             Rotation = CollisionWith.gameObject.transform.rotation;
             winkel = Rotation.eulerAngles.z;
-            PortalReference.transform.position = transform.position;
+            BluePortal.transform.position = transform.position;
 
             var angle = 180f;
             if (((winkel == 90) || (winkel == -90)) && (transform.right.y > 0f))
@@ -47,15 +42,8 @@ public class PortalShot : MonoBehaviour
                 angle = 0f;
             }
 
-            if (PortalReference.name == "NewOrangePortal")
-            {
-                OrangePortalScript.PortalCreated = true;
-            }
-            else if (PortalReference.name == "NewBluePortal")
-            {
-                BluePortalScript.PortalCreated = true;
-            }
-            PortalReference.transform.rotation = Rotation * Quaternion.Euler(0, 0, angle);
+
+            BluePortal.transform.rotation = Rotation * Quaternion.Euler(0, 0, angle);
         }
 
         CallResetShot();
