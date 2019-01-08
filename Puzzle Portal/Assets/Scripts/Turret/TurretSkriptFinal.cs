@@ -4,230 +4,224 @@ using UnityEngine;
 
 public class TurretSkriptFinal : MonoBehaviour
 {
-    public GameObject Firepoint;
-    public GameObject Projectile;
-    public Transform Target;
-    public float RotationSpeed;
-    public float AngleCap = 90;
-    public float IdleCap = 30;
-    public float Idle_Speed;
-    public bool StartAngleIsRight;
-    public float Startangle;
-    public float threshold = 4; //private?
-    public float startTimeBetweenShots = 0.05f;
-    public float VisionInLightLenght = 100;
-    public float VisionInDarknessLength = 3; //Length Private?
-    public float SpinupTime = 1;
+  public GameObject Firepoint;
+  public GameObject Projectile;
+  public Transform Target;
+  public float RotationSpeed;
+  public float AngleCap = 90;
+  public float IdleCap = 30;
+  public float Idle_Speed;
+  public bool StartAngleIsRight;
+  public float Startangle;
+  public float Threshold = 4;
+  public float StartTimeBetweenShots = 0.05f;
+  public float VisionInLightLenght = 100;
+  public float VisionInDarknessLength = 3;
+  public float SpinupTime = 1.71f;
+  public bool Active;
 
-    // Use this for initialization
-    void Start()
+  void Start()
+  {
+    transform.rotation = Quaternion.AngleAxis(Startangle, new Vector3(0, 0, 1));
+    startAngle = new Vector2(-transform.right.x, -transform.right.y);
+    Debug.Log(startAngle);
+    if (startAngle.x > 0) { StartAngleIsRight = true; }
+    else { StartAngleIsRight = false; }
+    Debug.Log(StartAngleIsRight);
+    Active = true;
+  }
+  Vector2 startAngle;
+
+  void Update()
+  {
+    if (Active)
     {
-        transform.rotation = Quaternion.AngleAxis(Startangle, new Vector3(0, 0, 1));
-        startAngle = new Vector2(-transform.right.x, -transform.right.y);
-        Debug.Log(startAngle);
-        if(startAngle.x > 0) { StartAngleIsRight = true; }
-        else { StartAngleIsRight = false; }
-        Debug.Log(StartAngleIsRight);
-    }
-    Vector2 startAngle;
-    void Update()
-    {
-        updateValues();
+      updateValues();
 
-        if (GetComponent<Renderer>().isVisible) // Raycast only if onscreen
-        {
-            RaycastVision();
-            
-        }
+      if (GetComponent<Renderer>().isVisible)
+      {
+        RaycastVision();
+      }
 
-        if (TargetSighted)
+      if (targetSighted)
+      {
+        rotateToTargetPosition(currentAngleToTarget);
+        if (targetLocked(rotationToTarget))
         {
-            rotateToTargetPosition(currentAngleToTarget);
-           
-            if (targetLocked(rotationtotarget))
-            {
-                fireProjectile();
-                
-            }
-            else
-            {
-                spinupTime = SpinupTime;
-            }
+          fireProjectile();
         }
         else
         {
-            if (isBack)
-            {
-                Idlemode();
-                
-            }
-            else
-            {
-                ReturnToIdlemode();
-            }
+          spinupTime = SpinupTime;
         }
-    }
-    
-    bool PlayerInLight; //Placeholder Detectionrays
-    float rotationtotarget;
-    float currentAngleToTarget;
-    Vector2 Turrettotargetdirection;
-    Vector2 TurretXAxisDirection;
-    ContactPoint2D Contact;
-
-    void updateValues()
-    {
-        PlayerInLight = ItemScript.InLight; // Detect Skript no longer needed
-        Turrettotargetdirection = (Target.position - this.transform.position).normalized;
-        TurretXAxisDirection = new Vector2(-this.transform.right.x, -this.transform.right.y);
-        rotationtotarget = AngleBetweenVector2(Turrettotargetdirection, TurretXAxisDirection);                                                                                                                                                                                                                              //rotationtotarget = (rotationtotarget - (0.25f * Mathf.PI)) % Mathf.PI; //Doesnt work? DOESNT WORK !
-        currentAngleToTarget = AngleBetweenVector2(Turrettotargetdirection, new Vector2(-1, 0));
-
-        Debug.Log(rotationtotarget + "ROtTOTArget");
-        Debug.Log(currentAngleToTarget + "Currangletotarget");
-
-    }
-
-    //bool detected() { }
-
-    float AngleBetweenVector2(Vector2 vec1, Vector2 vec2)
-    {
-        Vector2 vec1Rotated90 = new Vector2(-vec1.y, vec1.x);
-        float sign = (Vector2.Dot(vec1Rotated90, vec2) < 0) ? -1.0f : 1.0f;
-        return Vector2.Angle(vec1, vec2) * sign;
-    }
-
-    void RaycastVision()
-    {
-        origin = new Vector2(Firepoint.transform.position.x, Firepoint.transform.position.y);
-        Target2d = new Vector2(Target.transform.position.x, Target.transform.position.y);
-        direction = Target2d - origin; //NEUE IDEE
-        //Debug.Log(direction);
-        //Raylength Through LightDetection
-        if (PlayerInLight)
+      }
+      else
+      {
+        if (isBack)
         {
-            reallength = VisionInLightLenght;
+          Idlemode();
         }
         else
         {
-            reallength = VisionInDarknessLength;
+          ReturnToIdlemode();
         }
-        //ray2D = new Ray2D(new Vector2(transform.position.x, transform.position.y), Vector3.down); //Not the Firepoint! ??Maybe a Turretcam Ask Arthur
-        //hit = Physics2D.Linecast(new Vector2(transform.position.x, transform.position.y), Vector3.right*reallength);
-        RaycastHit2D DetectionRay = Physics2D.Raycast(origin, direction, reallength);
-        //Debug.Log(reallength);
-        if (DetectionRay.collider != null)
-        {
-            if (DetectionRay.collider.tag == "Player")
-            {
-                TargetSighted = true;
-            }
-            else { TargetSighted = false; }
-        }
+      }
     }
-    Vector2 origin;
-    Vector2 Target2d;
-    Vector2 direction;
-    float reallength;
-    bool TargetSighted = false;
+  }
 
-    void rotateToTargetPosition(float AngleToTarget)
-    {
-        if (!StartAngleIsRight)
-        {
-            if (rotationtotarget > 0 && Mathf.Abs(AngleToTarget)<AngleCap)
-            {
-                transform.Rotate(0, 0, -RotationSpeed);
-            }
-            if (rotationtotarget < 0 && Mathf.Abs(AngleToTarget) < AngleCap)
-            {
-                transform.Rotate(0, 0, RotationSpeed);
-            }
-        }
-        if (StartAngleIsRight)
-        {
-            if (rotationtotarget > 0 && Mathf.Abs(AngleToTarget) > AngleCap)
-            {
-                transform.Rotate(0, 0, -RotationSpeed);
-            }
-            if (rotationtotarget < 0 && Mathf.Abs(AngleToTarget) > AngleCap)
-            {
-                transform.Rotate(0, 0, RotationSpeed);
-            }
-        }
+  bool playerInLight; //Placeholder Detectionrays
+  float rotationToTarget;
+  float currentAngleToTarget;
+  Vector2 turretToTargetDirection;
+  Vector2 turretXAxisDirection;
+  ContactPoint2D contact;
 
-    }
-    
-    bool targetLocked(float rotationToTarget)
-    {
-        if (Mathf.Abs(rotationToTarget) < threshold) { return true; }
-        else { return false; }
-    }
-    void fireProjectile()
-    {
-        if (spinupTime <= 0)
-        {
-            if (timeBetweenShots <= 0)
-            {
-                Instantiate(Projectile, this.transform.position, this.transform.rotation);
-                timeBetweenShots = startTimeBetweenShots;
-            }
-            else
-            {
-                timeBetweenShots -= Time.deltaTime;
-            }
-        }
-        else
-        {
-            spinupTime -= Time.deltaTime;
-        }
-    }
-    float timeBetweenShots;
-    float spinupTime;
+  void updateValues()
+  {
+    playerInLight = ItemScript.InLight; // Detect Skript no longer needed
+    turretToTargetDirection = (Target.position - this.transform.position).normalized;
+    turretXAxisDirection = new Vector2(-this.transform.right.x, -this.transform.right.y);
+    rotationToTarget = AngleBetweenVector2(turretToTargetDirection, turretXAxisDirection);                                                                                                                                                                                                                              //rotationtotarget = (rotationtotarget - (0.25f * Mathf.PI)) % Mathf.PI; //Doesnt work? DOESNT WORK !
+    currentAngleToTarget = AngleBetweenVector2(turretToTargetDirection, new Vector2(-1, 0));
+  }
 
-    void ReturnToIdlemode()
-    {
-        angleToStartingVector = AngleBetweenVector2(TurretXAxisDirection, startAngle);
-        Debug.Log(angleToStartingVector + "AngtoStarting");
-        rotateToTargetPosition(angleToStartingVector);
-        if (targetLocked(angleToStartingVector))
-        {
-            isBack = true;
-        }
-        else
-        {
-            isBack = false;
-        }
+  float AngleBetweenVector2(Vector2 vec1, Vector2 vec2)
+  {
+    Vector2 vec1Rotated90 = new Vector2(-vec1.y, vec1.x);
+    float sign = (Vector2.Dot(vec1Rotated90, vec2) < 0) ? -1.0f : 1.0f;
+    return Vector2.Angle(vec1, vec2) * sign;
+  }
 
-    }
-    bool isBack;
-    float angleToStartingVector;
-    
-    void Idlemode()
-    {
-        if (switchdirection)
-        {
-            transform.Rotate(0, 0, -Idle_Speed);
-        }
-        if (!switchdirection)
-        {
-            transform.Rotate(0, 0, Idle_Speed);
-        }
-        if (!StartAngleIsRight)
-        {
-            if (Mathf.Abs(this.transform.rotation.z * Mathf.Rad2Deg * 4) > IdleCap)
-            {
-                switchdirection = !switchdirection;
-            }
-        }
+  void RaycastVision()
+  {
+    origin = new Vector2(Firepoint.transform.position.x, Firepoint.transform.position.y);
+    target2D = new Vector2(Target.transform.position.x, Target.transform.position.y);
+    direction = target2D - origin;
 
-        else
-        {
-            if (Mathf.Abs(this.transform.rotation.z * Mathf.Rad2Deg * 4) < IdleCap)
-            {
-                switchdirection = !switchdirection;
-            }
-        }
+    if (playerInLight)
+    {
+      reallength = VisionInLightLenght;
     }
-    bool switchdirection;
+    else
+    {
+      reallength = VisionInDarknessLength;
+    }
+    RaycastHit2D DetectionRay = Physics2D.Raycast(origin, direction, reallength);
+
+    if (DetectionRay.collider != null)
+    {
+      if (DetectionRay.collider.tag == "Player")
+      {
+        targetSighted = true;
+      }
+      else { targetSighted = false; }
+    }
+  }
+  Vector2 origin;
+  Vector2 target2D;
+  Vector2 direction;
+  float reallength;
+  bool targetSighted = false;
+
+  void rotateToTargetPosition(float AngleToTarget)
+  {
+    if (!StartAngleIsRight)
+    {
+      if (rotationToTarget > 0 && Mathf.Abs(AngleToTarget) < AngleCap)
+      {
+        transform.Rotate(0, 0, -RotationSpeed);
+      }
+      if (rotationToTarget < 0 && Mathf.Abs(AngleToTarget) < AngleCap)
+      {
+        transform.Rotate(0, 0, RotationSpeed);
+      }
+    }
+    if (StartAngleIsRight)
+    {
+      if (rotationToTarget > 0 && Mathf.Abs(AngleToTarget) > AngleCap)
+      {
+        transform.Rotate(0, 0, -RotationSpeed);
+      }
+      if (rotationToTarget < 0 && Mathf.Abs(AngleToTarget) > AngleCap)
+      {
+        transform.Rotate(0, 0, RotationSpeed);
+      }
+    }
+  }
+
+  bool targetLocked(float rotationToTarget)
+  {
+    if (Mathf.Abs(rotationToTarget) < Threshold)
+    {
+      return true;
+    }
+    else { return false; }
+  }
+  void fireProjectile()
+  {
+    if (spinupTime <= 0)
+    {
+      if (timeBetweenShots <= 0)
+      {
+        Instantiate(Projectile, this.transform.position, this.transform.rotation);
+        timeBetweenShots = StartTimeBetweenShots;
+      }
+      else
+      {
+        timeBetweenShots -= Time.deltaTime;
+      }
+    }
+    else
+    {
+      spinupTime -= Time.deltaTime;
+    }
+  }
+  float timeBetweenShots;
+  float spinupTime;
+
+  void ReturnToIdlemode()
+  {
+    angleToStartingVector = AngleBetweenVector2(turretXAxisDirection, startAngle);
+    Debug.Log(angleToStartingVector + "AngtoStarting");
+    rotateToTargetPosition(angleToStartingVector);
+    if (targetLocked(angleToStartingVector))
+    {
+      isBack = true;
+    }
+    else
+    {
+      isBack = false;
+    }
+
+  }
+  bool isBack;
+  float angleToStartingVector;
+
+  void Idlemode()
+  {
+    if (switchdirection)
+    {
+      transform.Rotate(0, 0, -Idle_Speed);
+    }
+    if (!switchdirection)
+    {
+      transform.Rotate(0, 0, Idle_Speed);
+    }
+    if (!StartAngleIsRight)
+    {
+      if (Mathf.Abs(this.transform.rotation.z * Mathf.Rad2Deg * 4) > IdleCap)
+      {
+        switchdirection = !switchdirection;
+      }
+    }
+
+    else
+    {
+      if (Mathf.Abs(this.transform.rotation.z * Mathf.Rad2Deg * 4) < IdleCap)
+      {
+        switchdirection = !switchdirection;
+      }
+    }
+  }
+  bool switchdirection;
 }
