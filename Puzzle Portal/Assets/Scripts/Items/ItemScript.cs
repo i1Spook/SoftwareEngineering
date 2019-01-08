@@ -10,6 +10,9 @@ public class ItemScript : MonoBehaviour
     public static int KeycardsCollected;
     public static int KeycardsNeeded;
 
+    public GameObject BluePortal;
+    public GameObject OrangePortal;
+
     static GameObject Keycard;
 
     public static GameObject LastHit;
@@ -18,6 +21,8 @@ public class ItemScript : MonoBehaviour
     public static bool ItemInHandToggle;
     public GameObject ArmLocation;
     static GameObject ArmLocationStatic;
+
+    public static bool AllPortalsCreated;
 
     public static uint SmokeCounter;
     public static bool InLight;
@@ -37,6 +42,8 @@ public class ItemScript : MonoBehaviour
         AtItem = false;
         AtTurret = false;
 
+        AllPortalsCreated = false;
+
         KeycardsNeeded = GameObject.FindGameObjectsWithTag("Keycard").Length;
         Debug.Log("Needed" + KeycardsNeeded);
         Debug.Log("Collected" + KeycardsCollected);
@@ -46,6 +53,11 @@ public class ItemScript : MonoBehaviour
 
     void Update()
     {
+        if (BluePortal.GetComponent<PortalScript>().PortalCreated && OrangePortal.GetComponent<PortalScript>().PortalCreated)
+        {
+            AllPortalsCreated = true;
+        }
+
         InLight = (SmokeCounter < 3) && (Illuminated) ? true : false;
         if (AtTurret && Input.GetKeyDown(KeyCode.Q))
         {

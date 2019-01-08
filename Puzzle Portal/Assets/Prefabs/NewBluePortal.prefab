@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4418113933629598}
   - component: {fileID: 212575804710246858}
   - component: {fileID: 61378515512377502}
-  - component: {fileID: 114216157684101950}
+  - component: {fileID: 114658918021199396}
   m_Layer: 0
   m_Name: NewBluePortal
   m_TagString: BluePortal
@@ -29,19 +29,48 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1224009960424950
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4121186441254508}
+  m_Layer: 0
+  m_Name: Position
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4121186441254508
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1224009960424950}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 6.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4418113933629598}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4418113933629598
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1039039847319754}
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: -2.23, y: 10.19, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
+  m_LocalPosition: {x: -27.020126, y: -2.687858, z: 1.1484375}
   m_LocalScale: {x: 0.14749262, y: 0.12195122, z: 0}
-  m_Children: []
+  m_Children:
+  - {fileID: 4121186441254508}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &61378515512377502
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -67,7 +96,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.39, y: 0.41}
   m_EdgeRadius: 0
---- !u!114 &114216157684101950
+--- !u!114 &114658918021199396
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -75,12 +104,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1039039847319754}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b4846e23aec1b547aa6bbcea62ef1fe, type: 3}
+  m_Script: {fileID: 11500000, guid: 43b4c611904c7704b833d60ab93454a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   BluePortal: {fileID: 1039039847319754}
   OrangePortal: {fileID: 0}
   velo: 0
+  disableThisPortal: 0
+  PortalCreated: 0
 --- !u!212 &212575804710246858
 SpriteRenderer:
   m_ObjectHideFlags: 1

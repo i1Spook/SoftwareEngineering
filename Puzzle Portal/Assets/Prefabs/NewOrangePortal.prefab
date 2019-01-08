@@ -11,6 +11,21 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1509494470717128}
   m_IsPrefabAsset: 1
+--- !u!1 &1069652771667400
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4431030557330516}
+  m_Layer: 0
+  m_Name: Position
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1509494470717128
 GameObject:
   m_ObjectHideFlags: 0
@@ -21,7 +36,7 @@ GameObject:
   - component: {fileID: 4818180823943040}
   - component: {fileID: 212342460528706920}
   - component: {fileID: 61058644238314226}
-  - component: {fileID: 114836733637232944}
+  - component: {fileID: 114556568448106862}
   m_Layer: 0
   m_Name: NewOrangePortal
   m_TagString: OrangePortal
@@ -29,19 +44,33 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4431030557330516
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1069652771667400}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 6.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4818180823943040}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4818180823943040
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1509494470717128}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -3.7, y: 9.71, z: 0}
-  m_LocalScale: {x: 0.14749262, y: 0.12195122, z: 0}
-  m_Children: []
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -24.737288, y: -3.1304064, z: 1.1484375}
+  m_LocalScale: {x: 0.14749268, y: 0.12195128, z: 0}
+  m_Children:
+  - {fileID: 4431030557330516}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &61058644238314226
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -67,7 +96,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.39, y: 0.41}
   m_EdgeRadius: 0
---- !u!114 &114836733637232944
+--- !u!114 &114556568448106862
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -75,12 +104,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1509494470717128}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b88c6195fe72f4a4689b5d737b7c2c76, type: 3}
+  m_Script: {fileID: 11500000, guid: 43b4c611904c7704b833d60ab93454a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OrangePortal: {fileID: 1509494470717128}
   BluePortal: {fileID: 0}
+  OrangePortal: {fileID: 1509494470717128}
   velo: 0
+  disableThisPortal: 0
+  PortalCreated: 0
 --- !u!212 &212342460528706920
 SpriteRenderer:
   m_ObjectHideFlags: 1
