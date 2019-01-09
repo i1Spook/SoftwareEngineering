@@ -44,6 +44,9 @@ public class ItemScript : MonoBehaviour
 
         AllPortalsCreated = false;
 
+        ItemInHand = null;
+        ItemInHandToggle = false;
+
         KeycardsNeeded = GameObject.FindGameObjectsWithTag("Keycard").Length;
         Debug.Log("Needed" + KeycardsNeeded);
         Debug.Log("Collected" + KeycardsCollected);
@@ -79,8 +82,8 @@ public class ItemScript : MonoBehaviour
             LastHit.gameObject.transform.position = ArmLocationStatic.transform.position;
             LastHit.transform.SetParent(ArmLocationStatic.gameObject.transform);
 
-            LastHit.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
-            LastHit.GetComponent<Rigidbody2D>().gravityScale = 0;
+            LastHit.GetComponent<Rigidbody2D>().isKinematic = true;
+            LastHit.GetComponent<Rigidbody2D>().simulated = false;
 
             ItemInHand = LastHit;
             ItemInHandToggle = true;
@@ -88,8 +91,8 @@ public class ItemScript : MonoBehaviour
         else if (ItemButtonPressed && ItemInHandToggle)
         {
             FindObjectOfType<AudioManager>().PlayAt("ItemDrop");
-            ItemInHand.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-            ItemInHand.GetComponent<Rigidbody2D>().gravityScale = 1;
+            ItemInHand.GetComponent<Rigidbody2D>().isKinematic = false;
+            ItemInHand.GetComponent<Rigidbody2D>().simulated = true;
 
             ItemInHand.transform.parent = null;
             ItemInHandToggle = false;
@@ -99,8 +102,8 @@ public class ItemScript : MonoBehaviour
         {
             FindObjectOfType<AudioManager>().PlayAt("ItemThrow");
             ItemInHand.transform.parent = null;
-            ItemInHand.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-            ItemInHand.GetComponent<Rigidbody2D>().gravityScale = 1;
+            ItemInHand.GetComponent<Rigidbody2D>().isKinematic = false;
+            ItemInHand.GetComponent<Rigidbody2D>().simulated = true;
 
 
             ItemInputHandler.FireObject(ItemInHand, 500);
@@ -118,6 +121,12 @@ public class ItemScript : MonoBehaviour
           FindObjectOfType<AudioManager>().PlayAt("KeycardPickUp");
           GotKeycard = true;
           KeycardsCollected++;
+
+            if (KeycardsCollected == KeycardsNeeded)
+            {
+                GotKeycard = true;
+            }
+
           Debug.Log("Needed" + KeycardsNeeded);
           Debug.Log("Collected" + KeycardsCollected);
           CollisionWith.gameObject.SetActive(false);
@@ -185,7 +194,7 @@ public class ItemScript : MonoBehaviour
         Debug.Log("Needed" + needed);
         Debug.Log("Collected" + collected);
 
-        KeycardsCollected = 0;
+        
 
         return true;
       }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class PortalShot : MonoBehaviour
 {
 
-    public GameObject PortalReference;
+    public GameObject DropPrefabReference;
 
 
     // Use this for initialization
@@ -13,9 +13,9 @@ public class PortalShot : MonoBehaviour
     {
         foreach (GameObject item in GameObject.FindGameObjectsWithTag(tag))
         {
-            if (item.name != name)
+            if (item.name == "NewOrangePortal" || item.name == "NewBluePortal")
             {
-                PortalReference = item;
+                DropPrefabReference = item;
                 break;
             }
         }
@@ -38,7 +38,7 @@ public class PortalShot : MonoBehaviour
 
             Rotation = CollisionWith.gameObject.transform.rotation;
             winkel = Rotation.eulerAngles.z;
-            PortalReference.transform.position = transform.position;
+            DropPrefabReference.transform.position = transform.position;
 
             var angle = 180f;
             if (((winkel == 90) || (winkel == -90)) && (transform.right.y > 0f))
@@ -50,9 +50,9 @@ public class PortalShot : MonoBehaviour
                 angle = 0f;
             }
 
-            PortalReference.GetComponent<PortalScript>().PortalCreated = true;
+            DropPrefabReference.GetComponent<PortalScript>().PortalCreated = true;
 
-            PortalReference.transform.rotation = Rotation * Quaternion.Euler(0, 0, angle);
+            DropPrefabReference.transform.rotation = Rotation * Quaternion.Euler(0, 0, angle);
         }
 
         CallResetShot();

@@ -38,7 +38,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4575017783620900}
   - component: {fileID: 212710922888581146}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Lamp Bulb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4452017105822624}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Light+Bulb
   m_TagString: Untagged
   m_Icon: {fileID: 0}

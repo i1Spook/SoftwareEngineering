@@ -12,12 +12,20 @@ public class AreaLevelChanger : MonoBehaviour
   int levelToLoad;
 
   public static bool initiatedLevelChange = false;
+
   public static int CurrentLevel { get; private set; }
   void Start()
   {
     CurrentLevel = SceneManager.GetActiveScene().buildIndex;
 
     nextLevel = CurrentLevel + 1;
+  }
+  void Update()
+  {
+    if (Input.GetKeyDown(KeyCode.N))
+    {
+      FadeToNextLevel();
+    }
   }
   void OnTriggerEnter2D(Collider2D CollidedWith)
   {
@@ -34,7 +42,9 @@ public class AreaLevelChanger : MonoBehaviour
   public void FadeToLevel(int levelIndex)
   {
     initiatedLevelChange = true;
+
     levelToLoad = levelIndex;
+
     animator.SetTrigger("FadeOut");
   }
   public void OnFadeComplete()

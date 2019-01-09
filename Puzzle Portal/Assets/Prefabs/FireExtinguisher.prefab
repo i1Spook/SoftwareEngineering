@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4434056590136210}
   - component: {fileID: 61890150653798912}
-  m_Layer: 14
+  m_Layer: 2
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 61364948444360644}
   - component: {fileID: 50371883806752140}
   - component: {fileID: 114060886900618414}
-  m_Layer: 10
+  m_Layer: 2
   m_Name: FireExtinguisher
   m_TagString: Item
   m_Icon: {fileID: 0}

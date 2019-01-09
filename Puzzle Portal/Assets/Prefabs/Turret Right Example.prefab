@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212700560317943342}
   - component: {fileID: 61727220098046190}
   - component: {fileID: 50481231487073646}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Turret Right Example
   m_TagString: Portable
   m_Icon: {fileID: 0}
@@ -39,9 +39,10 @@ GameObject:
   - component: {fileID: 4835722727175036}
   - component: {fileID: 212969422727551014}
   - component: {fileID: 114804503026225010}
-  m_Layer: 0
+  - component: {fileID: 61089358141653382}
+  m_Layer: 10
   m_Name: turret-arm
-  m_TagString: Untagged
+  m_TagString: Turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,7 +55,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4898733215009044}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Firepoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,9 +68,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1046792707380374}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32.97, y: -29.244, z: 0}
-  m_LocalScale: {x: 1.8452839, y: 3.2579818, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -36.77, y: 5.27, z: 0.609375}
+  m_LocalScale: {x: 1.896, y: 1.896, z: 1}
   m_Children:
   - {fileID: 4835722727175036}
   m_Father: {fileID: 0}
@@ -82,8 +83,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1189055585560048}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.1457, y: -0.0182, z: 0}
-  m_LocalScale: {x: 1.4547594, y: 1.584268, z: 1}
+  m_LocalPosition: {x: -0.28, y: -0, z: 0}
+  m_LocalScale: {x: 1.3319601, y: 2.453322, z: 1}
   m_Children:
   - {fileID: 4898733215009044}
   m_Father: {fileID: 4084493878085488}
@@ -122,6 +123,31 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &61089358141653382
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1189055585560048}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.11409858, y: 0.02609316}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 0.5}
+    newSize: {x: 1, y: 0.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.4595332, y: 0.043371033}
+  m_EdgeRadius: 0
 --- !u!61 &61727220098046190
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -134,7 +160,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.01232487, y: -0.09567253}
+  m_Offset: {x: -0.20018113, y: -0.20004606}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -145,7 +171,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.4410712, y: 0.30865493}
+  m_Size: {x: 0.5425476, y: 0.09990789}
   m_EdgeRadius: 0
 --- !u!114 &114804503026225010
 MonoBehaviour:
@@ -165,7 +191,7 @@ MonoBehaviour:
   AngleCap: 90
   IdleCap: 220
   Idle_Speed: 0.2
-  StartAngleIsRight: 0
+  StartAngleIsRight: 1
   Startangle: 180
   threshold: 4
   startTimeBetweenShots: 0.05

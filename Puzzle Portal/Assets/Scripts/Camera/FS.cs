@@ -17,6 +17,6 @@ public class FS : MonoBehaviour {
     // Update is called once per frame
     void LateUpdate()
     {
-        transform.position = (new Vector3(player.transform.position.x, offY, player.transform.position.z)) + (new Vector3(offset.x, offY, offset.z));
+        transform.position = (new Vector3(player.transform.position.x, offY, 5)) + (new Vector3(offset.x, offY, offset.z));
     }
 }
