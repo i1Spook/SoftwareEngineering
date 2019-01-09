@@ -3554,11 +3554,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4035821306990626, guid: 6a99e048dc53d1446accda7e4a82e95f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 23.24
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4035821306990626, guid: 6a99e048dc53d1446accda7e4a82e95f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 9.42
+      value: -3.4
       objectReference: {fileID: 0}
     - target: {fileID: 4035821306990626, guid: 6a99e048dc53d1446accda7e4a82e95f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3601,12 +3601,44 @@ Prefab:
     - target: {fileID: 20008543950272968, guid: 6a99e048dc53d1446accda7e4a82e95f,
         type: 2}
       propertyPath: orthographic size
-      value: 14.807247
+      value: 8.10928
       objectReference: {fileID: 0}
     - target: {fileID: 114609452849529494, guid: 6a99e048dc53d1446accda7e4a82e95f,
         type: 2}
       propertyPath: offY
       value: 4.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035821306990626, guid: 6a99e048dc53d1446accda7e4a82e95f, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.92867994
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035821306990626, guid: 6a99e048dc53d1446accda7e4a82e95f, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1.6984136
+      objectReference: {fileID: 0}
+    - target: {fileID: 4035821306990626, guid: 6a99e048dc53d1446accda7e4a82e95f, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.0464
+      objectReference: {fileID: 0}
+    - target: {fileID: 114609452849529494, guid: 6a99e048dc53d1446accda7e4a82e95f,
+        type: 2}
+      propertyPath: MinY
+      value: 2.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 114609452849529494, guid: 6a99e048dc53d1446accda7e4a82e95f,
+        type: 2}
+      propertyPath: MinX
+      value: 11.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 114609452849529494, guid: 6a99e048dc53d1446accda7e4a82e95f,
+        type: 2}
+      propertyPath: MaxY
+      value: 16.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 114609452849529494, guid: 6a99e048dc53d1446accda7e4a82e95f,
+        type: 2}
+      propertyPath: MaxX
+      value: 51.66
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a99e048dc53d1446accda7e4a82e95f, type: 2}

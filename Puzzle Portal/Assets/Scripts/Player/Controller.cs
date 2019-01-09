@@ -74,7 +74,7 @@ public class Controller : MonoBehaviour
         if (grounded && Input.GetKeyDown(KeyCode.Space))
         {
             anim.SetBool("Ground", false);
-            //FindObjectOfType<AudioManager>().Play("Jump");
+            FindObjectOfType<AudioManager>().PlayAt("Jump");
             rb.AddForce(new Vector2(0, jumpForce));
         }
 

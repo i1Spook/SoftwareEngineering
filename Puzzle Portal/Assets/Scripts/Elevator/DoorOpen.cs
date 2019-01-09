@@ -13,7 +13,7 @@ public class DoorOpen : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (ItemScript.AllKeycardsCollected()==true) {
+		if (ItemScript.GotKeycard) {
 			anim.SetBool ("GotAll", true);
 
 

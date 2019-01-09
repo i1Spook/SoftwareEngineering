@@ -6,7 +6,7 @@ public class ItemScript : MonoBehaviour
 {
     public GameObject Player;
 
-    public bool GotKeycard;
+    public static bool GotKeycard;
     public static int KeycardsCollected;
     public static int KeycardsNeeded;
 
@@ -194,7 +194,7 @@ public class ItemScript : MonoBehaviour
         Debug.Log("Needed" + needed);
         Debug.Log("Collected" + collected);
 
-        
+		KeycardsCollected = 0;
 
         return true;
       }
