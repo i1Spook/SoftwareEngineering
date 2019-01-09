@@ -5,12 +5,20 @@ using UnityEngine;
 public class PortalShot : MonoBehaviour
 {
 
-    public GameObject BluePortal;
+    public GameObject DropPrefabReference;
 
 
     // Use this for initialization
     void Start()
     {
+        foreach (GameObject item in GameObject.FindGameObjectsWithTag(tag))
+        {
+            if (item.name == "NewOrangePortal" || item.name == "NewBluePortal")
+            {
+                DropPrefabReference = item;
+                break;
+            }
+        }
 
     }
 
@@ -26,9 +34,11 @@ public class PortalShot : MonoBehaviour
 
         if (CollisionWith.gameObject.tag.ToUpper() == "PORTALWALL")
         {
+            FindObjectOfType<AudioManager>().PlayAt("PortalWallHit2");
+
             Rotation = CollisionWith.gameObject.transform.rotation;
             winkel = Rotation.eulerAngles.z;
-            BluePortal.transform.position = transform.position;
+            DropPrefabReference.transform.position = transform.position;
 
             var angle = 180f;
             if (((winkel == 90) || (winkel == -90)) && (transform.right.y > 0f))
@@ -40,8 +50,9 @@ public class PortalShot : MonoBehaviour
                 angle = 0f;
             }
 
+            DropPrefabReference.GetComponent<PortalScript>().PortalCreated = true;
 
-            BluePortal.transform.rotation = Rotation * Quaternion.Euler(0, 0, angle);
+            DropPrefabReference.transform.rotation = Rotation * Quaternion.Euler(0, 0, angle);
         }
 
         CallResetShot();

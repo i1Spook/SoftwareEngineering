@@ -6,22 +6,27 @@ public class TurretSkriptFinal : MonoBehaviour
 {
   public GameObject Firepoint;
   public GameObject Projectile;
+
   public Transform Target;
   public float RotationSpeed;
   public float AngleCap = 90;
   public float IdleCap = 30;
   public float Idle_Speed;
+
   public bool StartAngleIsRight;
+
   public float Startangle;
   public float Threshold = 4;
   public float StartTimeBetweenShots = 0.05f;
   public float VisionInLightLenght = 100;
   public float VisionInDarknessLength = 3;
   public float SpinupTime = 1.71f;
+
   public bool Active;
 
   void Start()
   {
+    Target = GameObject.FindGameObjectWithTag("Player").transform;
     transform.rotation = Quaternion.AngleAxis(Startangle, new Vector3(0, 0, 1));
     startAngle = new Vector2(-transform.right.x, -transform.right.y);
     Debug.Log(startAngle);
@@ -69,7 +74,7 @@ public class TurretSkriptFinal : MonoBehaviour
     }
   }
 
-  bool playerInLight; //Placeholder Detectionrays
+  bool playerInLight;
   float rotationToTarget;
   float currentAngleToTarget;
   Vector2 turretToTargetDirection;
@@ -78,7 +83,7 @@ public class TurretSkriptFinal : MonoBehaviour
 
   void updateValues()
   {
-    playerInLight = ItemScript.InLight; // Detect Skript no longer needed
+    playerInLight = ItemScript.InLight;
     turretToTargetDirection = (Target.position - this.transform.position).normalized;
     turretXAxisDirection = new Vector2(-this.transform.right.x, -this.transform.right.y);
     rotationToTarget = AngleBetweenVector2(turretToTargetDirection, turretXAxisDirection);                                                                                                                                                                                                                              //rotationtotarget = (rotationtotarget - (0.25f * Mathf.PI)) % Mathf.PI; //Doesnt work? DOESNT WORK !

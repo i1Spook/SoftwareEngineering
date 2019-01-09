@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AimAtMouse : MonoBehaviour
 {
-   
+    Animator anim;
     public static Vector3 MousePositionRead;
   
     static Vector3 PlayerPosition;
@@ -17,6 +17,7 @@ public class AimAtMouse : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        anim = GetComponentInParent<Animator>();
     }
 
     // Update is called once per frame
@@ -28,35 +29,30 @@ public class AimAtMouse : MonoBehaviour
         MousePositionRead.x = MousePositionRead.x - PlayerPosition.x;
         MousePositionRead.y = MousePositionRead.y - PlayerPosition.y;
         angle = Mathf.Atan2(MousePositionRead.y, MousePositionRead.x) * Mathf.Rad2Deg;
-        Rotation.z = angle;
-        transform.rotation = Quaternion.Euler(Rotation);       
 
-        if (Controller.facingRight && FlippedArm)
-        {
-            FlipArm();
-            FlippedArm = false;
-        }
-        else if (!Controller.facingRight && !FlippedArm)
-        {
-            FlipArm();
-            FlippedArm = true;
-        }
+        Rotation.z = (angle > 90 || angle < -90) ? 180 - angle : angle;
+
+        Rotation.y = (angle > 90 || angle < -90) ? 180f : 0;
+
+        anim.SetBool("FacingRight", MousePositionRead.x > 0 ? true : false);
+
+        transform.rotation = Quaternion.Euler(Rotation);
     }
     
-void FlipArm()
-    {
-        GameObject Arm = gameObject.transform.GetChild(0).gameObject;
+//void FlipArm()
+//    {
+//        GameObject Arm = gameObject.transform.GetChild(0).gameObject;
 
-        Arm.GetComponent<SpriteRenderer>().flipX = !Arm.GetComponent<SpriteRenderer>().flipX;
+//        Arm.GetComponent<SpriteRenderer>().flipX = !Arm.GetComponent<SpriteRenderer>().flipX;
 
-        if (!FlippedArm)
-        {
-            Arm.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 180f));
-        }
-        else
-        {
-            Arm.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
-        }
-    } 
+//        if (!FlippedArm)
+//        {
+//            Arm.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 180f));
+//        }
+//        else
+//        {
+//            Arm.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
+//        }
+//    } 
 }
 

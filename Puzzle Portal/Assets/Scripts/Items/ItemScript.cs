@@ -1,12 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ItemScript : MonoBehaviour
 {
     public GameObject Player;
 
-    bool GotKeycard;
+    public static bool GotKeycard;
+    public static int KeycardsCollected;
+    public static int KeycardsNeeded;
+
+    public GameObject BluePortal;
+    public GameObject OrangePortal;
+
+    static GameObject Keycard;
 
     public static GameObject LastHit;
 
@@ -14,6 +22,8 @@ public class ItemScript : MonoBehaviour
     public static bool ItemInHandToggle;
     public GameObject ArmLocation;
     static GameObject ArmLocationStatic;
+
+    public static bool AllPortalsCreated;
 
     public static uint SmokeCounter;
     public static bool InLight;
@@ -24,6 +34,8 @@ public class ItemScript : MonoBehaviour
 
     public static bool AtItem;
 
+    public static bool PortalGunFound;
+
     void Start()
     {
         GotKeycard = false;
@@ -33,14 +45,54 @@ public class ItemScript : MonoBehaviour
         AtItem = false;
         AtTurret = false;
 
+        AllPortalsCreated = false;
+
+        ItemInHand = null;
+        ItemInHandToggle = false;
+
+        KeycardsNeeded = GameObject.FindGameObjectsWithTag("Keycard").Length;
+        Debug.Log("Needed" + KeycardsNeeded);
+        Debug.Log("Collected" + KeycardsCollected);
+
         ArmLocationStatic = ArmLocation;
+
+        PortalGunFound = false;
+
+        int[] SpritePreset = new int[] { 0, 1 ,2, 3 ,5,7,9};
+
+        foreach (int levelFilter in SpritePreset)
+        {
+            if (SceneManager.GetActiveScene().buildIndex == levelFilter)
+            {
+                GameObject.Find("PlayerGunSprite").GetComponent<SpriteRenderer>().enabled = false;
+                GameObject.Find("PlayerHandSprite").GetComponent<SpriteRenderer>().enabled = true;
+                PortalGunFound = false;
+                break;
+            }
+            else
+            {
+                GameObject.Find("PlayerGunSprite").GetComponent<SpriteRenderer>().enabled = true;
+                GameObject.Find("PlayerHandSprite").GetComponent<SpriteRenderer>().enabled = false;
+                PortalGunFound = true;
+            }
+        }
+
     }
 
     void Update()
     {
+        if (PortalGunFound)
+        {
+            if (BluePortal.GetComponent<PortalScript>().PortalCreated && OrangePortal.GetComponent<PortalScript>().PortalCreated)
+            {
+                AllPortalsCreated = true;
+            }
+        }
+
         InLight = (SmokeCounter < 3) && (Illuminated) ? true : false;
         if (AtTurret && Input.GetKeyDown(KeyCode.Q))
         {
+            FindObjectOfType<AudioManager>().PlayAt("TurretExplosion");
             TurnOffTurret();
         }
     }
@@ -52,38 +104,49 @@ public class ItemScript : MonoBehaviour
 
     public static void ItemInteraction(bool ItemButtonPressed, bool ThrowButtonPressed)
     {
-        if (ItemButtonPressed && AtItem && !ItemInHandToggle)
+        if (PortalGunFound)
         {
-            LastHit.gameObject.transform.position = ArmLocationStatic.transform.position;
-            LastHit.transform.SetParent(ArmLocationStatic.gameObject.transform);
+            if (ItemButtonPressed && AtItem && !ItemInHandToggle)
+            {
+                FindObjectOfType<AudioManager>().PlayAt("ItemPickUp");
+                LastHit.gameObject.transform.position = ArmLocationStatic.transform.position;
+                LastHit.transform.SetParent(ArmLocationStatic.gameObject.transform);
 
-            LastHit.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
-            LastHit.GetComponent<Rigidbody2D>().gravityScale = 0;
+                LastHit.GetComponent<Rigidbody2D>().isKinematic = true;
+                LastHit.GetComponent<Rigidbody2D>().simulated = false;
 
-            ItemInHand = LastHit;
-            ItemInHandToggle = true;
-        }
-        else if (ItemButtonPressed && ItemInHandToggle)
-        {
-            ItemInHand.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-            ItemInHand.GetComponent<Rigidbody2D>().gravityScale = 1;
+                ItemInHand = LastHit;
+                ItemInHandToggle = true;
 
-            ItemInHand.transform.parent = null;
-            ItemInHandToggle = false;
-        }
+                if(ItemInHand.name == "FireExtinguisher")
+                {
+                    ItemInHand.GetComponent<FireExt>().EnableFireExtHitbox();
+                }
+            }
+            else if (ItemButtonPressed && ItemInHandToggle)
+            {
+                FindObjectOfType<AudioManager>().PlayAt("ItemDrop");
+                ItemInHand.GetComponent<Rigidbody2D>().isKinematic = false;
+                ItemInHand.GetComponent<Rigidbody2D>().simulated = true;
 
-        if (ThrowButtonPressed && ItemInHandToggle)
-        {
-            ItemInHand.transform.parent = null;
-            ItemInHand.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-            ItemInHand.GetComponent<Rigidbody2D>().gravityScale = 1;
+                ItemInHand.transform.parent = null;
+                ItemInHandToggle = false;
+            }
+
+            if (ThrowButtonPressed && ItemInHandToggle)
+            {
+                FindObjectOfType<AudioManager>().PlayAt("ItemThrow");
+                ItemInHand.transform.parent = null;
+                ItemInHand.GetComponent<Rigidbody2D>().isKinematic = false;
+                ItemInHand.GetComponent<Rigidbody2D>().simulated = true;
 
 
-            ItemInputHandler.FireObject(ItemInHand, 500);
-            ItemInHand = null;
-            ItemInHandToggle = false;
+                ItemInputHandler.FireObject(ItemInHand, 500);
+                ItemInHand = null;
+                ItemInHandToggle = false;
 
-            ItemInputHandler.ItemWasShot = true;
+                ItemInputHandler.ItemWasShot = true;
+            }
         }
     }
 
@@ -91,35 +154,54 @@ public class ItemScript : MonoBehaviour
     {
         if (CollisionWith.gameObject.tag.ToUpper() == "KEYCARD")
         {
-            GotKeycard = true;
-            CollisionWith.gameObject.SetActive(false);
+          FindObjectOfType<AudioManager>().PlayAt("KeycardPickUp");
+          GotKeycard = true;
+          KeycardsCollected++;
+
+            if (KeycardsCollected == KeycardsNeeded)
+            {
+                GotKeycard = true;
+            }
+
+          Debug.Log("Needed" + KeycardsNeeded);
+          Debug.Log("Collected" + KeycardsCollected);
+          CollisionWith.gameObject.SetActive(false);
         }
         else if (CollisionWith.gameObject.tag.ToUpper() == "ITEM")
         {
-            AtItem = true;
-            LastHit = CollisionWith.gameObject;
+          AtItem = true;
+          LastHit = CollisionWith.gameObject;
         }
         else if (CollisionWith.gameObject.tag.ToUpper() == "LIGHT")
         {
-            Illuminated = true;
+          Illuminated = true;
         }
         else if (CollisionWith.gameObject.tag.ToUpper() == "SMOKE")
         {
-            SmokeCounter++;
+          SmokeCounter++;
         }
         else if (CollisionWith.gameObject.tag.ToUpper() == "DEATH")
         {
-
-            Illuminated = false;
-            RestartLevel.Restart();
+          FindObjectOfType<AudioManager>().PlayAt("PlayerDeath");
+          Illuminated = false;
+          KeycardsCollected = 0;
+          RestartLevel.Restart();
         }
         else if (CollisionWith.gameObject.tag.ToUpper() == "TURRET")
         {
-            AtTurret = true;
-            ThisTurret = CollisionWith.gameObject;
+          AtTurret = true;
+          ThisTurret = CollisionWith.gameObject;
         }
-
-
+        else if (CollisionWith.gameObject.name.ToUpper() == "PROJECTILE")
+        {
+          FindObjectOfType<AudioManager>().PlayAt("ProjectileHit");
+        }
+        else if (CollisionWith.gameObject.tag.ToUpper() == "PORTALGUN")
+        {
+            PortalGunFound = true;
+            GameObject.Find("PlayerGunSprite").GetComponent<SpriteRenderer>().enabled = true;
+            GameObject.Find("PlayerHandSprite").GetComponent<SpriteRenderer>().enabled = false;
+        }
     }
 
     void OnTriggerExit2D(Collider2D CollisionWith)
@@ -142,5 +224,27 @@ public class ItemScript : MonoBehaviour
             AtTurret = false;
             ThisTurret = null;
         }
+    }
+    public static bool AllKeycardsCollected()
+    {
+      int collected = KeycardsCollected;
+      int needed = KeycardsNeeded;
+
+      if (collected == needed)
+      {
+        Debug.Log("Fade successful");
+        Debug.Log("Needed" + needed);
+        Debug.Log("Collected" + collected);
+
+        
+
+        return true;
+      }
+      else
+      {
+        FindObjectOfType<AudioManager>().PlayAt("Error");
+        Debug.Log("Not enough Keycards");
+        return false;
+      }
     }
 }

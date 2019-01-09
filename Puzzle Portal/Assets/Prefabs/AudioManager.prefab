@@ -1,0 +1,194 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1816016870456956}
+  m_IsPrefabAsset: 1
+--- !u!1 &1816016870456956
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4360582741814490}
+  - component: {fileID: 114021686958253018}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4360582741814490
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1816016870456956}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114021686958253018
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1816016870456956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d632f6d4aa77b44cab8a9224eb12a6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: PlayerDeath
+    clip: {fileID: 8300000, guid: a6d22884d471bcc48854ad0f46008d8c, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Theme
+    clip: {fileID: 8300000, guid: edc8e9cbc97868b498ff1582719144d0, type: 3}
+    volume: 0.05
+    pitch: 1
+    loop: 1
+    mute: 0
+    source: {fileID: 0}
+  - name: KeycardPickUp
+    clip: {fileID: 8300000, guid: d1d0e7f233a9b7648842f44e03aa5ea5, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Footsteps
+    clip: {fileID: 8300000, guid: 569afa511d741b64fa35fe0fa08d3ddc, type: 3}
+    volume: 0
+    pitch: 1
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: TurretAttack
+    clip: {fileID: 8300000, guid: eb4e8170490fc4c438801ae9d15b7a6f, type: 3}
+    volume: 0.216
+    pitch: 1
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: BlueShot
+    clip: {fileID: 8300000, guid: b99ffe773e8d1b34eadabebdaf291a8b, type: 3}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: OrangeShot
+    clip: {fileID: 8300000, guid: c997af32e93fb2f44b3f921241cd4e15, type: 3}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Jump
+    clip: {fileID: 8300000, guid: d463502f3beffd24987908b9c8898f22, type: 3}
+    volume: 0.05
+    pitch: 1
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: TurretExplosion
+    clip: {fileID: 8300000, guid: f0ab2ec9b1fe7584190c2df3c8437011, type: 3}
+    volume: 0.15
+    pitch: 1
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: ItemPickUp
+    clip: {fileID: 8300000, guid: b174ee905b7e31740ba75dc517f59208, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: ItemThrow
+    clip: {fileID: 8300000, guid: 31825e6cd20fa0c4382f36df810d954b, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: TurretIdle
+    clip: {fileID: 8300000, guid: 953ffe2a831b817488e6817f1ca67933, type: 3}
+    volume: 0.637
+    pitch: 1
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: FireExt
+    clip: {fileID: 8300000, guid: 396660a6f8f9a5646b288e84b3a51966, type: 3}
+    volume: 0.02
+    pitch: 1
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: ItemDrop
+    clip: {fileID: 8300000, guid: 4f1268323d333b542b64dac62bb816fb, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: ProjectileHit
+    clip: {fileID: 8300000, guid: 9facbba0c7f388b44bd46d7417f03512, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Error
+    clip: {fileID: 8300000, guid: 617c3e7dd527b6a48b5bd54176aa1177, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: Elevator
+    clip: {fileID: 8300000, guid: ce583899c76970c43a582fa164422cd8, type: 3}
+    volume: 0.02
+    pitch: 1
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: PortalWallHit1
+    clip: {fileID: 8300000, guid: fa243cd790418004fb6bf490ddbd5bd6, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: PortalWallHit2
+    clip: {fileID: 8300000, guid: 821664c366d3a564488907d5c8bf973f, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: PortalTraversal
+    clip: {fileID: 8300000, guid: b9f9fc12d4097d74aa3b89ea3c7b6b99, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
