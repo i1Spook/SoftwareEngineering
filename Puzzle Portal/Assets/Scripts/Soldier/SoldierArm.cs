@@ -17,6 +17,7 @@ public class SoldierArm : MonoBehaviour
 
   void Start()
   {
+    Target = GameObject.FindGameObjectWithTag("Player").transform;
     timeBetweenShots = startTimeBetweenShots;
     facingLeft = false;
   }
@@ -24,7 +25,7 @@ public class SoldierArm : MonoBehaviour
   void Update()
   {
     playerInLight = ItemScript.InLight;
-    FacingLeftBody = SoldierBody.GetComponent<Soldiermovement>().facingRight;
+    FacingLeftBody = SoldierBody.GetComponent<Soldiermovement>().FacingRight;
 
     if (FacingLeftBody != facingLeft)
     {

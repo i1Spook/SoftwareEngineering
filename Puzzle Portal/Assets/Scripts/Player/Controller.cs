@@ -1,64 +1,92 @@
 
-﻿using System.Collections;
+using System.Collections;
 using UnityEngine;
 
 public class Controller : MonoBehaviour
 {
-	public float speed;             
-    	public float force; 
-	
-	public static bool facingRight;
-	Rigidbody2D rb;
-	
-	bool grounded = false;
-	public Transform groundCheck;
-	float groundRadius=0.2f;
-	public LayerMask whatIsGround;
-	
-	public float jumpForce = 400f;
+    public float maxSpeed;
+    public float jumpForce = 400f;
+    public static bool facingRight;
+    public bool grounded = false;
+    public Transform groundCheck;
+    public LayerMask whatIsGround;
+    float groundRadius = 0.01f;
 
-	// Use this for initialization
-	void Start ()
-	{
+    Rigidbody2D rb;
+
+    Animator anim;
+
+    // Use this for initialization
+    void Start()
+    {
+        anim = GetComponent<Animator>();
+
         maxSpeed = 10f;
+
         facingRight = true;
-	    rb = GetComponentInParent<Rigidbody2D> ();
-	}
-	
-	// Update is called once per frame
-	void FixedUpdate()
-	{
-		grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
-		
-		float move = Input.GetAxis ("Horizontal");
 
-		rb.AddForce = new Vector2 (move * speed, 0);
+        rb = GetComponentInParent<Rigidbody2D>();
+    }
 
-		if (((AimAtMouse.MousePositionRead.x-rb.position.x)>0) && !facingRight) {
-			Flip ();
-		} else if (((AimAtMouse.MousePositionRead.x-rb.position.x)<0) && facingRight) {
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+        float move = Input.GetAxis("Horizontal");
+        grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
 
-			Flip ();         
-        }
-	}
-	
-	void Update()
-	{
-		if (grounded && Input.GetKeyDown (KeyCode.Space)) {
-			rb.AddForce(new Vector2 (0, jumpForce));
+        anim.SetBool("Grounded", grounded);
+        anim.SetFloat("Speed", rb.velocity.x);
+
+        float regulatedSpeed;
+
+		if (move * maxSpeed > 2) {
+			regulatedSpeed = 2;
+		} else {
+			regulatedSpeed = move * maxSpeed;
 		}
 			
-	}
 
-	 void Flip()
-	{
-		facingRight = !facingRight;
+        if (grounded == false)
+        {
+			rb.AddForce(new Vector2(regulatedSpeed, 0));
+        }
+        else
+        {
+            rb.velocity = new Vector2(move * maxSpeed, rb.velocity.y);
+        }
+
+
+        //Flipping Logic
+        if (((AimAtMouse.MousePositionRead.x - rb.position.x) > 0) && !facingRight)
+        {
+            Flip();
+        }
+        else if (((AimAtMouse.MousePositionRead.x - rb.position.x) < 0) && facingRight)
+        {
+
+            Flip();
+        }
+    }
+
+    void Update()
+    {
+        //Jumping
+        if (grounded && Input.GetKeyDown(KeyCode.Space))
+        {
+            anim.SetBool("Ground", false);
+            FindObjectOfType<AudioManager>().PlayAt("Jump");
+            rb.AddForce(new Vector2(0, jumpForce));
+        }
+
+    }
+
+    /// <summary>
+    /// Fliping the Sprite
+    /// </summary>
+	void Flip()
+    {
+        facingRight = !facingRight;
 
         GetComponent<SpriteRenderer>().flipX = !GetComponent<SpriteRenderer>().flipX;
-        //transform.GetChild(0).GetChild(0).GetComponent<SpriteRenderer>().flipY = !transform.GetChild(0).GetChild(0).GetComponent<SpriteRenderer>().flipY;
-
-        //Vector3 theScale = transform.localScale;
-        //theScale.x *= -1;
-        //   transform.localScale = theScale;
     }
 }

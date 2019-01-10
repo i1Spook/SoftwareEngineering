@@ -17,6 +17,10 @@ TagManager:
   - Smoke
   - Death
   - Turret
+  - AreaLevelChange
+  - LevelChange
+  - PortalGun
+  - PortalGunOnPlayer
   layers:
   - Default
   - TransparentFX
@@ -35,8 +39,8 @@ TagManager:
   - ItemCollider
   - Projectile
   - 
-  - 
-  - 
+  - Platform
+  - Falling
   - 
   - 
   - 

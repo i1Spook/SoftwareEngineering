@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: c876609321efefc48a3d85adb9caee35
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 500
+  forceTextureCase: -1
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: House On Mars
+  fontNames:
+  - House On Mars
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 3c3de3169cc15df4f9e56f30a8b65907, type: 3}
+  - {fileID: 12800000, guid: 31b1406624c41404cbedce4898da5777, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

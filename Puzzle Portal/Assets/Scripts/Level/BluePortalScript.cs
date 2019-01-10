@@ -31,6 +31,7 @@ public class BluePortalScript : MonoBehaviour
         //Check if Object is allowed to teleport
         if ((Object.gameObject.tag == "Player") || (Object.gameObject.tag == "Portable") || (Object.gameObject.tag == "Item"))
         {
+            FindObjectOfType<AudioManager>().PlayAt("PortalTraversal");
             Teleport(Object);
         }
     }
