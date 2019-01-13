@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpriteChanger : MonoBehaviour {
+public class SpriteChanger : MonoBehaviour
+{
+  // Changes the player and weapon sprites upon entering a collision box
 
   public Sprite playerBodyBefore;
   public Sprite playerBodyAfter;
@@ -25,27 +27,34 @@ public class SpriteChanger : MonoBehaviour {
       spriteRendererPlayer.sprite = playerBodyBefore;
     }
   }
+
   void ChangeSprite()
   {
     if (spriteRendererPlayer.sprite == playerBodyBefore)
     {
       spriteRendererPlayer.sprite = playerBodyAfter;
       spriteRendererGun.sprite = playerArmsAfter;
+
       gameObject.GetComponent<ItemInputHandler>().enabled = true;
     }
     else
     {
       spriteRendererPlayer.sprite = playerBodyBefore;
       spriteRendererGun.sprite = playerArmsBefore;
+
+      gameObject.GetComponent<ItemInputHandler>().enabled = true;
     }
   }
+
   private void OnTriggerEnter2D(Collider2D collision)
   {
     if (collision.gameObject.tag.ToUpper() == "PORTALGUN")
     {      
       FindObjectOfType<AudioManager>().PlayAt("ItemPickUp");
+
       ChangeSprite();
-      collision.gameObject.SetActive(false);
+
+      GameObject.FindGameObjectWithTag("PortalGun").SetActive(false);
     }
   }
 }

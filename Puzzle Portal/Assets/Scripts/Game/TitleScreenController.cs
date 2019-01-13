@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class TitleScreenController : MonoBehaviour
 {
+  // Handles the logic for the TitleScreen/ PauseScreen
+  // Upon starting the game for the first time, the TitleScreen turns into the PauseScreen
+  // Disables player control during pause
 
   GameObject titleScreen;
   GameObject player;
@@ -12,7 +15,6 @@ public class TitleScreenController : MonoBehaviour
   public static TitleScreenController instance;
 
   public static bool titleScreenActive;
-
 
   void Awake()
   {
@@ -27,9 +29,11 @@ public class TitleScreenController : MonoBehaviour
     }
     DontDestroyOnLoad(gameObject);
   }
+
   void Start()
   {
     titleScreen = GameObject.FindGameObjectWithTag("TitleScreen");
+
     player = GameObject.FindGameObjectWithTag("Player");
 
     if (AreaLevelChanger.CurrentLevel == 0)
@@ -40,6 +44,7 @@ public class TitleScreenController : MonoBehaviour
       player.GetComponent<Controller>().enabled = false;
     }
   }
+
   void Update()
   {
     Camera = GameObject.FindGameObjectWithTag("MainCamera");
@@ -51,16 +56,16 @@ public class TitleScreenController : MonoBehaviour
     {
       if (Input.GetKeyDown(KeyCode.Escape) && titleScreenActive == false)
       {
-        Debug.Log("escape1");
         titleScreen.gameObject.SetActive(true);
         titleScreenActive = true;
+
         player.GetComponent<Controller>().enabled = false;
       }
       else if (Input.GetKeyDown(KeyCode.Escape) && titleScreenActive == true)
       {
-        Debug.Log("Escape2");
         titleScreen.gameObject.SetActive(false);
         titleScreenActive = false;
+
         player.GetComponent<Controller>().enabled = true;
       }
     }

@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class StartGame : MonoBehaviour {
+public class StartGame : MonoBehaviour
+{
+  // Provides functionality to the StartGame Button,
+  // such as disabling itself after click and enabling the character controls
 
   GameObject titleScreen;
   GameObject player;
@@ -14,11 +17,12 @@ public class StartGame : MonoBehaviour {
   void Start ()
   {
     titleScreen = GameObject.FindGameObjectWithTag("TitleScreen");
+
     startGameButton = GameObject.FindGameObjectWithTag("TitleStartGame");
 
     player = GameObject.FindGameObjectWithTag("Player");
-    Debug.Log(player);
   }
+
   void OnMouseDown()
   {
     startGameButtonPressed = true;

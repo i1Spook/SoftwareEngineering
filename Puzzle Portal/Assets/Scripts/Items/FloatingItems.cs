@@ -2,23 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FloatingItems : MonoBehaviour {
+public class FloatingItems : MonoBehaviour
+{
+  // Simple ItemFloater moving an object up and down, 
+  // allowing for customizable float strength
 
   float originalY;
 
   public float floatStrength = 1;
 
-  // Use this for initialization
   void Start ()
   {
     this.originalY = transform.position.y;
 	}
-	
-	// Update is called once per frame
+
 	void Update ()
   {
-    transform.position = new Vector3(transform.position.x, 
-      originalY + ((float)Mathf.Sin(Time.time) * floatStrength), 
-      transform.position.z);
-	}
+    transform.position = new Vector3(transform.position.x,
+                         originalY + ((float)Mathf.Sin(Time.time) * floatStrength),
+                         transform.position.z);
+  }
 }

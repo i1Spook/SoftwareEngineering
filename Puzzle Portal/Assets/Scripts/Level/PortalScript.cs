@@ -53,6 +53,8 @@ public class PortalScript : MonoBehaviour
       //Teleport Object to position of otherPortal
       toBePorted.transform.position = Position;
 
+      FindObjectOfType<AudioManager>().PlayAt("PortalTraversal");
+
       //Gives the Object it's original velocity in the Updirection of the OtherPortal
       toBePorted.GetComponent<Rigidbody2D>().velocity = OtherPortalUpVector * toBePorted.GetComponent<Rigidbody2D>().velocity.magnitude;
     }

@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class AreaLevelChanger : MonoBehaviour
 {
+  // Changes the level with an animation whenever the player collides with this area
+  // and has collected all Keycards
+
   public Animator animator;
 
   int nextLevel;
@@ -20,25 +23,29 @@ public class AreaLevelChanger : MonoBehaviour
 
     nextLevel = CurrentLevel + 1;
   }
+
   void Update()
   {
+    // Hidden functionality to allow level skip
     if (Input.GetKeyDown(KeyCode.N))
     {
       FadeToNextLevel();
     }
   }
+
   void OnTriggerEnter2D(Collider2D CollidedWith)
   {
     if (CollidedWith.CompareTag("Player") && ItemScript.AllKeycardsCollected())
     {
-      Debug.Log("Collided");
       FadeToNextLevel();
     }
   }
+
   public void FadeToNextLevel()
   {
     FadeToLevel(nextLevel);
   }
+
   public void FadeToLevel(int levelIndex)
   {
     initiatedLevelChange = true;
@@ -47,6 +54,7 @@ public class AreaLevelChanger : MonoBehaviour
 
     animator.SetTrigger("FadeOut");
   }
+
   public void OnFadeComplete()
   {
     SceneManager.LoadScene(levelToLoad);

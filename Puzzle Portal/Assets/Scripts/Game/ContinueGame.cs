@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ContinueGame : MonoBehaviour {
+public class ContinueGame : MonoBehaviour
+{
+  // Provides functionality to the ContinueGame Button,
+  // which is only active after the StartGame Button has been pressed
 
   GameObject titleScreen;
   GameObject continueButton;
@@ -19,6 +22,7 @@ public class ContinueGame : MonoBehaviour {
 
     titleScreen = GameObject.FindGameObjectWithTag("TitleScreen");
   }
+
 	void Update ()
   {
     if (StartGame.startGameButtonPressed)
@@ -27,6 +31,7 @@ public class ContinueGame : MonoBehaviour {
       continueButton.GetComponent<BoxCollider2D>().enabled = true;
     }
   }
+
   void OnMouseDown()
   {
     TitleScreenController.titleScreenActive = false;
